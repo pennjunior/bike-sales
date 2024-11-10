@@ -1,0 +1,32 @@
+<section class="hero row">
+  <div class="col-3">
+    <%= render "shared/search_form" %>
+  </div>
+  <div class="col-9">
+    <div class="hero-text">
+      <h1>Looking to Purchase Bikes with Unmatched Quality?</h1>
+      <p>Our bikes use only premium materials and cutting-edge technology</p>
+      <p>cutting-edge technology to ensure</p>
+      <p>durability and safety for every adventure.</p>
+    </div>
+  </div>
+</section>
+
+<h1 class="suggested-bikes-title">Featured Bikes</h1>
+<div class="bike-container">
+  <% @bikes.each do |bike| %>
+    <div class="bike-card">
+      <%= link_to bike_path(bike) do %>
+        <div class="bike-image">
+          <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
+        </div>
+        <div class="bike-info">
+          <h3 class="bike-title"><%= bike.model %></h3>
+          <p><strong>Category: </strong><%= bike.category.name %></p>
+          <p><strong>Price: </strong><%= number_to_currency(bike.price) %></p>
+          <p><strong>Engine: </strong><%= bike.engine_capacity %> CC</p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

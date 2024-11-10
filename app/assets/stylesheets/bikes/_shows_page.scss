@@ -1,0 +1,95 @@
+/* General Styles for Bike Show Page */
+.bike-show-title {
+  text-align: center;
+  font-size: 3rem;
+  color: $primary-color;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.bike-main-image {
+  text-align: center;
+  margin-bottom: 30px;
+  .main-image {
+    max-width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Gallery Thumbnails */
+.bike-gallery {
+  text-align: center;
+  .gallery-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .thumbnail {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      border-color: $primary-color;
+    }
+  }
+}
+
+/* Bike Details */
+.bike-details {
+  margin: 20px;
+  font-size: 1.2rem;
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  strong {
+    color: $primary-color;
+  }
+}
+
+/* Back Link */
+.back-link {
+  display: inline-block;
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bike-main-image .main-image {
+    max-height: 400px;
+  }
+
+  .thumbnails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bike-details {
+    font-size: 1rem;
+  }
+}

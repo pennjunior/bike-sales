@@ -1,0 +1,18 @@
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2 class="auth-title">Sign In</h2>
+
+      <%= f.input :email, placeholder: "Email Address", required: true, autofocus: true, input_html: { class: 'auth-input' } %>
+      <%= f.input :password, placeholder: "Password", required: true, input_html: { class: 'auth-input' } %>
+
+      <div class="auth-actions">
+        <%= f.submit "Sign In", class: "auth-button" %>
+      </div>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <%= link_to "Sign Up", new_user_registration_path, class: 'auth-link' %></p>
+      </div>
+    </div>
+  </div>
+<% end %>

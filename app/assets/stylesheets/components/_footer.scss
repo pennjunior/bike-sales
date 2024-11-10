@@ -1,0 +1,111 @@
+// Color Variables
+$dark-bg: #1b1b1b;           // Dark background color for footer
+$gold-color: #ff6600;        // Luxurious gold accent color
+$text-light: #e0e0e0;        // Light text color
+$hover-gold: lighten($gold-color, 10%);
+
+// Footer Styles
+.luxury-footer {
+  background-color: $dark-bg;
+  color: $text-light;
+  padding: 40px 20px;
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .footer-section {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px 20px;
+
+      .footer-heading {
+        color: $gold-color;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .footer-text {
+        color: $text-light;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: $text-light;
+            text-decoration: none;
+
+            &:hover {
+              color: $gold-color;
+            }
+          }
+        }
+      }
+    }
+
+    // Social Icons
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      a {
+        color: $text-light;
+        font-size: 1.5em;
+
+        &:hover {
+          color: $gold-color;
+        }
+      }
+    }
+
+    // Newsletter Form
+    .newsletter-form {
+      display: flex;
+      margin-top: 10px;
+
+      .newsletter-input {
+        padding: 8px;
+        border: 1px solid $gold-color;
+        border-radius: 4px 0 0 4px;
+        background: $dark-bg;
+        color: $text-light;
+
+        &::placeholder {
+          color: $text-light;
+        }
+      }
+
+      .newsletter-button {
+        padding: 8px 15px;
+        background-color: $gold-color;
+        color: $dark-bg;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $hover-gold;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid lighten($dark-bg, 10%);
+    padding-top: 10px;
+    font-size: 0.85em;
+    color: $text-light;
+  }
+}

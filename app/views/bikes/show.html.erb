@@ -1,0 +1,43 @@
+<h1 class="bike-show-title"><%= @bike.model %></h1>
+
+<!-- Main Image Section -->
+<div class="bike-main-image">
+  <% if @bike.photos.attached? %>
+    <%= cl_image_tag @bike.photos.first.key, alt: @bike.model, class: "main-image" %>
+  <% else %>
+    <p>No images available</p>
+  <% end %>
+</div>
+
+<!-- Gallery Thumbnails Section -->
+<div class="bike-gallery">
+  <% if @bike.photos.attached? %>
+    <h2 class="gallery-title">Gallery</h2>
+    <div class="thumbnails">
+      <% @bike.photos.each_with_index do |photo, index| %>
+        <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
+        <%= link_to cl_image_tag(photo.key, height: 100, width: 100, crop: :fill), "#", class: "thumbnail" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<!-- Bike Information Section -->
+<div class="bike-details">
+  <p><strong>Category:</strong> <%= @bike.category.name %></p>
+  <p><strong>Brand:</strong> <%= @bike.brand.name %></p>
+  <p><strong>Kilometers:</strong> <%= @bike.kilometers %> km</p>
+  <p><strong>Purpose:</strong> <%= @bike.body %></p>
+  <p><strong>Colour:</strong> <%= @bike.colour %></p>
+  <p><strong>Engine Capacity:</strong> <%= @bike.engine_capacity %> cc</p>
+  <p><strong>Fuel:</strong> <%= @bike.fuel_type %></p>
+  <p><strong>Maximum Speed:</strong> <%= @bike.maximum_speed %> km/h</p>
+  <p><strong>Registration Status:</strong> <%= @bike.registration_status %></p>
+  <p><strong>Release Date:</strong> <%= @bike.last_modified %></p>
+  <p><strong>Description:</strong> <%= @bike.description %></p>
+  <p><strong>Details:</strong> <%= @bike.features %></p>
+  <p><strong>Price:</strong> <%= number_to_currency(@bike.price) %></p>
+  <p><strong>In Stock:</strong> <%= @bike.stock %> units</p>
+</div>
+
+<%= link_to 'Back to Bikes', bikes_path, class: "back-link" %>

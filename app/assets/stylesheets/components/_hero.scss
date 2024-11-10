@@ -1,0 +1,115 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('utvpc.jpg') center center / cover no-repeat;
+  color: white;
+  height: 70%;
+  padding: 7rem 5rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.options-color {
+  color: black;
+}
+
+.benefits-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #FF4500;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+// suggested bikes
+
+.suggested-bikes-title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 3.5rem;
+  color: $primary-color;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.bike-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 20px;
+}
+
+.bike-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Image Styling */
+  .bike-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* Bike Info */
+  .bike-info {
+    padding: 15px;
+    h3.bike-title {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+
+  }
+
+  /* Hover Effects */
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .bike-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .bike-container {
+    grid-template-columns: 1fr;
+  }
+}

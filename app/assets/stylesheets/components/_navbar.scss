@@ -1,0 +1,137 @@
+/* General Variables */
+$primary-color: #ff6600;
+$hover-color: #cc5200;
+$text-color: #333;
+$background-color: #fff;
+
+/* Navbar Styling */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $background-color;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  /* Logo Section */
+  .custom-logo {
+    .brand-link {
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: $text-color;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  /* Main Navigation Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .nav-item {
+      margin-right: 8px;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+
+        &:hover {
+          color: $background-color;
+          background-color: $primary-color;
+          padding: 5px 10px;
+          border-radius: 4px;
+        }
+      }
+
+      /* Dropdown Styling */
+      &.dropdown {
+        position: relative;
+
+        .dropdown-toggle {
+          cursor: pointer;
+          color: $text-color;
+          &:hover {
+            color: $background-color;
+          background-color: $primary-color;
+          padding: 5px 10px;
+          border-radius: 4px;
+          }
+        }
+
+        .dropdown-menu {
+          display: none;
+          position: absolute;
+          background-color: $background-color;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          padding: 10px;
+          list-style: none;
+          margin-top: 5px;
+
+          li {
+            padding: 5px 10px;
+            a {
+              color: $text-color;
+              &:hover {
+                color: $background-color;
+                background-color: $hover-color;
+              }
+            }
+          }
+
+          .divider {
+            height: 1px;
+            background-color: #eaeaea;
+            margin: 5px 0;
+          }
+        }
+
+        &:hover .dropdown-menu {
+          display: block;
+        }
+      }
+    }
+  }
+
+  /* User Links */
+  .user-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    .user-item {
+      margin-left: 20px;
+
+      .profile-link,
+      .logout-link,
+      .login-link,
+      .signup-link {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+        color: $background-color;
+        background-color: $primary-color;
+        padding: 5px 10px;
+        border-radius: 4px;
+
+        &:hover {
+          color: $background-color;
+          background-color: $primary-color;
+          padding: 5px 10px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
