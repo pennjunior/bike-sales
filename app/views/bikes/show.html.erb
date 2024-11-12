@@ -1,9 +1,8 @@
 <h1 class="bike-show-title"><%= @bike.model %></h1>
-
 <!-- Main Image Section -->
-<div class="bike-main-image">
+<div class="bike-main-image" data-controller="gallery">
   <% if @bike.photos.attached? %>
-    <%= cl_image_tag @bike.photos.first.key, alt: @bike.model, class: "main-image" %>
+    <%= cl_image_tag @bike.photos.first.key, alt: @bike.model, class: "main-image", data: { gallery_target: "mainImage" } %>
   <% else %>
     <p>No images available</p>
   <% end %>
@@ -16,11 +15,12 @@
     <div class="thumbnails">
       <% @bike.photos.each_with_index do |photo, index| %>
         <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
-        <%= link_to cl_image_tag(photo.key, height: 100, width: 100, crop: :fill), "#", class: "thumbnail" %>
+        <%= link_to cl_image_tag(photo.key, height: 100, width: 100, crop: :fill), "#", class: "thumbnail", data: { action: "click->gallery#show" } %>
       <% end %>
     </div>
   <% end %>
 </div>
+
 
 <!-- Bike Information Section -->
 <div class="bike-details">
@@ -41,3 +41,5 @@
 </div>
 
 <%= link_to 'Back to Bikes', bikes_path, class: "back-link" %>
+<%= link_to 'Edit Bike', edit_bike_path(@bike), class: "back-link" %>
+<%= link_to 'Delete', bike_path(@bike), method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -19,13 +19,8 @@ $background-color: #fff;
   /* Logo Section */
   .custom-logo {
     .brand-link {
-      font-size: 2.4rem;
-      font-weight: bold;
-      color: $text-color;
-      text-decoration: none;
-      &:hover {
-        color: $primary-color;
-      }
+      height: 41px;
+      width: 130px;
     }
   }
 
