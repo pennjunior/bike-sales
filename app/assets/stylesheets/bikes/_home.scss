@@ -22,6 +22,7 @@ h2 {
 }
 
 .category-blog {
+  position: relative;
   display: flex; /* Arrange images in a row */
   flex-wrap: wrap; /* Allow wrapping to a new row if needed */
   justify-content: center; /* Align images horizontally */

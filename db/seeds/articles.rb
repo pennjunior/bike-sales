@@ -1,3 +1,5 @@
+Article.destroy_all
+puts "Destroyed all article"
 article1 = Article.create!(
   title: "Royal Enfield Goes Electric with New 'Flying Flea' Sub-Brand",
   description: "In a bold move towards sustainability, Royal Enfield has announced an all-new electric motorcycle sub-brand named 'Flying Flea.' Known for their rugged and reliable motorcycles, Royal Enfield’s leap into the electric market comes as part of a broader effort to reduce carbon emissions while keeping up with evolving consumer demands. This electric line is expected to maintain the brand’s signature look and feel, appealing to both traditional motorcycle enthusiasts and the growing eco-conscious market. \n
@@ -6,6 +8,15 @@ article1 = Article.create!(
   article_type: "News",
   date: Date.new(2024)
 )
+article1_urls = ["https://res.cloudinary.com/drxr1eiwp/image/upload/v1731740860/img_0448-scaled_gj32pv.jpg",
+                "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731740859/royalenfield-flying-flea-left-rear-three-quarter5_l2fmmw.webp"
+]
+article1_urls.each_with_index do |url, index|
+  file = URI.open(url)
+  article1.photos.attach(io: file, filename: "article1#{index +1}.jpg", content_type: "image/jpg")
+end
+
+
 # "Royal Enfield electric motorcycle"
 # "Flying Flea sub-brand"
 # "eco-friendly motorcycle"
@@ -19,6 +30,15 @@ article2 = Article.create!(
   article_type: "Feature",
   date: Date.new(2024)
 )
+article2_urls = [
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731741156/quad-bike-and-atv-training-at-beyond-driving-2_mrsacb.jpg",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731741156/A_farmer_using_one_atv_on_a_farm_fkfeco.jpg",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731740860/woman-on-a-quad-backing-down-a-ramp-768x512_illmli.jpg"
+]
+article2_urls.each_with_index do |url, index|
+  file = URI.open(url)
+  article2.photos.attach(io: file, filename: "article2#{index +1}.jpg", content_type: "image/jpg")
+end
 # SEO Keywords:
 
 # "ATVs in farming"
@@ -34,6 +54,14 @@ article3 = Article.create!(
   article_type: "Feature",
   date: Date.new(2024)
 )
+article3_urls = [
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731740860/can-am-dale-brisby-defender-pro35_yyjm8l.avif",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731740860/orv-my21-rec-defender-limited-oxford-blue-lifestyle-kyle-kst-4684-rgb_lwzymh.avif"
+]
+article3_urls.each_with_index do |url, index|
+  file = URI.open(url)
+  article3.photos.attach(io: file, filename: "article3#{index +1}.jpg", content_type: "image/jpg")
+end
 
 # SEO Keywords:
 
@@ -50,6 +78,14 @@ article4 = Article.create!(
   article_type: "Tech",
   date: Date.new(2024)
 )
+article4_urls = [
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731741853/1_JnF21CSkS_4T0BjI-tQ26A_scxf9u.webp",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731741853/Hfea5549d24ff4da4beebba2cedff2564q_eukhkx.avif"
+]
+article4_urls.each_with_index do |url, index|
+  file = URI.open(url)
+  article4.photos.attach(io: file, filename: "article4#{index +1}.jpg", content_type: "image/jpg")
+end
 # "electric ATVs"
 # "sustainable off-road vehicles"
 # "eco-friendly ATVs"
@@ -63,38 +99,21 @@ article5 = Article.create!(
   article_type: "Feature",
   date: Date.new(2024)
 )
+article5_urls = [
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731742014/108eefce-4981-4e8a-8382-84facda9ec66_f54061.jpg",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731742014/054_t8atss.jpg",
+  "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731742013/2QAV2N3YNRBMVCMFCJINWDH2EM_xijnxd.avif"
+]
+article5_urls.each_with_index do |url, index|
+  file = URI.open(url)
+  article5.photos.attach(io: file, filename: "article5#{index +1}.jpg", content_type: "image/jpg")
+end
 # "UTVs for extreme terrain"
 # "rugged UTVs"
 # "high-performance utility vehicles"
 # "off-road utility vehicles"
 # "UTVs for rugged landscapes"
-article6 = Article.create!(
-  title: "Luxury Scooters – Revolutionizing Urban Commutes with Style and Efficiency",
-  description: "In bustling urban areas, luxury scooters are redefining the way people commute, combining efficiency, style, and advanced technology. Designed for modern city life, these high-end scooters feature sleek aesthetics, comfortable seating, and powerful engines that provide a smooth, efficient ride through busy streets. Equipped with automatic transmissions, anti-lock braking systems (ABS), and premium finishes, luxury scooters are ideal for those seeking a premium urban commuting experience.\n
-  Unlike traditional scooters, luxury models often come with advanced features like Bluetooth connectivity, integrated navigation, and LED lighting, catering to tech-savvy riders. Additionally, the smaller carbon footprint of scooters makes them an eco-friendly alternative to cars, reducing traffic congestion and air pollution in cities. Popular brands are also exploring electric models to further appeal to eco-conscious consumers.\n
-  Whether for short trips or longer commutes, luxury scooters offer an appealing blend of comfort, style, and practicality. These vehicles represent the future of urban mobility, allowing riders to navigate crowded cityscapes efficiently while enjoying premium features typically associated with luxury vehicles.",
-  article_type: "Lifestyle",
-  date: Date.new(2024)
-)
 
-# "luxury scooters"
-# "urban commuting scooters"
-# "premium scooters for city riding"
-# "eco-friendly urban transport"
-# "advanced features in scooters"
-article7 = Article.create!(
-  title: "Hybrid UTVs – The Future of Sustainable Off-Roading",
-  description: "Hybrid UTVs (Utility Terrain Vehicles) are revolutionizing the off-roading world by providing an eco-friendly alternative that doesn't compromise on power or performance. Combining gasoline and electric engines, hybrid UTVs offer extended range and reduced emissions, making them a popular choice for both recreational riders and those in agriculture or construction.\n
-  With their dual-engine systems, hybrid UTVs can switch between electric mode for quieter, zero-emission operation and gasoline mode for more power-intensive tasks. This versatility is ideal for remote areas where noise and pollution reduction is a priority. Leading brands are developing models with high-torque motors, regenerative braking, and long-lasting lithium-ion batteries, ensuring that hybrid UTVs are as durable and dependable as their traditional counterparts.\n
-  As the demand for environmentally friendly vehicles grows, hybrid UTVs are expected to gain traction in multiple industries, from agriculture to outdoor recreation. These vehicles represent a significant step toward sustainability in the power sports industry, offering a solution that combines the best of both worlds—fuel efficiency and raw power for rugged terrains.",
-  article_type: "Feature",
-  date: Date.new(2024)
-)
-# "hybrid UTVs"
-# "sustainable off-road vehicles"
-# "eco-friendly UTVs"
-# "hybrid utility terrain vehicles"
-# "dual-engine UTVs"
 article8 = Article.create!(
   title: "Adventure Motorcycles – Built for the Open Road and Beyond",
   description: "Adventure motorcycles are growing in popularity among riders looking to explore diverse terrains, from smooth highways to rugged trails. Designed for versatility, adventure bikes offer the durability needed for off-road adventures while maintaining the comfort and handling required for long-distance road trips. These motorcycles are known for their high ground clearance, larger fuel tanks, and advanced suspension systems.\n
