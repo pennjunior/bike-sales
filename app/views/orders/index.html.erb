@@ -1,0 +1,28 @@
+<h2 class="text-center mt-3">All Orders</h2>
+<div class="container row">
+  <% if @orders.any? %>
+    <% @orders.each do |order| %>
+      <div class="col">
+      <!-- Display the first photo for each bike -->
+        <% if order.bike.photos.any? %>
+          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo" %>
+        <% else %>
+          <p>No photos available for this bike.</p>
+        <% end %>
+
+        <!-- Display the bike details -->
+        <div class="bike-info">
+          <p><strong>Bike Name: </strong><%= order.bike.model %></p>
+          <p><strong>Order ID: </strong><%= order.id %></p>
+          <p><strong>Name: </strong><%= order.name %></p>
+          <p><strong>Email: </strong><%= order.email %></p>
+          <p><strong>Telephone: </strong><%= order.phone %></p>
+          <p><strong>Quantity: </strong><%= order.quantity %></p>
+          <p><strong>Ordered At: </strong><%= order.created_at.strftime("%Y-%m-%d") %></p>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No orders yet.</p>
+  <% end %>
+</div>

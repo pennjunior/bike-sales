@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @order = @bike.orders.new(order_params)
     if @order.save
-      redirect_to @bike, notice: "Order successfully placed!"
+      redirect_to orders_path, notice: "Order successfully placed!"
     else
       render :new
     end
