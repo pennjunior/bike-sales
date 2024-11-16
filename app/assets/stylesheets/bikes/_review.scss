@@ -1,0 +1,63 @@
+.review-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.review-form .form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.review-form .submit-button {
+  margin-top: 1rem;
+}
+
+.bike-reviews {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .review {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      color: #333;
+      font-weight: 600;
+    }
+
+    .stars {
+      color: #ffcc00; // Gold color for filled stars
+      margin-top: 0.5rem;
+    }
+  }
+
+  // Styling for average rating display at the top
+  .average-rating {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+
+    .stars {
+      color: #ffcc00;
+      font-size: 1.1rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

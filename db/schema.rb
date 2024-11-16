@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_07_150859) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_14_010119) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -39,6 +42,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_07_150859) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "article_type"
+  end
+
   create_table "bikes", force: :cascade do |t|
     t.string "model"
     t.integer "kilometers"
@@ -53,8 +65,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_07_150859) do
     t.integer "stock"
     t.integer "maximum_speed"
     t.string "fuel_type"
-    t.integer "category_id", null: false
-    t.integer "brand_id", null: false
+    t.bigint "category_id", null: false
+    t.bigint "brand_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_bikes_on_brand_id"
@@ -73,6 +85,27 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_07_150859) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.bigint "bike_id", null: false
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bike_id"], name: "index_orders_on_bike_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.bigint "bike_id", null: false
+    t.string "reviewer_name"
+    t.integer "rating"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["bike_id"], name: "index_reviews_on_bike_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -89,4 +122,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_07_150859) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "bikes", "brands"
   add_foreign_key "bikes", "categories"
+  add_foreign_key "orders", "bikes"
+  add_foreign_key "reviews", "bikes"
 end

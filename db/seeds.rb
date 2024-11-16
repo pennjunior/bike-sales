@@ -9,15 +9,33 @@
 #   end
 require "open-uri"
 
-Bike.destroy_all
-puts "Destroyed all  motocycles"
+# Category.destroy_all
+# puts "Destroyed all categories"
 
-# Seed Categories
-categories = ["ATVs/Quad", "Cruisers", "Dirt Bikes", "Electric", "Road Bikes", "UTVs", "Scooters"]
-categories.map do |category_name|
-  Category.find_or_create_by!(name: category_name)
-end
+# categories = ["ATVs/Quad", "Cruisers", "Dirt Bikes", "Electric", "Sport", "UTVs", "Scooters"]
+
+# categories.each do |category_name|
+#   Category.create!(name: category_name)
+# end
+
+# cruiser_category = Category.find_by(name: "Cruisers")
+# atv_category = Category.find_by(name: "ATVs/Quad")
+# dirtbike_category = Category.find_by(name: "Dirt Bikes")
+# electric_category = Category.find_by(name: "Electric")
+
+# utv_category = Category.find_by(name: "UTVs")
+# scooter_category = Category.find_by(name: "Scooters")
+
+# # Attaching images to categories
+# cruiser_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731679086/cruiser_pxd5wd.png"), filename: "cruiser.jpg") if cruiser_category
+# atv_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731544894/development/xyuiwmgtdbtytuogyhx49xte8a6e.webp"), filename: "atv.jpg") if atv_category
+# dirtbike_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731679086/dirtbike_tpjajl.webp"), filename: "dirtbike.jpg") if dirtbike_category
+# electric_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731679086/electric-scooter_tfvwo5.jpg"), filename: "electric.jpg") if electric_category
+# utv_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731679087/utv_sko8w8.webp"), filename: "utv.jpg") if utv_category
+# scooter_category.photo.attach(io: URI.open("https://res.cloudinary.com/drxr1eiwp/image/upload/v1731679087/scooter_islstn.webp"), filename: "scooter.jpg") if scooter_category
+
 puts "Categories created: #{Category.count}"
+
 
 brands = ["Honda", "Yamaha", "Kawasaki", "BMW", "Suzuki", "Ducati", "Segway", "Can-Am", "CFMOTO",
           "Polaris", "Harley Davidson", "Royal Enfield", "Indian", "KYMCO", "Piaggio", "SYM", "Harley"]
@@ -26,9 +44,9 @@ brands.map do |brand_name|
 end
 puts "Brands created: #{Brand.count}"
 
-require_relative "seeds/atvs"
-require_relative "seeds/cruisers"
-require_relative "seeds/scooter"
-require_relative "seeds/utvs"
-require_relative "seeds/articles"
-require_relative "seeds/reviews"
+# require_relative "seeds/atvs"
+# require_relative "seeds/cruisers"
+# require_relative "seeds/scooter"
+# require_relative "seeds/utvs"
+# require_relative "seeds/reviews"
+# require_relative "seeds/articles"

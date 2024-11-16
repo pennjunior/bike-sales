@@ -1,12 +1,14 @@
 <div class="custom-navbar">
   <!-- Logo Section -->
   <div class="custom-logo">
-    <%= image_tag "bikelogo.jpg", class: "brand-link" %>
+    <%= link_to root_path do %>
+      <%= image_tag "bikelogo.jpg", alt: "Bike Logo", class: "brand-link" %>
+    <% end %>
   </div>
 
   <!-- Navigation Links -->
   <ul class="nav-links">
-    <li class="nav-item"><a href="#">Home</a></li>
+    <li class="nav-item"><%= link_to "Home", root_path %></li>
     <li class="nav-item dropdown">
       <a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Inventory</a>
       <ul class="dropdown-menu">

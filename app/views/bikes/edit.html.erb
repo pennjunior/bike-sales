@@ -1,6 +1,9 @@
-<h2 class="form-title">Edit Bike Details</h2>
+<h2 class="form-title">Edit Bikes details</h2>
 
-<%= simple_form_for @bike, html: { class: "custom-bike-form" } do |form| %>
+<%= simple_form_for @bike,
+    local: true,
+    data: { controller: "loading", action: "submit->loading#showSpinner" },
+    html: { class: "custom-bike-form" } do |form| %>
   <div class="form-group">
     <%= form.input :model, placeholder: "Enter bike model", label: false %>
   </div>
@@ -50,6 +53,7 @@
     <%= form.input :photos, as: :file, input_html: { multiple: true }, label: false %>
   </div>
   <div class="form-group submit-button">
-    <%= form.button :submit, "Save Bike Details" %>
+    <%= form.button :submit, "Save Bike Info" %>
   </div>
+  <span class="loader text-center" data-loading-target="spinner" style="display: none;"></span>
 <% end %>

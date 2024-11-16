@@ -8,6 +8,7 @@ class BikesController < ApplicationController
   end
 
   def show
+    @order = Order.new(bike: @bike)
   end
 
   def new
@@ -27,8 +28,15 @@ class BikesController < ApplicationController
   end
 
   def update
-    if @bike.update(strong_params)
-      redirect_to bike_path(@bike), notice: "Bike was successfully updated."
+    # if @bike.update(strong_params)
+    #   redirect_to bike_path(@bike), notice: "Bike was successfully updated."
+    # end
+    if strong_params[:photos].present?
+      @bike.photos.attach(strong_params[:photos])
+    end
+
+    if @bike.update(strong_params.except(:photos))
+      redirect_to @bike, notice: "Bike was successfully updated."
     else
       render :edit
     end
@@ -40,9 +48,24 @@ class BikesController < ApplicationController
     redirect_to bikes_path, status: :see_other
   end
 
+  def create_order
+    @bike = Bike.find(params[:bike_id])  # Get the bike from params
+    @order = @bike.orders.new(order_params)
+
+    if @order.save
+      redirect_to @bike, notice: 'Order was successfully created.'
+    else
+      render :show  # Render the show page again in case of errors
+    end
+  end
+
   private
   def set_bike
     @bike = Bike.find(params[:id])
+  end
+
+  def order_params
+    params.require(:order).permit(:name, :email, :phone, :quantity)
   end
 
   def strong_params

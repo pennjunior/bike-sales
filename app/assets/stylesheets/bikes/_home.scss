@@ -20,3 +20,20 @@ h2 {
   color: #333;
   text-transform: capitalize;
 }
+
+.category-blog {
+  display: flex; /* Arrange images in a row */
+  flex-wrap: wrap; /* Allow wrapping to a new row if needed */
+  justify-content: center; /* Align images horizontally */
+  gap: 1px;
+  text-align: center;
+  margin-left: 10px;
+}
+.cat-img {
+  margin-top: 20px;
+  width: 60%; /* Ensure the image fills the width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Options: cover, contain, fill, scale-down, none */
+  display: block;
+  gap: 2px; /* Removes inline space under images */
+}

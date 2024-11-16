@@ -11,15 +11,20 @@
     </div>
   </div>
 </section>
-
+<%= render "shared/categories" %>
 <h1 class="suggested-bikes-title">Featured Bikes</h1>
 <div class="bike-container">
   <% @bikes.each do |bike| %>
     <div class="bike-card">
       <%= link_to bike_path(bike) do %>
         <div class="bike-image">
-          <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
+          <% if bike.photos.first.present? %>
+            <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
+          <% else %>
+            <%= image_tag 'san_francisco.jpg', height: 300, width: 400, crop: :fill, alt: 'Default bike image' %>
+          <% end %>
         </div>
+
         <div class="bike-info">
           <h3 class="bike-title"><%= bike.model %></h3>
           <p><strong>Category: </strong><%= bike.category.name %></p>

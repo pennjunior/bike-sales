@@ -2,7 +2,7 @@ cruiser_category_id = Category.find_by(name: "Cruisers")&.id
 atv_category_id = Category.find_by(name: "ATVs/Quad" )&.id
 dirtbike_category_id = Category.find_by(name: "Dirt Bikes" )&.id
 electric_category_id = Category.find_by(name: "Electric" )&.id
-roadbike_category_id = Category.find_by(name: "Road Bikes" )&.id
+roadbike_category_id = Category.find_by(name: "Sport" )&.id
 utv_category_id = Category.find_by(name: "UTVs" )&.id
 scooter_category_id = Category.find_by(name: "Scooters" )&.id
 

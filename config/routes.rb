@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root 'bikes#index'
-  resources :bikes
-  # , only: [:index, :show, :new, :edit] do
-  #   resources :review, only: [:create, :index]
-  # end
+  resources :categories, only: [:index, :show]
+  resources :bikes do
+    resources :orders, only: [:new, :create]
+    resources :reviews, only: [:new, :create]
+  end
+
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

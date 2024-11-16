@@ -1,6 +1,8 @@
 class Bike < ApplicationRecord
   belongs_to :category
   belongs_to :brand
+  has_many :reviews, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   enum registration_status: [:registered, :unregistered]
   has_many_attached :photos

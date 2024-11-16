@@ -1,15 +1,14 @@
-// app/javascript/controllers/loading_controller.js
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus"
 
+// Connects to data-controller="loading"
 export default class extends Controller {
   static targets = ["spinner"]
-
   connect() {
-    console.log("Loading controller is connected!");
+    console.log("this works")
   }
 
   showSpinner() {
-    console.log("Loader can spin")
+    // Show the spinner when the form is submitted
     this.spinnerTarget.style.display = "inline-block";
   }
 }

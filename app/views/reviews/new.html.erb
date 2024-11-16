@@ -1,0 +1,22 @@
+<h1>Reviews#new</h1>
+  <%= simple_form_for [@bike, @review],
+    local: true,
+    data: { controller: "loading", action: "submit->loading#showSpinner" },
+    html: { class: "custom-bike-form" } do |f| %>
+    <div class="form-group">
+      <%= f.input :reviewer_name, label: "Your Name" %>
+    </div>
+    <div class="form-group">
+      <%= f.input :rating, as: :select, collection: [1, 2, 3, 4, 5], label: "Rating", prompt: "Select a Rating" %>
+    </div>
+    <div class="form-group p-4">
+      <%= f.input :content, as: :text, label: "Review Content", input_html: { class: 'form-control', rows: 4, placeholder: "Write your review here..." } %>
+    </div>
+    <div class="form-group" style="display: none;">
+      <%= f.input :bike_id, as: :hidden, value: @bike.id %>
+    </div>
+    <div class="form-group submit-button">
+      <%= f.button :submit, "Create Review" %>
+    </div>
+    <span class="loader tecxt-center" data-loading-target="spinner" style="display: none;"></span>
+  <% end %>

@@ -1,45 +1,250 @@
-<h1 class="bike-show-title"><%= @bike.model %></h1>
 <!-- Main Image Section -->
-<div class="bike-main-image" data-controller="gallery">
-  <% if @bike.photos.attached? %>
-    <%= cl_image_tag @bike.photos.first.key, alt: @bike.model, class: "main-image", data: { gallery_target: "mainImage" } %>
-  <% else %>
-    <p>No images available</p>
-  <% end %>
-</div>
+<div class="row">
+  <div class="col-8">
+    <div class="container">
+      <div class="slider-container">
+        <div class="bike-main-image" id="slider">
+          <% if @bike.photos.attached? %>
+            <% @bike.photos.each_with_index do |photo, index| %>
+              <div class="mySlides">
+                <div class="numbertext"><i class="fa-solid fa-camera"></i> <%= index + 1 %>/<%= @bike.photos.count %></div>
+                <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
 
-<!-- Gallery Thumbnails Section -->
-<div class="bike-gallery">
-  <% if @bike.photos.attached? %>
-    <h2 class="gallery-title">Gallery</h2>
-    <div class="thumbnails">
-      <% @bike.photos.each_with_index do |photo, index| %>
-        <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
-        <%= link_to cl_image_tag(photo.key, height: 100, width: 100, crop: :fill), "#", class: "thumbnail", data: { action: "click->gallery#show" } %>
-      <% end %>
+        <div class="bike-gallery">
+          <% if @bike.photos.attached? %>
+            <div class="thumbnails">
+              <% @bike.photos.each_with_index do |photo, index| %>
+                <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
+                <%= cl_image_tag(photo.key, height: 100, width: 100, crop: :fill, class: "thumbnail", onclick: "currentSlide(#{index + 1})") %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
-</div>
+  </div>
+  <!-- Order Form Section -->
+  <div class="col-4" style="margin-top: 5%;">
+        <!-- Bike description -->
+    <%= simple_form_for [@bike, @order],
+      local: true,
+      data: { controller: "loading", action: "submit->loading#showSpinner" },
+      html: { class: "custom-bike-form ", style: "height: 70%" } do |form| %>
+      <h1 class="bike-show-title"><%= @bike.model %></h1>
+      <h1 class="bike-show-title"><%= number_to_currency(@bike.price) %></h1>
 
+      <% if @order.errors.any? %>
+        <div class="error-messages alert alert-danger">
+          <h3>There were some errors with your order:</h3>
+          <ul>
+            <% @order.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group <%= 'has-error' if @order.errors[:name].any? %>">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+        <% if @order.errors[:name].any? %>
+          <small class="form-text text-danger"><%= @order.errors[:name].first %></small>
+        <% end %>
+      </div>
+
+      <div class="form-group <%= 'has-error' if @order.errors[:email].any? %>">
+        <%= form.label :email %>
+        <%= form.email_field :email, class: "form-control" %>
+        <% if @order.errors[:email].any? %>
+          <small class="form-text text-danger"><%= @order.errors[:email].first %></small>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :phone %>
+        <%=form.number_field :phone %>
+      </div>
+
+      <div class="form-group <%= 'has-error' if @order.errors[:quantity].any? %>">
+        <%= form.label :quantity %>
+        <%= form.number_field :quantity, min: 1, class: "form-control" %>
+        <% if @order.errors[:quantity].any? %>
+          <small class="form-text text-danger"><%= @order.errors[:quantity].first %></small>
+        <% end %>
+      </div>
+
+      <div class="form-group submit-button">
+        <%= form.button :submit, "Request Purchase Info", class: "btn btn-dark text-white" %>
+      </div>
+      <span class="loader text-center" data-loading-target="spinner" style="display: none;"></span>
+    <% end %>
+  </div>
+</div>
 
 <!-- Bike Information Section -->
 <div class="bike-details">
-  <p><strong>Category:</strong> <%= @bike.category.name %></p>
-  <p><strong>Brand:</strong> <%= @bike.brand.name %></p>
-  <p><strong>Kilometers:</strong> <%= @bike.kilometers %> km</p>
-  <p><strong>Purpose:</strong> <%= @bike.body %></p>
-  <p><strong>Colour:</strong> <%= @bike.colour %></p>
-  <p><strong>Engine Capacity:</strong> <%= @bike.engine_capacity %> cc</p>
-  <p><strong>Fuel:</strong> <%= @bike.fuel_type %></p>
-  <p><strong>Maximum Speed:</strong> <%= @bike.maximum_speed %> km/h</p>
-  <p><strong>Registration Status:</strong> <%= @bike.registration_status %></p>
-  <p><strong>Release Date:</strong> <%= @bike.last_modified %></p>
-  <p><strong>Description:</strong> <%= @bike.description %></p>
-  <p><strong>Details:</strong> <%= @bike.features %></p>
-  <p><strong>Price:</strong> <%= number_to_currency(@bike.price) %></p>
-  <p><strong>In Stock:</strong> <%= @bike.stock %> units</p>
+  <table>
+    <tr>
+      <td><strong>Category:</strong></td>
+      <td><%= @bike.category.name %></td>
+    </tr>
+    <tr>
+      <td><strong>Brand:</strong></td>
+      <td><%= @bike.brand.name %></td>
+    </tr>
+    <tr>
+      <td><strong>Kilometers:</strong></td>
+      <td><%= @bike.kilometers %> km</td>
+    </tr>
+    <tr>
+      <td><strong>Purpose:</strong></td>
+      <td><%= @bike.body %></td>
+    </tr>
+    <tr>
+      <td><strong>Colour:</strong></td>
+      <td><%= @bike.colour %></td>
+    </tr>
+    <tr>
+      <td><strong>Engine Capacity:</strong></td>
+      <td><%= @bike.engine_capacity %> cc</td>
+    </tr>
+    <tr>
+      <td><strong>Fuel:</strong></td>
+      <td><%= @bike.fuel_type %></td>
+    </tr>
+    <tr>
+      <td><strong>Maximum Speed:</strong></td>
+      <td><%= @bike.maximum_speed %> km/h</td>
+    </tr>
+    <tr>
+      <td><strong>Registration Status:</strong></td>
+      <td><%= @bike.registration_status %></td>
+    </tr>
+    <tr>
+      <td><strong>Release Date:</strong></td>
+      <td><%= @bike.last_modified %></td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td>
+      <td><%= @bike.description %></td>
+    </tr>
+    <tr>
+      <td><strong>In Stock:</strong></td>
+      <td><%= @bike.stock %> units</td>
+    </tr>
+  </table>
+</div>
+<h3><%= @bike.features %></h3>
+<!-- Reviews Section -->
+<div class="bike-reviews">
+  <h2>Reviews</h2>
+
+  <% if @bike.reviews.any? %>
+    <%# Calculate the average rating and display it as stars %>
+    <% average_rating = @bike.reviews.average(:rating).to_f.round(1) %>
+    <p>Average Rating:
+      <% (1..5).each do |star| %>
+        <i class="fa stars<%= average_rating >= star ? 's' : 'r' %> fa-star"></i> <!-- filled or regular star -->
+      <% end %>
+      (<%= average_rating %> based on <%= @bike.reviews.count %> reviews)
+    </p>
+
+    <% @bike.reviews.each do |review| %>
+      <div class="review">
+        <p><strong><%= review.reviewer_name %></strong> - <%= review.rating %>/5</p>
+        <p><%= review.content %></p>
+        <%# Display rating as stars %>
+        <p>
+          <% (1..5).each do |star| %>
+            <i class="fa stars<%= review.rating >= star ? 's' : 'r' %> fa-star"></i> <!-- filled or regular star -->
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No reviews yet.</p>
+  <% end %>
 </div>
 
-<%= link_to 'Back to Bikes', bikes_path, class: "back-link" %>
-<%= link_to 'Edit Bike', edit_bike_path(@bike), class: "back-link" %>
-<%= link_to 'Delete', bike_path(@bike), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="text-center=">
+  <%= link_to bikes_path, class: "back-link" do %>
+    <i class="fas fa-arrow-left"></i> Back to Bikes
+  <% end %>
+
+  <%= link_to edit_bike_path(@bike), class: "back-link" do %>
+    <i class="fas fa-edit"></i> Edit Bike
+  <% end %>
+
+  <%= link_to bike_path(@bike), method: :delete, data: { confirm: 'Are you sure?' }, class: "back-link" do %>
+    <i class="fas fa-trash-alt"></i> Delete
+  <% end %>
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Detect swipe gestures
+let xDown = null;
+let yDown = null;
+
+document.getElementById("slider").addEventListener('touchstart', handleTouchStart, false);
+document.getElementById("slider").addEventListener('touchmove', handleTouchMove, false);
+
+function handleTouchStart(evt) {
+  const firstTouch = evt.touches[0];
+  xDown = firstTouch.clientX;
+  yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  let xUp = evt.touches[0].clientX;
+  let yUp = evt.touches[0].clientY;
+
+  let xDiff = xDown - xUp;
+  let yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) { // Most significant movement
+    if (xDiff > 0) {
+      // Left swipe
+      plusSlides(1);
+    } else {
+      // Right swipe
+      plusSlides(-1);
+    }
+  }
+  // Reset values
+  xDown = null;
+  yDown = null;
+}
+
+// Function to change slide
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+</script>
