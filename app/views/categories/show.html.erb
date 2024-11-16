@@ -1,2 +1,25 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
+
+<div class="bikes-container">
+  <% if @bikes.any? %>
+    <% @bikes.each do |bike| %>
+      <div class="bike-card">
+        <%= link_to bike_path(bike) do %>
+          <% if bike.photos.attached? %>
+            <%= image_tag bike.photos.first, height: 200, width: 300, alt: bike.model %>
+          <% else %>
+            <%= image_tag 'default_bike.jpg', height: 200, width: 300, alt: 'Default bike image' %>
+          <% end %>
+
+          <div class="bike-info">
+            <h3 class="bike-title"><%= bike.model %></h3>
+            <p><strong>Price:</strong> <%= number_to_currency(bike.price) %></p>
+            <p><strong>Engine:</strong> <%= bike.engine_capacity %> CC</p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <p>No bikes are available in this category.</p>
+  <% end %>
+</div>

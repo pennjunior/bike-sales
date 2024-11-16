@@ -1,11 +1,11 @@
-<h2 class="text-center mt-3">All Orders</h2>
-<div class="container row">
+<h1 class="text-center mt-3 mb-3">All Orders</h1>
+<div class="bike-container">
   <% if @orders.any? %>
     <% @orders.each do |order| %>
-      <div class="col">
+      <div class="bike-card">
       <!-- Display the first photo for each bike -->
         <% if order.bike.photos.any? %>
-          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo" %>
+          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo" c %>
         <% else %>
           <p>No photos available for this bike.</p>
         <% end %>

@@ -1,5 +1,63 @@
 // Specific CSS for your home-page
+html, body {
+  height: 100%; /* Ensures the page height spans the full viewport */
+  margin: 0; /* Removes any default margins */
+}
 
+body {
+  display: flex;
+  flex-direction: column; /* Stacks the content and footer vertically */
+}
+
+.entire-content {
+  flex: 1;
+}
+
+.bike-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 0 20px;
+}
+
+.bike-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Image Styling */
+  .bike-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* Bike Info */
+  .bike-info {
+    padding: 15px;
+    h3.bike-title {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+
+
+  }
+
+  /* Hover Effects */
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
 
 .bike-card {
   border: 1px solid #ddd;
@@ -21,20 +79,86 @@ h2 {
   text-transform: capitalize;
 }
 
-.category-blog {
-  position: relative;
-  display: flex; /* Arrange images in a row */
-  flex-wrap: wrap; /* Allow wrapping to a new row if needed */
-  justify-content: center; /* Align images horizontally */
-  gap: 1px;
-  text-align: center;
-  margin-left: 10px;
+/* Container for all categories */
+.categories-container {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.cat-img {
-  margin-top: 20px;
-  width: 60%; /* Ensure the image fills the width of its container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Options: cover, contain, fill, scale-down, none */
+
+/* Each category section */
+.category-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Category title */
+.category-title {
+  font-size: 2.2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ea540f;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Container for bikes in a category */
+.bikes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Individual bike card */
+.bike-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.bike-card:hover {
+  transform: scale(1.05);
+}
+
+/* Bike image */
+.bike-card img {
+  width: 100%;
+  height: auto;
   display: block;
-  gap: 2px; /* Removes inline space under images */
+}
+
+/* Bike info */
+.bike-info {
+  padding: 15px;
+}
+
+.bike-title {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.bike-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .bike-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .bike-container {
+    grid-template-columns: 1fr;
+  }
 }

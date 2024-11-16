@@ -1,12 +1,12 @@
-<div style="width: 80%">
-  <div class="row category-blog">
-    <% @categories.each do |category| %>
-    <div class="col" style="gap: 1%">
-      <%= link_to categories_path(category) do%>
-        <%cl_image_tag category.photo.key, class: "cat-img" %>
+<div style="margin-left: 14%; margin-top: 2%; margin-bottom: 2%;">
+  <div class="category-blog" style="width: 80%">
+      <% @categories.each do |category| %>
+      <div class="cat-img">
+        <%= link_to category_path(category) do%>
+          <%cl_image_tag category.photo.key %>
+        <% end %>
+        <p><strong class="text-center"><%= category.name%></strong></p>
+      </div>
       <% end %>
-      <p class="text-center"><%= category.name%></p>
-    </div>
-    <% end %>
   </div>
 </div>
