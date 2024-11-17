@@ -7,7 +7,8 @@ gem "rails", "~> 7.1.5"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
-
+gem 'sass-rails', '>= 6'
+gem 'uglifier', '>= 1.3.0'
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", ">= 1.4"
 gem 'pg', '>= 0.18', '< 2.0'
@@ -29,7 +30,7 @@ gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
-gem "sassc-rails"
+gem "devise"
 gem "jbuilder"
 gem "cloudinary"
 gem "dotenv-rails"
@@ -59,7 +60,6 @@ group :development, :test do
 end
 
 group :development do
-  gem "devise"
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
