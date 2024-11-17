@@ -7,22 +7,27 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: penn            # Replace with your PostgreSQL username
-  password: Jupercho11      # Replace with the actual password
-  host: localhost
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
   database: pennjunior_development
+  username: penn            # Replace with your PostgreSQL username
+  password: Jupercho11      # Replace with the actual password
+  host: localhost
 
 test:
   <<: *default
   database: pennjunior_test
+  username: penn
+  password: Jupercho11
+  host: localhost
 
 production:
   <<: *default
-  database: pennjunior_production
-  username: penn
-  password: <%= ENV['PENN_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # Optionally, you can override the settings to use the DATABASE_URL directly
+  # username: <%= ENV['DATABASE_USERNAME'] %>
+  # password: <%= ENV['DATABASE_PASSWORD'] %>
+  # host: <%= ENV['DATABASE_HOST'] %>
