@@ -1,4 +1,6 @@
 .search-form {
+    max-width:100%;
+    height:auto;
     left: 20px;
     background: white;
     padding: 20px;
@@ -22,7 +24,6 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    min-width: 200px;
     background: #f9f9f9;
   }
 

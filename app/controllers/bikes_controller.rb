@@ -5,6 +5,8 @@ class BikesController < ApplicationController
     @bikes = Bike.all.limit(10)
     @categories = Category.all
     @brands = Brand.all
+    @reviews = Review.all.limit(4)
+    @articles = Article.all.limit(5)
   end
 
   def show

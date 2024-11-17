@@ -1,12 +1,14 @@
-<div style="margin-left: 14%; margin-top: 2%; margin-bottom: 2%;">
-  <div class="category-blog" style="width: 80%">
-      <% @categories.each do |category| %>
-      <div class="cat-img">
-        <%= link_to category_path(category) do%>
-          <%cl_image_tag category.photo.key %>
+<div class="container">
+  <div style="margin-top: 2%; margin-bottom: 2%;">
+    <div class="category-blog" style="width: 100%">
+        <% @categories.each do |category| %>
+        <div class="cat-img">
+          <%= link_to category_path(category) do%>
+            <%cl_image_tag category.photo.key %>
+          <% end %>
+          <p><strong class="text-center"><%= category.name%></strong></p>
+        </div>
         <% end %>
-        <p><strong class="text-center"><%= category.name%></strong></p>
-      </div>
-      <% end %>
+    </div>
   </div>
 </div>

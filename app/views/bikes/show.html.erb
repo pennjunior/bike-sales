@@ -3,7 +3,7 @@
   <div class="col-8">
     <div class="container">
       <div class="slider-container">
-        <div class="bike-main-image" id="slider">
+        <div class="bike-main-image">
           <% if @bike.photos.attached? %>
             <% @bike.photos.each_with_index do |photo, index| %>
               <div class="mySlides">
@@ -12,19 +12,26 @@
               </div>
             <% end %>
           <% end %>
-        </div>
 
-        <div class="bike-gallery">
-          <% if @bike.photos.attached? %>
-            <div class="thumbnails">
-              <% @bike.photos.each_with_index do |photo, index| %>
-                <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
-                <%= cl_image_tag(photo.key, height: 100, width: 100, crop: :fill, class: "thumbnail", onclick: "currentSlide(#{index + 1})") %>
-              <% end %>
-            </div>
-          <% end %>
+          <!-- Navigation buttons container -->
+          <div class="slider-nav">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
         </div>
       </div>
+    <div class="bike-gallery">
+      <% if @bike.photos.attached? %>
+        <div class="thumbnails">
+          <% @bike.photos.each_with_index do |photo, index| %>
+            <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
+            <%= cl_image_tag(photo.key, height: 100, width: 100, crop: :fill, class: "thumbnail", onclick: "currentSlide(#{index + 1})") %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+
+
     </div>
   </div>
   <!-- Order Form Section -->
@@ -132,49 +139,12 @@
       <td><strong>Description:</strong></td>
       <td><%= @bike.description %></td>
     </tr>
-    <tr>
-      <td><strong>In Stock:</strong></td>
-      <td><%= @bike.stock %> units</td>
-    </tr>
-    <tr>
-      <td><strong>Id:</strong></td>
-      <td><%= @bike.category_id  %></td>
-    </tr>
   </table>
-</div>
-<h3><%= @bike.features %></h3>
-<!-- Reviews Section -->
-<div class="bike-reviews">
-  <h2>Reviews</h2>
+<h2 class="mt-5">Features</h2>
+<p><%= @bike.features %></p>
 
-  <% if @bike.reviews.any? %>
-    <%# Calculate the average rating and display it as stars %>
-    <% average_rating = @bike.reviews.average(:rating).to_f.round(1) %>
-    <p>Average Rating:
-      <% (1..5).each do |star| %>
-        <i class="fa stars<%= average_rating >= star ? 's' : 'r' %> fa-star"></i> <!-- filled or regular star -->
-      <% end %>
-      (<%= average_rating %> based on <%= @bike.reviews.count %> reviews)
-    </p>
 
-    <% @bike.reviews.each do |review| %>
-      <div class="review">
-        <p><strong><%= review.reviewer_name %></strong> - <%= review.rating %>/5</p>
-        <p><%= review.content %></p>
-        <%# Display rating as stars %>
-        <p>
-          <% (1..5).each do |star| %>
-            <i class="fa stars<%= review.rating >= star ? 's' : 'r' %> fa-star"></i> <!-- filled or regular star -->
-          <% end %>
-        </p>
-      </div>
-    <% end %>
-  <% else %>
-    <p>No reviews yet.</p>
-  <% end %>
-</div>
-
-<div class="text-center=">
+<div>
   <%= link_to bikes_path, class: "back-link" do %>
     <i class="fas fa-arrow-left"></i> Back to Bikes
   <% end %>
@@ -188,7 +158,7 @@
   <% end %>
 </div>
 
-
+</div>
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);

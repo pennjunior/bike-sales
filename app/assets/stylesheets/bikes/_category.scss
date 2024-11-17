@@ -20,7 +20,6 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1px;
-  margin: 0 20px;
 }
 
   /* Image Styling */
@@ -29,7 +28,8 @@
     // height: auto;
     // overflow: hidden;
     img {
-      width: 70%;
+      width: 100px;
       height: 100px;
+      gap: 1px;
     }
   }
