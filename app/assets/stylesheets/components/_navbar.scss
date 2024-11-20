@@ -1,17 +1,17 @@
-/* General Variables */
+/* SCSS Variables */
 $primary-color: #ff6600;
 $hover-color: #cc5200;
 $text-color: #333;
 $background-color: #fff;
-
-/* Navbar Styling */
+/* General Navbar Styling */
 .custom-navbar {
   position: sticky;
   top: 0;
+  width: 100%;
+  background-color: $background-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $background-color;
   padding: 10px 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -19,114 +19,171 @@ $background-color: #fff;
   /* Logo Section */
   .custom-logo {
     .brand-link {
-      height: 41px;
-      width: 130px;
+      height: 40px;
+      width: auto;
     }
   }
 
-  /* Main Navigation Links */
+  /* Main Navigation Links (Desktop View) */
   .nav-links {
-    display: flex;
+    display: flex; /* Horizontal layout for desktop */
     list-style: none;
     padding: 0;
     margin: 0;
 
     .nav-item {
-      margin-right: 8px;
+      margin-right: 15px;
 
       a {
         color: $text-color;
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
         &:hover {
           color: $background-color;
           background-color: $primary-color;
-          padding: 5px 10px;
-          border-radius: 4px;
         }
       }
 
-      /* Dropdown Styling */
+      /* Dropdown Styling (Desktop) */
       &.dropdown {
         position: relative;
 
         .dropdown-toggle {
           cursor: pointer;
-          color: $text-color;
-          &:hover {
-            color: $background-color;
-          background-color: $primary-color;
-          padding: 5px 10px;
-          border-radius: 4px;
-          }
         }
 
         .dropdown-menu {
           display: none;
           position: absolute;
+          top: 100%;
+          left: 0;
           background-color: $background-color;
+          list-style: none;
+          padding: 10px 0;
+          margin: 0;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           border-radius: 4px;
-          padding: 10px;
-          list-style: none;
-          margin-top: 5px;
 
           li {
-            padding: 5px 10px;
+            padding: 5px 20px;
+
             a {
               color: $text-color;
+              text-decoration: none;
+
               &:hover {
                 color: $background-color;
                 background-color: $hover-color;
               }
             }
           }
-
-          .divider {
-            height: 1px;
-            background-color: #eaeaea;
-            margin: 5px 0;
-          }
         }
 
         &:hover .dropdown-menu {
-          display: block;
+          display: block; /* Show dropdown on hover */
         }
       }
     }
   }
 
-  /* User Links */
+  /* User Links (Desktop View) */
   .user-links {
-    display: flex;
+    display: flex; /* Horizontal layout for desktop */
     list-style: none;
     padding: 0;
     margin: 0;
 
     .user-item {
-      margin-left: 20px;
+      margin-left: 15px;
 
-      .profile-link,
-      .logout-link,
       .login-link,
       .signup-link {
-        color: $text-color;
-        text-decoration: none;
-        font-weight: bold;
         color: $background-color;
         background-color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
         padding: 5px 10px;
         border-radius: 4px;
+        transition: background-color 0.3s ease;
 
         &:hover {
-          color: $background-color;
-          background-color: $primary-color;
-          padding: 5px 10px;
-          border-radius: 4px;
+          background-color: $hover-color;
         }
       }
+    }
+  }
+
+  /* Hamburger Icon (Mobile Only) */
+  #hamburger-icon {
+    display: none; /* Hidden on desktop */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary-color;
+    border-radius: 50%; /* Circular button */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color; /* Darker on hover */
+      transform: scale(1.1); /* Slightly larger on hover */
+    }
+
+    &.active {
+      background-color: $hover-color; /* Change color when active */
+      transform: scale(1.2); /* Grow slightly when clicked */
+    }
+
+    i {
+      color: $background-color;
+      font-size: 20px; /* Default icon size */
+      transition: transform 0.3s ease;
+
+      &.rotate {
+        transform: rotate(90deg); /* Rotate icon when active */
+      }
+    }
+  }
+
+  /* Responsive Mobile Styles */
+  @media (max-width: 768px) {
+    #hamburger-icon {
+      display: flex; /* Show hamburger icon on mobile */
+      margin-left: auto; /* Push to the right */
+    }
+
+    .nav-links,
+    .user-links {
+      display: none; /* Hidden by default on mobile */
+      flex-direction: column; /* Stack links vertically */
+      width: 100%; /* Full-width for mobile */
+      background-color: $background-color;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 999;
+      padding: 10px 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      .nav-item,
+      .user-item {
+        margin: 0;
+        padding: 10px 20px;
+
+        a {
+          padding: 8px 0;
+          width: 100%; /* Full clickable width */
+        }
+      }
+    }
+
+    .nav-links.show,
+    .user-links.show {
+      display: flex; /* Show when toggled */
     }
   }
 }

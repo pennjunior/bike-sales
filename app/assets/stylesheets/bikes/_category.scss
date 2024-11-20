@@ -33,3 +33,9 @@
       gap: 1px;
     }
   }
+  @media (max-width: 768px) {
+  .category-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,17 +1,19 @@
 // Specific CSS for your home-page
-html, body {
-  height: 100%; /* Ensures the page height spans the full viewport */
-  margin: 0; /* Removes any default margins */
+* {
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-  display: flex;
-  flex-direction: column; /* Stacks the content and footer vertically */
+  height: 100%; /* Ensures the page height spans the full viewport */
+  width: 100%;
+  margin: 0;
 }
 
-.entire-content {
-  flex: 1;
-}
 
 .bike-container {
   display: grid;
@@ -155,10 +157,16 @@ h2 {
   .bike-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  #searchForm {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
   .bike-container {
     grid-template-columns: 1fr;
+  }
+  #searchForm {
+    display: none;
   }
 }

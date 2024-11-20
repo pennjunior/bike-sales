@@ -4,6 +4,11 @@ $gold-color: #ff6600;        // Luxurious gold accent color
 $text-light: #e0e0e0;        // Light text color
 $hover-gold: lighten($gold-color, 10%);
 
+footer {
+  margin-bottom: 0%;
+  width: 100%;
+  z-index: 1000;
+}
 // Footer Styles
 .luxury-footer {
   background-color: $dark-bg;

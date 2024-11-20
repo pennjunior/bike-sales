@@ -1,5 +1,9 @@
 class ReviewsController < ApplicationController
   before_action :set_bike, only: %i[new create]
+  def index
+    @reviews = Review.all
+  end
+
   def new
     @review = @bike.reviews.new
   end

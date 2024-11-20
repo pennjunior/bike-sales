@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   root 'bikes#index'
   resources :categories, only: [:index, :show]
   resources :orders, only: [:index]
+  resources :reviews, only: [:index]
   resources :bikes do
     resources :orders, only: [:new, :create]
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:index, :new, :create]
   end
 
   devise_for :users

@@ -6,42 +6,60 @@
     <% end %>
   </div>
 
-  <!-- Navigation Links -->
-  <ul class="nav-links">
-    <li class="nav-item"><%= link_to "Home", root_path %></li>
-    <li class="nav-item dropdown">
-      <a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Inventory</a>
-      <ul class="dropdown-menu">
-        <% Category.all.each do |category| %>
-            <li><a href="#"><%= category.name %></a></li>
-        <% end %>
-      </ul>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dealer</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Get-Quote</a></li>
-      </ul>
-    </li>
-    <li class="nav-item"><a href="#">Accesories</a></li>
-    <li class="nav-item"><a href="#">Services</a></li>
-    <li class="nav-item"><a href="#">Contact</a></li>
-  </ul>
-  <!-- User Links - Login/Profile Section -->
-  <ul class="user-links">
-    <% if user_signed_in? %>
-      <li class="user-item">
-        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'logout-link' %>
+  <!-- Hamburger Icon -->
+  <div id="hamburger-icon">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Navigation Menu -->
+  <div class="menu-wrapper">
+    <ul class="nav-links" id="navbarMenu">
+      <li class="nav-item"><%= link_to "Home", root_path %></li>
+      <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="#">Inventory</a>
+        <ul class="dropdown-menu">
+          <% Category.all.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
       </li>
-    <% else %>
-      <li class="user-item">
-        <%= link_to 'Login', new_user_session_path, class: 'login-link' %>
+      <li class="nav-item dropdown">
+        <a class="dropdown-toggle" href="#">Dealer</a>
+        <ul class="dropdown-menu">
+          <li><%= link_to "Reviews", reviews_path %></li>
+          <li><a href="#">Get-Quote</a></li>
+        </ul>
       </li>
-      <li class="user-item">
-        <%= link_to 'Sign Up', new_user_registration_path, class: 'signup-link' %>
-      </li>
-    <% end %>
-  </ul>
+      <li class="nav-item"><a href="#">About Us</a></li>
+      <li class="nav-item"><a href="#">Services</a></li>
+      <li class="nav-item"><a href="#">Contact</a></li>
+    </ul>
+
+    <ul class="user-links" id="userMenu">
+      <% if user_signed_in? %>
+        <li><%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link" %></li>
+      <% else %>
+        <li><%= link_to "Login", new_user_session_path, class: "login-link" %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path, class: "signup-link" %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const navbarMenu = document.getElementById("navbarMenu");
+  const userMenu = document.getElementById("userMenu");
+
+  // Event listener for hamburger icon
+  hamburgerIcon.addEventListener("click", () => {
+    // Toggle visibility of menus
+    navbarMenu.classList.toggle("show");
+    userMenu.classList.toggle("show");
+
+    // Add an active class to the hamburger icon
+    hamburgerIcon.classList.toggle("active");
+  });
+  });
+</script>

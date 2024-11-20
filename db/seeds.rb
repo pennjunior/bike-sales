@@ -12,7 +12,7 @@ require "open-uri"
 Category.destroy_all
 puts "Destroyed all categories"
 
-categories = ["ATVs/Quad", "Cruisers", "Dirt Bikes", "Electric", "Sport", "UTVs", "Scooters"]
+categories = ["ATVs/Quad", "Cruisers", "Dirt Bikes", "Electric", "UTVs", "Scooters"]
 
 categories.each do |category_name|
   Category.create!(name: category_name)
