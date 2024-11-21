@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
       flash[:alert] = "Category not found."
       redirect_to roots_path # Redirect back to the index page
     else
-      @bikes = @category.bikes
+      @bikes = @category.bikes.page(params[:page]).per(10)
     end
   end
 end

@@ -54,12 +54,10 @@
 
   // Event listener for hamburger icon
   hamburgerIcon.addEventListener("click", () => {
-    // Toggle visibility of menus
-    navbarMenu.classList.toggle("show");
-    userMenu.classList.toggle("show");
+    navbarMenu.classList.toggle("show"); // Toggle nav links
+    userMenu.classList.toggle("show"); // Toggle user links
+    hamburgerIcon.classList.toggle("active"); // Animate hamburger
+  });
+});
 
-    // Add an active class to the hamburger icon
-    hamburgerIcon.classList.toggle("active");
-  });
-  });
 </script>

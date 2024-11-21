@@ -27,10 +27,13 @@
     // width: 100%;
     // height: auto;
     // overflow: hidden;
+    text-align: center;
+
     img {
       width: 100px;
       height: 100px;
       gap: 1px;
+      text-align: center;
     }
     &:hover {
       transform: translateY(-5px);
@@ -41,5 +44,8 @@
   .category-blog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .cat-img {
+    width: 100%;
   }
 }

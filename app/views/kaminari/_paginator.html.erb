@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-center">
+  <ul class="pagination">
+    <% if @bikes.first_page? %>
+      <li class="page-item disabled">
+        <span class="page-link">&laquo;</span>
+      </li>
+    <% else %>
+      <li class="page-item">
+        <%= link_to '«', url_for(page: @bikes.prev_page), class: 'page-link' %>
+      </li>
+    <% end %>
+
+    <% (1..@bikes.total_pages).each do |page| %>
+      <li class="page-item <%= 'active' if @bikes.current_page == page %>">
+        <%= link_to page, url_for(page: page), class: 'page-link' %>
+      </li>
+    <% end %>
+
+    <% if @bikes.last_page? %>
+      <li class="page-item disabled">
+        <span class="page-link">&raquo;</span>
+      </li>
+    <% else %>
+      <li class="page-item">
+        <%= link_to '»', url_for(page: @bikes.next_page), class: 'page-link' %>
+      </li>
+    <% end %>
+  </ul>
+</div>
