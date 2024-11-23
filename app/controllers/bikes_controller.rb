@@ -2,7 +2,11 @@ class BikesController < ApplicationController
   before_action :set_bike, only: %i[show edit update destroy]
   before_action :strong_params, only: %i[create update]
   def index
-    @bikes = Bike.all.limit(8)
+    if params[:query].present?
+      @bikes = Bike.global_search(params[:query]).limit(8)
+    else
+      @bikes = Bike.all.limit(8)
+    end
     @categories = Category.all
     @brands = Brand.all
     @reviews = Review.all.limit(4)
