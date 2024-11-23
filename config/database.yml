@@ -11,11 +11,13 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: pennjunior_development
-  username: penn            # Replace with your PostgreSQL username
-  password: Jupercho11      # Replace with the actual password
-  host: localhost
+  pool: 5
+  username: penn          # PostgreSQL username
+  password: Jupercho11    # PostgreSQL password
+  host: localhost         # Ensure this is correct`
 
 test:
   <<: *default

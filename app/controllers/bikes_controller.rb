@@ -2,7 +2,7 @@ class BikesController < ApplicationController
   before_action :set_bike, only: %i[show edit update destroy]
   before_action :strong_params, only: %i[create update]
   def index
-    @bikes = Bike.all.limit(10)
+    @bikes = Bike.all.limit(8)
     @categories = Category.all
     @brands = Brand.all
     @reviews = Review.all.limit(4)

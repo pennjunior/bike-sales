@@ -22,7 +22,6 @@ cruiser_category = Category.find_by(name: "Cruisers")
 atv_category = Category.find_by(name: "ATVs/Quad")
 dirtbike_category = Category.find_by(name: "Dirt Bikes")
 electric_category = Category.find_by(name: "Electric")
-
 utv_category = Category.find_by(name: "UTVs")
 scooter_category = Category.find_by(name: "Scooters")
 
@@ -43,6 +42,28 @@ brands.map do |brand_name|
   Brand.find_or_create_by!(name: brand_name)
 end
 puts "Brands created: #{Brand.count}"
+
+User.destroy_all
+puts "All users destroyed."
+
+# Creating admin user
+admin_user = User.create!(
+  email: "admin@quan.com",
+  password: "29w@jV7!4!tQ",
+  password_confirmation: "29w@jV7!4!tQ",
+  role: "admin"
+)
+puts "Admin user created with email: #{admin_user.email} and password: #{admin_user.password}"
+
+# Create a visitor user
+visitor_user = User.create!(
+  email: "visitor@quan.com",
+  password: "123456",
+  password_confirmation: "123456",
+  role: "customer"
+)
+puts "Visitor user created with email: #{visitor_user.email} and password: #{visitor_user.password}"
+
 Bike.destroy_all
 puts "Destroyed Bikes"
 require_relative "seeds/atvs"

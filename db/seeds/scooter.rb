@@ -18,7 +18,17 @@ agility_rs_125 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "Air-cooled, 4-stroke, single-cylinder 125cc engine, efficient fuel economy",
-  features: "Spacious under-seat storage, LED headlight, front and rear disc brakes...",
+  features: "• 124.8cc, single-cylinder, air-cooled engine delivering efficient and reliable power for city commuting and everyday use
+  • Smooth and responsive performance with a 5-speed manual transmission, ideal for both beginner and experienced riders seeking control and agility
+  • Sporty and modern styling with sharp lines, aggressive graphics, and a sleek, compact body designed for both performance and aesthetics
+  • Lightweight frame and low seat height for easy maneuverability and confidence on city streets, offering a nimble and comfortable ride
+  • Telescopic front forks and twin rear shock absorbers for enhanced stability and a smooth ride over uneven roads
+  • 17-inch front and 14-inch rear alloy wheels paired with high-performance tires for superior grip and handling in various urban conditions
+  • High-efficiency LED lighting for improved visibility, including a stylish LED headlamp and taillights
+  • Digital display showing essential information like speed, trip meter, fuel level, and time, for easy monitoring of your ride
+  • Front disc brake and rear drum brake system offering reliable stopping power with smooth, controlled braking performance
+  • Generous 9-liter fuel tank for an extended riding range, reducing the need for frequent stops during daily commutes
+  • Eco-friendly and fuel-efficient design, ensuring low emissions and minimal maintenance for a long-lasting, hassle-free ownership experience.",
   price: 1499,
   stock: 10,
   maximum_speed: 95,
@@ -54,7 +64,17 @@ honda_pcx_160 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2018),
   description: "156cc liquid-cooled, 4-stroke engine with smart key and start-stop technology",
-  features: "• ABS, LED lights, under-seat storage for full-face helmet...",
+  features: "• 157cc, single-cylinder, liquid-cooled engine delivering smooth and efficient power for both city commuting and longer rides
+  • Sleek, modern scooter design with sharp lines, sporty aesthetics, and a premium look that stands out on the road
+  • Fuel-efficient engine with Honda's eSP+ technology, offering impressive mileage for daily commutes and reduced emissions for eco-friendly riding
+  • V-Matic automatic transmission for smooth and effortless acceleration, making it perfect for both new and experienced riders
+  • Comfortable, large seat design with ample foot space for a relaxed riding experience, even on longer journeys
+  • Spacious under-seat storage with enough room for a full-face helmet and other essentials, ideal for daily commuting or running errands
+  • Full LED lighting package including a bold LED headlamp, taillights, and turn signals for improved visibility and modern styling
+  • 14-inch front and 13-inch rear wheels, providing excellent stability and handling on a variety of surfaces
+  • Advanced digital dashboard with easy-to-read displays for speed, fuel level, trip meter, and other important ride information
+  • Honda's Combined Braking System (CBS) for enhanced braking performance, offering smooth and confident stops
+  • Low-maintenance and durable design with high-quality materials, ensuring reliability and longevity for daily use.",
   price: 1799,
   stock: 8,
   maximum_speed: 100,
@@ -89,7 +109,17 @@ yamaha_nmax_155 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "155cc, liquid-cooled, 4-stroke engine with variable valve actuation",
-  features: "• LCD instrument cluster, LED lighting, ABS...",
+  features: "• 155cc, single-cylinder, liquid-cooled engine equipped with Yamaha's Variable Valve Actuation (VVA) system for smooth performance and excellent fuel efficiency
+  • Modern and sporty design with sharp lines, bold graphics, and a compact body that’s perfect for city riding and tight spaces
+  • Automatic V-Belt transmission for seamless acceleration, making it easy to ride and perfect for both beginner and experienced riders
+  • Lightweight and agile chassis for enhanced handling and stability, ensuring a smooth ride through traffic and on winding roads
+  • Comfortable and wide seat with ample legroom, providing excellent rider comfort during both short and long commutes
+  • Spacious under-seat storage with enough space to hold a full-face helmet and other essentials for daily use
+  • Full LED lighting, including a stylish LED headlamp and taillights, improving visibility while giving the scooter a modern, sleek look
+  • 13-inch front and rear wheels designed to provide a balance of stability and comfort, with high-performance tires for solid grip
+  • Advanced digital dashboard displaying essential information such as speed, fuel level, trip meter, and other key metrics
+  • Unified Braking System (UBS) for improved braking control and safety, providing smooth and responsive stopping power
+  • Yamaha's renowned reliability, low maintenance, and durable build, making the NMAX 155 a great long-term investment for urban commuters.",
   price: 599,
   stock: 6,
   maximum_speed: 105,
@@ -122,7 +152,16 @@ suzuki_110 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2022),
   description: "278cc liquid-cooled, 4-stroke engine with classic Italian styling",
-  features: "• ABS, LED lights, enhanced ergonomics, modern digital dashboard...",
+  features: "• 113cc, single-cylinder, air-cooled engine designed for efficient fuel consumption and reliable performance in urban commuting
+  • Lightweight and compact design, making it highly maneuverable and perfect for navigating busy city streets and tight spaces
+  • V-belt automatic transmission for smooth, effortless acceleration, ideal for new riders and those looking for a stress-free riding experience
+  • Spacious under-seat storage with enough capacity for a helmet and other essentials, offering convenience for daily errands and commuting
+  • Front telescopic forks and rear twin shock absorbers for a comfortable and stable ride, even on uneven urban roads
+  • 10-inch front and 10-inch rear wheels, providing excellent stability and agility while maintaining a compact profile for easy handling
+  • Full LED headlamp and taillight for improved visibility and a modern, stylish appearance, ensuring safe riding at night or in low light conditions
+  • Large, ergonomic seat design for increased comfort during both short and long rides, ideal for urban commuters
+  • Fuel-efficient design, offering an impressive fuel economy for long-range commutes with fewer stops for refueling
+  • Suzuki's reputation for reliability, low maintenance, and durable build quality, ensuring a long-lasting and dependable ride for daily use.",
   price: 2299,
   stock: 4,
   maximum_speed: 120,
@@ -154,7 +193,17 @@ piaggio_bv_350 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "330cc single-cylinder, liquid-cooled engine with smooth power delivery",
-  features: "• Large wheels, dual-disc ABS, spacious under-seat storage...",
+  features: "• 350cc, single-cylinder, liquid-cooled engine delivering strong performance with excellent acceleration and top speed, ideal for both city commuting and longer rides
+  • Smooth, responsive CVT (Continuously Variable Transmission) for effortless acceleration and easy handling in various traffic conditions
+  • Modern and sporty design with clean lines, a large front shield, and stylish curves, providing both comfort and an eye-catching aesthetic
+  • Comfortable seat with ample space for the rider and passenger, ensuring a relaxed and comfortable ride, even on longer journeys
+  • Full LED lighting system, including a sleek LED headlamp and tail light for improved visibility and a contemporary look
+  • Large, spacious under-seat storage capable of holding a full-face helmet and more, perfect for daily commuting and running errands
+  • 16-inch front and 14-inch rear wheels with high-performance tires, providing excellent stability, grip, and smooth handling across a variety of surfaces
+  • Advanced digital dashboard offering essential information such as speed, fuel level, and trip data in a sleek and easy-to-read format
+  • Anti-lock Braking System (ABS) and front and rear disc brakes for enhanced stopping power and safety
+  • Large fuel tank for extended range and fewer stops, making it ideal for longer trips and highway cruising
+  • Piaggio's reputation for quality and reliability, delivering a low-maintenance, high-performance scooter for daily use.",
   price: 2200,
   stock: 5,
   maximum_speed: 130,
@@ -189,7 +238,17 @@ sym_jet14_200 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "168cc air-cooled engine with sporty design, stable ride",
-  features: "• Dual headlights, integrated fuel tank, comfortable seating...",
+  features: "• 169cc, single-cylinder, liquid-cooled engine offering impressive power and smooth performance, ideal for both city commuting and weekend rides
+  • CVT (Continuously Variable Transmission) for smooth acceleration and effortless gear transitions, making it perfect for both new and experienced riders
+  • Sporty and aggressive styling with sharp lines, sleek bodywork, and modern graphics, giving the Jet14 200 a dynamic and eye-catching appearance
+  • Comfortable, wide seat with ample space for both rider and passenger, ensuring a relaxed ride during short or longer journeys
+  • Full LED lighting system, including a bright LED headlamp, stylish tail lights, and integrated turn signals for enhanced visibility and modern aesthetics
+  • 14-inch alloy wheels with high-performance tires for superior grip, stability, and handling on various road surfaces
+  • Spacious under-seat storage capable of holding a full-face helmet and other essentials, providing convenience for daily commuting or running errands
+  • Advanced digital instrument cluster displaying key information such as speed, fuel level, trip meter, and time, for easy monitoring on the go
+  • Front and rear disc brakes with a combined braking system (CBS) for responsive, reliable stopping power and added safety
+  • Economical fuel efficiency for longer riding range with fewer stops, perfect for both city commutes and weekend excursions
+  • SYM’s reputation for reliability, low maintenance, and durable build, ensuring a long-lasting, hassle-free ownership experience.",
   price: 2_899,
   stock: 7,
   maximum_speed: 95,
@@ -207,7 +266,6 @@ sym_jet14_200_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156808/66b07fef296e05564264905c_abhbsz.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156810/66b07ff88cfcc6322e52b6f9_ba0i0g.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156811/66b07ff40150852e061abf43_oey5cy.webp"
-
 ]
 sym_jet14_200_urls.each_with_index do |url, index|
   file = URI.open(url)

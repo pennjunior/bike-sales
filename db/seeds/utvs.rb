@@ -21,7 +21,17 @@ uforce_600 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "580cc single-cylinder, liquid-cooled engine with automatic CVT",
-  features: "• Electronic power steering, large dump bed, winch included...",
+  features: "• 580cc, single-cylinder, liquid-cooled engine delivering robust power and torque, perfect for off-road adventures, work, and utility tasks
+  • Electronic Fuel Injection (EFI) system for improved fuel efficiency, smoother engine response, and reliable performance across various terrains
+  • Fully automatic transmission with high/low range gearing and a selectable 2WD/4WD system for enhanced traction and versatility in both rough and smooth terrain
+  • Durable, heavy-duty chassis with a long-travel suspension system, including independent A-arm front suspension and rear dual shock absorbers for a smooth ride on uneven ground
+  • Ergonomically designed cabin with a comfortable, adjustable seat, roomy footrests, and high ground clearance for added comfort and control in rugged conditions
+  • 12-inch alloy wheels with aggressive tires that provide excellent grip and stability on dirt, mud, gravel, and rocky paths
+  • Large, 300kg towing capacity and generous cargo bed with 500kg payload capacity, making the UFORCE 600 an ideal choice for heavy-duty work and hauling
+  • LED headlights and taillights for improved visibility and durability, ensuring safe travel even in low-light conditions
+  • Hydraulic disc brakes for precise and effective stopping power on various surfaces
+  • Digital dashboard with key ride information including speed, trip meter, fuel level, and more for easy monitoring on the go
+  • CFMOTO’s reputation for durability, low maintenance, and high-quality build, ensuring reliable performance for work, recreation, and exploration.",
   price: 10499,
   stock: 7,
   maximum_speed: 70,
@@ -57,7 +67,17 @@ ranger_xp_1000 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2020),
   description: "999cc ProStar engine with electronic power steering",
-  features: "• Heavy-duty tires, 82 HP, 2,500 lb towing capacity...",
+  features: "• 999cc, twin-cylinder, liquid-cooled engine providing powerful performance and impressive torque, designed for tough jobs and off-road adventures
+  • High-performance ProStar engine with Electronic Fuel Injection (EFI) for smooth acceleration and reliable fuel efficiency, ensuring optimum power in various terrains
+  • Full-time 4WD with an On-Demand True AWD system for exceptional traction and stability, ideal for navigating rough trails, mud, and rocky paths
+  • Robust, heavy-duty chassis and independent rear suspension (IRS) with 12.25 inches of rear suspension travel for a smooth, comfortable ride over challenging terrain
+  • 11 inches of ground clearance and a 2,000 lbs towing capacity, making the Ranger XP 1000 Premium perfect for hauling heavy loads, equipment, or trailers
+  • Large 27-inch tires with durable wheels for added grip, allowing confident maneuvering on a variety of surfaces
+  • Comfortable seating for up to three passengers with ample legroom and ergonomic features, ensuring a smooth ride on long trips
+  • Advanced 7-inch touchscreen display for easy access to key information like GPS navigation, ride modes, and more
+  • LED headlights and a premium audio system for improved visibility and enjoyment during night rides or while working after dark
+  • Premium trim features, including high-quality upholstery, a locking glove box, and enhanced fit and finish for a more refined off-road experience
+  • Polaris’ renowned durability and reliability, backed by a reputation for rugged performance and minimal maintenance requirements.",
   price: 12999,
   stock: 4,
   maximum_speed: 80,
@@ -92,7 +112,17 @@ mule_pro_fx = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "812cc three-cylinder, fuel-injected engine with CVT",
-  features: "• Large cargo bed, 2,000 lb towing, full-size chassis...",
+  features: "• 812cc, three-cylinder, liquid-cooled engine providing smooth, reliable power for demanding work tasks and off-road exploration
+  • Electronic Fuel Injection (EFI) for improved fuel efficiency, consistent performance, and easier starting in various weather conditions
+  • Durable, heavy-duty chassis designed to handle tough workloads and off-road adventures, with 4WD capabilities for exceptional traction across rugged terrain
+  • Independent rear suspension (IRS) and long-travel front suspension system, offering a smooth and comfortable ride even on rough and uneven surfaces
+  • Class-leading 1,000 lbs cargo bed capacity and a towing capacity of up to 2,000 lbs, ideal for hauling heavy loads or towing equipment on the job site
+  • Spacious, comfortable cabin with room for up to three passengers, featuring ergonomic seating and a tilt steering wheel for added convenience
+  • 10.5 inches of ground clearance, allowing for better obstacle clearance and improved maneuverability in challenging terrain
+  • LED headlights for superior visibility during night rides or in low-light conditions, with an added benefit of low power consumption
+  • Large 26-inch tires for enhanced grip and stability, providing traction over mud, rocks, and dirt roads
+  • Easy-to-use digital display for monitoring essential vehicle information such as speed, fuel level, and trip data
+  • Kawasaki’s reputation for reliability and toughness, backed by a commitment to long-lasting performance, minimal maintenance, and a high standard of durability.",
   price: 10299,
   stock: 5,
   maximum_speed: 75,
@@ -132,7 +162,17 @@ defender_hd10 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "976cc V-twin engine with intelligent throttle control",
-  features: "• 82 HP, 2,500 lb towing, removable cargo box...",
+  features: "• 976cc, V-twin, liquid-cooled engine delivering exceptional power and torque for heavy-duty tasks, off-road adventures, and rugged terrain
+  • Rotax® HD10 engine with advanced Electronic Fuel Injection (EFI) for smooth throttle response, fuel efficiency, and reliable performance under various conditions
+  • Visco-Lok QE auto-locking front differential, providing optimal traction and stability on slippery or uneven surfaces, ensuring confidence in challenging off-road conditions
+  • High-strength chassis and robust suspension with dual A-arm front and rear suspension, offering 13 inches of front and 12.5 inches of rear suspension travel for a smooth ride on rough trails
+  • 1,500 lbs of towing capacity and a 1,000 lbs payload capacity in the cargo box, making it ideal for hauling tools, equipment, and materials on the job site or off-road
+  • Spacious cabin with seating for three, designed for comfort and ease, with ergonomic seating and easy access to controls
+  • Large 27-inch tires for superior ground clearance and traction, perfect for navigating mud, rocks, sand, and snow
+  • High-performance LED headlights for improved visibility in low-light conditions and during nighttime rides
+  • Can-Am's industry-leading DPS (Dynamic Power Steering) system for precise handling and effortless steering in all conditions
+  • Digital display showing essential ride data including speed, fuel level, and trip information for easy monitoring while on the go
+  • Built with Can-Am's reputation for durability and reliability, ensuring long-lasting performance and minimal maintenance.",
   price: 16_999,
   stock: 3,
   maximum_speed: 85,
@@ -170,7 +210,17 @@ pro_xp_ultimate = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2022),
   description: "925cc twin-cylinder turbo engine with CVT",
-  features: "181 HP, FOX live valve suspension, high clearance...",
+  features: "• 925cc turbocharged engine delivering an impressive 181 horsepower, providing unrivaled power and acceleration for extreme off-road performance
+  • High-performance, variable-tuned exhaust system for optimized engine response and enhanced durability, designed for maximum power output on the toughest trails
+  • Dynamix Elite active suspension system with 3 inches of adjustability, offering superior ride comfort and precision handling on rough, rocky, or uneven terrain
+  • 64-inch wide stance and 22 inches of ground clearance for exceptional stability and the ability to tackle steep inclines, rocks, and obstacles with ease
+  • Fully independent suspension with 18 inches of front and 22 inches of rear travel for smooth handling and control, even at high speeds or over rough trails
+  • Polaris' exclusive Smart-Way power steering system, delivering precise steering control and responsiveness, making the RZR Pro XP Ultimate easy to handle in any off-road condition
+  • Premium digital dash with a 7-inch touchscreen, showing ride metrics such as speed, fuel level, GPS, and trip information for easy monitoring
+  • High-performance LED lighting for superior visibility during night rides, including a bright LED light bar
+  • 29-inch tires with beadlock rims, providing excellent traction, durability, and a smooth ride across a variety of surfaces
+  • Durable, heavy-duty frame and cage designed for safety, stability, and long-lasting performance in extreme conditions
+  • Enhanced comfort features, including plush seating, adjustable harnesses, and ample legroom for extended trail rides.",
   price: 23999,
   stock: 2,
   maximum_speed: 90,
@@ -205,7 +255,16 @@ teryx_krx_1000 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "999cc parallel-twin engine with CVT transmission",
-  features: "FOX 2.5 PODIUM shocks, rugged frame, high ground clearance...",
+  features: "• 999cc, twin-cylinder, liquid-cooled engine delivering exceptional power and torque, designed to tackle even the most challenging off-road trails and rugged environments
+  • High-performance, long-travel suspension system with independent front and rear suspension, offering 21 inches of front and 24 inches of rear suspension travel for a smooth ride on tough terrain
+  • Durable and rugged chassis with a 64-inch width, providing exceptional stability and agility, ideal for high-speed trail rides and navigating tight spots
+  • Heavy-duty Fox® 2.5 Podium LSC (Low-Speed Compression) shocks, delivering superior comfort and handling, allowing for fine-tuned suspension adjustments on the fly
+  • 32-inch tires with beadlock wheels, providing excellent traction and durability across mud, rocks, sand, and snow
+  • Optimized steering system with power-assisted steering, ensuring precise handling and effortless maneuvering on even the most technical trails
+  • Aggressive styling with bold graphics, enhanced by LED headlights for improved visibility during night rides and in low-light conditions
+  • Spacious, ergonomic cockpit with a comfortable bench seat and harness-style seatbelts, designed for comfort and safety during long rides
+  • 2,000 lbs towing capacity and 600 lbs cargo bed capacity, perfect for hauling gear or supplies during trail adventures or work tasks
+  • Kawasaki’s reputation for durability and performance, backed by a robust build quality and minimal maintenance needs, ensuring long-lasting enjoyment in all conditions.",
   price: 17000,
   stock: 4,
   maximum_speed: 95,

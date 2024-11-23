@@ -24,7 +24,18 @@ heritage_classic_114 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Milwaukee-Eight 114 V-Twin engine, ABS brakes, classic chrome styling",
-  features: "Removable windscreen, cruise control, saddlebags...",
+  features: "• Milwaukee-Eight® 107 V-Twin engine delivering iconic Harley-Davidson performance with 1746cc of smooth, responsive power and torque
+  • Classic and stylish design with a full front fender, nostalgic lighting, and chrome accents that embody the spirit of vintage touring motorcycles
+  • Softail® frame with a modern design for enhanced ride comfort and performance, paired with a hidden rear suspension for a smooth and responsive ride
+  • 6-speed Cruise Drive® transmission for effortless highway cruising and exceptional fuel efficiency at higher speeds
+  • Dual front disc brakes for powerful, consistent stopping performance in all conditions
+  • Large, comfortable solo seat and pillion for rider and passenger comfort during long-distance journeys
+  • High-quality leather saddlebags offering ample storage space with a vintage look and feel
+  • Full LED lighting, including signature LED taillight and Daymaker™ LED headlamp for improved visibility and modern styling
+  • Cruise control, keyless ignition, and a premium audio system for enhanced convenience and entertainment on long rides
+  • 16-inch cast aluminum wheels with polished chrome spokes, designed for both durability and style
+  • Classic windshield to protect from wind and debris while maintaining an iconic cruiser appearance
+  • Iconic Harley-Davidson build quality for a timeless look, long-lasting durability, and unmatched performance on the open road.",
   price: 11799,
   stock: 3,
   maximum_speed: 180,
@@ -61,7 +72,18 @@ indian_chief_dark_horse = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Thunderstroke 116 V-Twin engine, keyless ignition, digital display",
-  features: "• LED lighting, 4-inch touchscreen, Bluetooth compatibility...",
+  features: "• Thunderstroke 111 V-Twin engine delivering 1811cc of smooth, powerful torque and unmatched low-end power for thrilling rides
+  • Bold, blacked-out styling with matte black finishes, chrome accents, and minimalist design for a modern, aggressive cruiser look
+  • Classic Indian Motorcycle design with a full fender, wide handlebars, and iconic illuminated headlamp for a striking presence on the road
+  • Modern engineering with a robust frame and the addition of adjustable rear suspension for a comfortable and controlled ride
+  • 6-speed constant mesh transmission for smooth cruising and high-speed performance on highways and long-distance journeys
+  • Digital display with Ride Command® for easy access to navigation, music, and vehicle information, enhancing the riding experience
+  • Large solo seat with premium stitching and ergonomic design, ensuring comfort for the rider on extended trips
+  • Dual-disc front brakes with Brembo® calipers for enhanced stopping power and confidence in any riding condition
+  • 16-inch wheels with blacked-out spokes for a sleek, aggressive appearance and superior performance on all road types
+  • Keyless ignition and integrated security system for added convenience and safety
+  • USB charging port, cruise control, and Bluetooth® connectivity to stay connected and powered during long rides
+  • Indian Motorcycle’s legendary craftsmanship for long-lasting durability and iconic American cruiser performance.",
   price: 18_499,
   stock: 2,
   maximum_speed: 175,
@@ -96,7 +118,18 @@ rebel_1100 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "1084cc parallel-twin engine, Honda Selectable Torque Control",
-  features: "• Dual-clutch transmission, cruise control, LED lighting...",
+  features: "• 1084cc liquid-cooled, parallel-twin engine delivering smooth, responsive power and exceptional torque for both city cruising and highway touring
+  • Automatic DCT (Dual Clutch Transmission) or traditional 6-speed manual transmission options, offering a personalized riding experience for different preferences
+  • Classic cruiser styling with minimalist design, including a low-slung seat, wide handlebars, and clean lines for a bold and iconic look
+  • Advanced ride-by-wire throttle system for smooth power delivery and precise throttle control
+  • Honda Selectable Torque Control (HSTC) for enhanced safety and traction by adjusting power delivery on various road conditions
+  • Dual-channel ABS for added stopping power and control, especially in adverse conditions or tight corners
+  • LED lighting throughout, including a distinctive LED headlamp and taillights for improved visibility and modern style
+  • 17-inch front and 16-inch rear wheels with wide tires for superior stability and grip on both city streets and longer rides
+  • Fully adjustable suspension system with 43mm fork and twin rear shocks for a smooth, comfortable ride over varied terrain
+  • Compact and lightweight frame for easier handling and maneuverability, making it perfect for both beginner and experienced riders
+  • Digital display with key metrics like speed, fuel, and trip meter for easy monitoring on the go
+  • Honda’s reputation for reliability, low maintenance, and long-lasting performance in the cruiser segment.",
   price: 6399,
   stock: 5,
   maximum_speed: 160,
@@ -131,7 +164,18 @@ vulcan_900_classic = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "903cc V-twin, fuel-injected engine with classic cruiser styling",
-  features: "• Wide handlebars, studded seats, footboards...",
+  features: "• 903cc V-twin engine providing smooth and powerful performance with plenty of low-end torque for an exciting yet comfortable ride
+  • 5-speed transmission for smooth shifting and excellent performance on both city streets and highways
+  • Low-slung custom cruiser design with a minimalist look, featuring a narrow, sculpted fuel tank and extended fenders for a sleek, aggressive stance
+  • Large 21-inch front wheel for a distinctive, custom cruiser look and enhanced stability on the road
+  • Classic chrome accents and detailed finish, adding to the bike's timeless style and overall aesthetic appeal
+  • Comfortable solo seat with an ergonomic design, ensuring rider comfort on long rides
+  • Twin rear shocks with adjustable preload for a smooth ride and customizable suspension setup to match rider preferences
+  • Digital speedometer with trip meter, odometer, and fuel gauge for easy monitoring of key ride information
+  • Dual front disc brakes and rear drum brake for confident stopping power and safety in a variety of riding conditions
+  • Wide 18-inch rear tire for improved traction and stability, enhancing the bike's overall performance and handling
+  • Sleek, custom-style exhaust system with a deep, rumbling sound that complements the bike’s powerful V-twin engine
+  • Kawasaki’s renowned build quality and low-maintenance design for long-lasting durability and reliability.",
   price: 6199,
   stock: 6,
   maximum_speed: 155,
@@ -162,7 +206,18 @@ boulevard_c50 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "805cc fuel-injected V-twin, liquid-cooled engine with classic styling",
-  features: "• Full fenders, wide handlebars, comfortable seating...",
+  features: "• 805cc, V-twin, liquid-cooled engine delivering a smooth and responsive ride with plenty of torque for cruising and long-distance touring
+  • Suzuki’s Dual Throttle Valve (DTV) system for improved throttle response and fuel efficiency across a wide range of riding conditions
+  • Stylish cruiser design with sleek, retro-inspired lines, chrome accents, and classic fenders for a timeless look
+  • 5-speed constant mesh transmission for smooth gear shifts and enhanced highway performance
+  • Comfortable, wide solo seat with ergonomically designed handlebars for relaxed cruising and reduced rider fatigue
+  • Twin chrome mufflers with deep, rumbling exhaust sound that enhances the bike's powerful V-twin engine
+  • 16-inch front and 15-inch rear spoked wheels with wide tires for excellent handling and stability on both city streets and highways
+  • Full front fork suspension and rear shock absorbers with adjustable preload for a smooth ride over varied terrain
+  • Large 5.1-gallon fuel tank for extended riding range and fewer stops during long tours
+  • Dual front disc brakes and a rear drum brake for reliable and responsive stopping power
+  • Custom-style full fenders, chrome accents, and minimalist aesthetic elements that highlight the bike's classic cruiser appeal
+  • Suzuki's reputation for reliability and low maintenance, ensuring long-lasting performance for years of enjoyment.",
   price: 3649,
   stock: 4,
   maximum_speed: 150,
@@ -197,7 +252,18 @@ fat_bob_114 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Milwaukee-Eight 114 engine, dual exhaust, signature LED headlight",
-  features: "• Aggressive styling, wide tires, 2-1-2 exhaust...",
+  features: "• 114 cubic inch (1868cc) Milwaukee-Eight® V-Twin engine delivering massive power and torque for thrilling acceleration and long-distance cruising
+  • Aggressive styling with a muscular stance, featuring a chopped rear fender, custom exhaust, and bold tank graphics for a unique, modern look
+  • Dual-disc front brakes with floating rotors for powerful, responsive stopping performance in all riding conditions
+  • 6-speed Cruise Drive® transmission for smooth, effortless shifting and excellent highway performance
+  • Softail® frame with updated suspension, featuring a rear mono-shock design for a smooth ride while maintaining the iconic hardtail look
+  • 5-gallon fuel tank for longer rides and fewer stops, perfect for extended cruising or touring
+  • Signature LED headlamp and taillights for enhanced visibility and modern styling
+  • Adjustable front and rear suspension, allowing riders to fine-tune their ride for comfort and performance
+  • Fat, 16-inch front and rear tires for superior grip and stability on a variety of surfaces, from city streets to winding roads
+  • 2-1-2 exhaust with dual mufflers offering a rich, throaty sound that complements the power of the V-Twin engine
+  • Keyless ignition and integrated security system for added convenience and safety
+  • Customizable features and Harley-Davidson's legendary craftsmanship for a bike built for high performance and long-lasting enjoyment.",
   price: 19_299,
   stock: 3,
   maximum_speed: 190,
@@ -232,7 +298,17 @@ harley_davidson = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2016),
   description: "4-stroke, Air/Oil cooled, 8-valve, OHV, Milwaukee-8 117 V-Twin",
-  features: "Key Aggressive bodywork...",
+  features: "• 494cc liquid-cooled, V-Twin engine providing smooth, responsive power for urban riding and entry-level riders looking for performance and style
+  • Lightweight frame and low seat height for easy handling, maneuverability, and a comfortable riding experience, ideal for new riders
+  • 6-speed constant mesh transmission for smooth shifting and efficient cruising, offering both city commuting and weekend riding versatility
+  • Modern, minimalist design with a classic Harley-Davidson stance, featuring a blacked-out finish and iconic tank shape
+  • 17-inch front and 15-inch rear wheels with spoked rims for improved stability and handling, perfect for navigating city streets and tight corners
+  • 2-into-1 exhaust system with a distinctive, throaty sound that embodies Harley-Davidson's iconic rumble
+  • Low center of gravity and responsive suspension with telescopic front forks and twin rear shocks for a smooth and comfortable ride
+  • Simple yet functional LCD instrument display showing speed, fuel level, gear position, and other essential ride information
+  • Dual-disc front brakes with hydraulic calipers for effective stopping power and confident braking in traffic and at higher speeds
+  • Customizable features with multiple color options and accessories to personalize the bike to suit your style
+  • Harley-Davidson's commitment to quality and craftsmanship, delivering reliability, ease of maintenance, and long-lasting performance.",
   price: 10000,
   stock: 2,
   maximum_speed: 180,

@@ -1,0 +1,10 @@
+// app/assets/stylesheets/custom_bootstrap.scss or app/javascript/stylesheets/custom_bootstrap.scss
+
+// Override Bootstrap's default primary color
+$primary: #ff6600;  // Set your custom color (in this case, orange)
+
+// Import Bootstrap's SCSS files after overriding variables
+// @import 'bootstrap/scss/functions';
+// @import 'bootstrap/scss/variables'; // Ensure you're overriding Bootstrap variables
+// @import 'bootstrap/scss/mixins';
+// @import 'bootstrap/scss/bootstrap';  // Import the rest of Bootstrap styles

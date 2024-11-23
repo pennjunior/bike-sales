@@ -1,46 +1,48 @@
 <!-- Main Image Section -->
-<div class="row">
-  <div class="col-8">
-    <div class="container">
-      <div class="slider-container">
-        <div class="bike-main-image">
-          <% if @bike.photos.attached? %>
-            <% @bike.photos.each_with_index do |photo, index| %>
-              <div class="mySlides">
-                <div class="numbertext"><i class="fa-solid fa-camera"></i> <%= index + 1 %>/<%= @bike.photos.count %></div>
-                <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
+<div class="bike-container">
+  <!-- Bike Slider Section -->
+  <div class="bike-slider">
+    <div class="slider-container">
+      <div class="bike-main-image">
+        <% if @bike.photos.attached? %>
+          <% @bike.photos.each_with_index do |photo, index| %>
+            <div class="mySlides">
+              <div class="numbertext">
+                <i class="fa-solid fa-camera"></i> <%= index + 1 %>/<%= @bike.photos.count %>
               </div>
-            <% end %>
+              <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
+            </div>
           <% end %>
+        <% end %>
 
-          <!-- Navigation buttons container -->
-          <div class="slider-nav">
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-          </div>
+        <!-- Navigation buttons -->
+        <div class="slider-nav">
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
       </div>
+    </div>
+
+    <!-- Bike Gallery -->
     <div class="bike-gallery">
       <% if @bike.photos.attached? %>
         <div class="thumbnails">
           <% @bike.photos.each_with_index do |photo, index| %>
-            <% next if index == 0 %> <!-- Skip the first image as it is the main image -->
-            <%= cl_image_tag(photo.key, height: 100, width: 100, crop: :fill, class: "thumbnail", onclick: "currentSlide(#{index + 1})") %>
+            <% next if index == 0 %> <!-- Skip the first image -->
+            <%= cl_image_tag photo.key, height: 100, width: 100, crop: :fill, class: "thumbnail", onclick: "currentSlide(#{index + 1})" %>
           <% end %>
         </div>
       <% end %>
     </div>
-
-
-    </div>
   </div>
+
   <!-- Order Form Section -->
-  <div class="col-4" style="margin-top: 5%;">
-        <!-- Bike description -->
+  <div class="bike-form">
     <%= simple_form_for [@bike, @order],
       local: true,
       data: { controller: "loading", action: "submit->loading#showSpinner" },
-      html: { class: "custom-bike-form ", style: "height: 70%" } do |form| %>
+      html: { class: "custom-bike-form" } do |form| %>
+
       <h1 class="bike-show-title"><%= @bike.model %></h1>
       <h1 class="bike-show-title"><%= number_to_currency(@bike.price) %></h1>
 
@@ -55,39 +57,29 @@
         </div>
       <% end %>
 
-      <div class="form-group <%= 'has-error' if @order.errors[:name].any? %>">
+      <div class="form-group">
         <%= form.label :name %>
         <%= form.text_field :name, class: "form-control" %>
-        <% if @order.errors[:name].any? %>
-          <small class="form-text text-danger"><%= @order.errors[:name].first %></small>
-        <% end %>
       </div>
 
-      <div class="form-group <%= 'has-error' if @order.errors[:email].any? %>">
+      <div class="form-group">
         <%= form.label :email %>
         <%= form.email_field :email, class: "form-control" %>
-        <% if @order.errors[:email].any? %>
-          <small class="form-text text-danger"><%= @order.errors[:email].first %></small>
-        <% end %>
       </div>
 
       <div class="form-group">
         <%= form.label :phone %>
-        <%=form.number_field :phone %>
+        <%= form.number_field :phone, class: "form-control" %>
       </div>
 
-      <div class="form-group <%= 'has-error' if @order.errors[:quantity].any? %>">
+      <div class="form-group">
         <%= form.label :quantity %>
         <%= form.number_field :quantity, min: 1, class: "form-control" %>
-        <% if @order.errors[:quantity].any? %>
-          <small class="form-text text-danger"><%= @order.errors[:quantity].first %></small>
-        <% end %>
       </div>
 
       <div class="form-group submit-button">
         <%= form.button :submit, "Request Purchase Info", class: "btn btn-dark text-white" %>
       </div>
-      <span class="loader text-center" data-loading-target="spinner" style="display: none;"></span>
     <% end %>
   </div>
 </div>

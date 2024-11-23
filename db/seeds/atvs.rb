@@ -63,7 +63,21 @@ kingquad = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Suzuki KingQuad 500AXi Power Steering SE+...",
-  features: "• Key Aggressive bodywork...",
+  features: "• Rugged and aggressive bodywork design, optimized for utility and off-road performance
+  • Advanced power steering system for improved handling and reduced rider fatigue
+  • High-performance 493cc liquid-cooled, single-cylinder, four-stroke engine for reliable power
+  • Fully independent suspension system for exceptional ride comfort on uneven terrain
+  • Sealed front and rear disc brakes for consistent stopping power in all conditions
+  • Durable chassis and skid plates for enhanced protection in rugged environments
+  • Multi-function digital instrument panel with clear readouts for speed, fuel level, and more
+  • Ergonomic seat and handlebar positioning for rider comfort during long hours of use
+  • Versatile towing capacity and heavy-duty racks for transporting tools or cargo
+  • Compact yet sturdy design, perfect for agricultural, utility, or recreational applications
+  • High-capacity fuel tank for extended rides without frequent refueling
+  • Engine braking system for better control on steep descents
+  • Water-resistant storage compartments for added convenience in all weather conditions
+  • Easy-to-use push-button 2WD/4WD drive selection for tackling diverse terrains effortlessly
+  • Aggressive all-terrain tires for superior traction in mud, snow, or loose dirt.",
   price: 3599.0,
   stock: 6,
   brand_id: suzuki_brand_id,
@@ -91,11 +105,25 @@ honda_crf = Bike.create!(
   kilometers: 2342,
   body: "Dual Purpose",
   colour: "Red/Black",
-  engine_capacity: 250,
+  engine_capacity: 249,
   registration_status: "registered",
   last_modified: Date.new(2018),
   description: "4-stroke, Air/Oil cooled, 8-valve, OHV, Milwaukee-8 117 V-Twin",
-  features: "• Key Aggressive bodywork...",
+  features: "• Lightweight and compact chassis, perfect for both on-road and off-road riding
+• High-performance 249cc liquid-cooled, single-cylinder, four-stroke engine for smooth power delivery
+• Programmed Fuel Injection (PGM-FI) system for efficient fuel consumption and consistent throttle response
+• Long-travel suspension system with Showa inverted front forks for excellent handling on rough terrain
+• Durable steel frame designed for maximum stability and resilience during off-road adventures
+• Comfortable and slim seat profile for enhanced rider movement and control
+• Digital instrument panel with speedometer, tachometer, fuel gauge, and clock for easy monitoring
+• Dual-purpose tires with exceptional grip for navigating dirt trails and paved roads
+• Lightweight aluminum swingarm for improved rear suspension performance and reduced weight
+• Electric start system for quick and reliable ignition in all conditions
+• Rear disc brake and wave-style front disc brake for strong and consistent stopping power
+• Stylish, aggressive bodywork inspired by Honda’s championship-winning motocross bikes
+• Conveniently located fuel tank with 7.8L capacity for extended riding without frequent refueling
+• Street-legal design with headlight, taillight, and turn signals for urban commutes and trail riding
+• Dependable Honda engineering for long-lasting reliability and minimal maintenance.",
   price: 6990,
   stock: 3,
   maximum_speed: 70,
@@ -129,7 +157,21 @@ polaris = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2016),
   description: "4-stroke, Air/Oil cooled, 8-valve, OHV, Milwaukee-8 117 V-Twin",
-  features: "• Key Aggressive bodywork...",
+  features: "Powerful 567cc ProStar single-cylinder, four-stroke engine delivering reliable and smooth performance
+  • Heavy-duty (HD) design for demanding utility and off-road tasks
+  • Industry-leading independent rear suspension (IRS) for superior ride comfort and handling on rough terrain
+  • Heavy-duty cargo bed with a 180kg capacity for hauling tools, supplies, or equipment
+  • High ground clearance of 11 inches for navigating over rocks, logs, and uneven surfaces with ease
+  • Durable steel front and rear racks for added cargo versatility
+  • Electronic Fuel Injection (EFI) system ensuring easy starts and consistent performance in all weather conditions
+  • On-demand True All-Wheel Drive (AWD) system for superior traction on challenging terrain
+  • Engine braking system (EBS) and Active Descent Control (ADC) for confident downhill control
+  • Ergonomic seat and handlebar positioning for all-day riding comfort
+  • Multi-function digital display with speedometer, odometer, fuel gauge, and maintenance indicators
+  • Sealed steel front bumper for enhanced durability and protection
+  • Easy-access maintenance points to reduce downtime and keep the ATV in top condition
+  • Aggressive all-terrain tires designed for mud, gravel, and dirt performance
+  • High-capacity fuel tank for extended workdays or trail adventures.",
   price: 3500,
   stock: 5,
   maximum_speed: 96,
@@ -162,7 +204,21 @@ cforce = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "4-stroke, Air/Oil cooled, 8-valve, OHV, Milwaukee-8 117 V-Twin",
-  features: "• Key Aggressive bodywork...",
+  features: "• Powerful 800cc liquid-cooled, V-twin, four-stroke engine for exceptional performance and torque
+  • Electronic Power Steering (EPS) for effortless handling and reduced rider fatigue on all terrains
+  • Fully independent suspension system with high-travel A-arms for superior comfort and control
+  • Durable 14-inch alloy wheels paired with aggressive all-terrain tires for enhanced traction and stability
+  • On-demand 2WD/4WD drive modes with a locking differential for tackling challenging terrain with ease
+  • Dual hydraulic disc brakes for reliable and consistent stopping power in all conditions
+  • High-strength steel frame designed for durability and rugged use
+  • Multi-function digital dashboard displaying speed, fuel, gear, and maintenance alerts
+  • Comfortable two-up seating with backrest and grab handles for a second passenger
+  • Heavy-duty front and rear racks with impressive cargo capacities for utility and work applications
+  • Towing capacity of up to 550kg, making it ideal for agriculture or hauling heavy loads
+  • High ground clearance of 11.2 inches to navigate rocks, mud, and uneven surfaces effortlessly
+  • LED headlights and taillights for improved visibility and safety during low-light conditions
+  • Engine braking system for enhanced downhill control and smoother rides
+  • Water-resistant storage compartments for carrying essentials in any weather.",
   price: 4899,
   stock: 5,
   maximum_speed: 96,
@@ -197,7 +253,20 @@ renegade_xmr = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "91-hp Rotax V-twin engine with Smart-Lok differential",
-  features: "• FOX 1.5 PODIUM shocks...",
+  features: "• High-performance 976cc Rotax V-twin engine with liquid cooling, delivering unmatched power and torque
+  • Intelligent Throttle Control (iTC) with selectable riding modes for precision handling and adaptability
+  • Heavy-duty snorkeled air intake and relocated CVT system for superior performance in mud and water
+  • FOX 1.5 Podium QS3 shocks for customizable suspension settings and excellent ride comfort on rough terrain
+  • Premium 14-inch aluminum wheels with 30-inch ITP Cryptid mud tires for maximum traction in wet and muddy conditions
+  • Dynamic Power Steering (DPS) for effortless maneuverability and reduced steering effort
+  • High ground clearance of 13 inches to tackle deep mud, rocks, and uneven terrain with ease
+  • Fully lockable 4WD system with Visco-4Lok front differential for exceptional traction in extreme conditions
+  • Rugged steel front bumper and heavy-duty skid plates for added protection in challenging environments
+  • Ergonomic sport seat for enhanced rider control and comfort during aggressive riding
+  • Digital multi-function display with speed, RPM, gear position, fuel level, and maintenance alerts
+  • LED headlights and taillights for superior visibility during night or low-light conditions
+  • Sturdy rear rack for small cargo storage or equipment transportation
+  • Aggressive and eye-catching bodywork, built for performance and durability in extreme conditions.",
   price: 10999,
   stock: 3,
   maximum_speed: 105,
@@ -230,7 +299,21 @@ grizzly_eps = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Powerful 686cc engine with advanced chassis design for durability",
-  features: "• High-performance Ultramatic transmission...",
+  features: "• Potent 686cc liquid-cooled, SOHC, four-stroke engine delivering robust power and torque for challenging trails
+  • Electronic Power Steering (EPS) for precise handling and reduced rider fatigue on all terrains
+  • Ultramatic® automatic transmission with dual-range (Hi/Lo) drive and reverse for seamless power delivery
+  • On-Command® 3-way locking differential with 2WD, 4WD, and full diff-lock modes for superior traction control
+  • Independent double wishbone suspension with adjustable shocks for optimal comfort and performance
+  • Durable 26-inch Maxxis® tires mounted on 12-inch cast aluminum wheels for excellent grip and stability
+  • High-mounted air intake and sealed drive system for reliable performance in wet and muddy conditions
+  • Digital multifunction display with speedometer, odometer, trip meter, fuel gauge, and maintenance indicators
+  • Sturdy front and rear cargo racks with impressive load capacities for carrying tools, gear, or supplies
+  • Heavy-duty front bumper and full-length skid plates for enhanced protection in rugged environments
+  • Ergonomically designed seat and handlebar layout for all-day riding comfort
+  • Powerful halogen headlights and LED taillights for improved visibility in low-light conditions
+  • Easy-to-access maintenance points for hassle-free servicing and upkeep
+  • High ground clearance of 11.3 inches for tackling rocks, logs, and uneven terrain effortlessly
+  • Yamaha’s renowned build quality and reliability for long-lasting performance and durability.",
   price: 9000,
   stock: 4,
   maximum_speed: 85,
@@ -262,7 +345,20 @@ foreman_rubicon = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "520cc fuel-injected engine with automatic DCT transmission",
-  features: "• Independent rear suspension for smooth ride...",
+  features: "• Powerful 518cc liquid-cooled, single-cylinder, four-stroke engine providing smooth and consistent power
+  • Advanced Honda DCT (Dual Clutch Transmission) for seamless shifting and superior control in all conditions
+  • Selectable 2WD/4WD with a locking front differential for exceptional traction on challenging terrains
+  • Independent rear suspension (IRS) for superior ride comfort and handling over rocks, ruts, and rough trails
+  • Electronic fuel injection (EFI) for reliable starting and consistent performance across varying altitudes and temperatures
+  • Durable steel frame designed for maximum strength and stability, ideal for heavy-duty tasks
+  • High ground clearance of 9.4 inches, making it easy to navigate obstacles and uneven terrain
+  • Heavy-duty front and rear racks for carrying cargo, tools, or gear with impressive weight capacity
+  • Sealed drive system and high-mounted air intake to protect against mud, water, and debris
+  • Comfortable seat and ergonomic handlebars for long rides with reduced rider fatigue
+  • Multifunction digital display with clear readouts of speed, fuel level, trip meter, and more
+  • LED headlights for improved visibility, making it ideal for low-light conditions
+  • Industry-leading reliability and build quality typical of Honda products for longevity and minimal maintenance
+  • Rugged 25-inch tires for excellent traction in mud, dirt, and gravel.",
   price: 5499,
   stock: 6,
   maximum_speed: 75,
@@ -297,7 +393,20 @@ brute_force_750 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "749cc V-twin engine with electric power steering",
-  features: "• Double wishbone front suspension...",
+  features: "• Powerful 749cc V-twin engine delivering exceptional torque and horsepower for superior off-road performance
+  • Electronic Power Steering (EPS) for effortless handling and reduced steering fatigue during long rides
+  • On-demand 4WD system with variable front differential lock for optimal traction on challenging terrains
+  • Fully independent suspension system for improved comfort and stability over rough trails and obstacles
+  • Advanced CVT transmission with high/low range for smooth, responsive power delivery in all conditions
+  • Heavy-duty front and rear racks with impressive cargo capacities for carrying tools, gear, or heavy loads
+  • Ergonomic seating and handlebars for a comfortable riding position and reduced fatigue over long distances
+  • High ground clearance of 10.5 inches for improved ability to clear obstacles like rocks and deep ruts
+  • Digital display with speedometer, odometer, fuel gauge, and trip meter for easy monitoring of key metrics
+  • Aggressive 26-inch tires on durable 12-inch wheels for excellent traction and durability in mud, snow, or dirt
+  • Twin headlights and rear brake lights for enhanced visibility in low-light conditions
+  • Sturdy front and rear bumpers for added protection during off-road adventures
+  • Robust braking system with dual hydraulic disc brakes for confident stopping power in all conditions
+  • Kawasaki’s renowned build quality for long-lasting reliability and minimal maintenance.",
   price: 6599,
   stock: 4,
   maximum_speed: 90,
@@ -332,7 +441,19 @@ sportsman_570 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "567cc single-cylinder ProStar engine with all-wheel drive",
-  features: "• 11.5-inch ground clearance, On-Demand AWD...",
+  features: "• Powerful 567cc ProStar single-cylinder, four-stroke engine delivering reliable power for work and play
+  • Electronic Fuel Injection (EFI) for consistent performance in any weather, easy starts, and improved fuel efficiency
+  • On-demand all-wheel drive (AWD) system for superior traction and handling across a wide variety of terrains
+  • Independent Rear Suspension (IRS) for a smooth, comfortable ride over rough trails and uneven surfaces
+  • High ground clearance of 10.5 inches for navigating rocks, ruts, and deep mud without getting stuck
+  • Dual front and rear racks with impressive cargo capacities for carrying gear, tools, or heavy loads
+  • Active Descent Control (ADC) and engine braking system for added stability and control when descending steep terrain
+  • Rugged, 25-inch tires designed for all-terrain performance, providing excellent traction in mud, snow, and gravel
+  • Multi-function digital display with speedometer, fuel gauge, trip meter, and maintenance alerts for convenience
+  • Comfortable, ergonomically designed seat for long rides with reduced rider fatigue
+  • Heavy-duty front bumper and full skid plate protection for durability in harsh environments
+  • LED headlights and taillights for better visibility and safety during night or low-light conditions
+  • Polaris’ industry-leading build quality for long-lasting reliability and minimal maintenance.",
   price: 4799,
   stock: 8,
   maximum_speed: 85,
@@ -365,7 +486,20 @@ kingquad_750 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "722cc single-cylinder engine with automatic transmission",
-  features: "• Rugged steel-tube frame, electric power steering...",
+  features: "• 722cc liquid-cooled, DOHC, four-stroke engine delivering smooth, powerful performance for all types of riding
+  • Advanced power steering (APS) for enhanced handling, reduced steering effort, and improved control on rough trails
+  • On-demand 2WD/4WD system with a fully lockable front differential for superior traction on challenging terrains
+  • Independent rear suspension (IRS) for a smooth, comfortable ride over uneven ground and obstacles
+  • Rugged and durable steel frame designed to withstand tough conditions while maintaining excellent stability
+  • High ground clearance of 10.5 inches to easily clear rocks, logs, and other obstacles in rugged environments
+  • Electronic Fuel Injection (EFI) for reliable starts, better throttle response, and improved fuel efficiency
+  • Large, durable front and rear racks with a total capacity of up to 140 kg for carrying tools, gear, or supplies
+  • Aggressive, all-terrain tires for maximum grip and traction in mud, snow, and loose dirt
+  • Multifunction digital display providing key metrics like speed, fuel level, trip meter, and more
+  • Sealed front and rear brakes for consistent stopping power, even in wet or muddy conditions
+  • Comfortable, ergonomically designed seat and handlebars for reduced rider fatigue during long rides
+  • Integrated heavy-duty bumpers for additional protection during off-road adventures
+  • Suzuki’s reputation for reliability and durability, ensuring long-lasting performance and minimal maintenance.",
   price: 9649,
   stock: 3,
   maximum_speed: 80,
@@ -400,7 +534,19 @@ outlander_850 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "854cc Rotax V-twin engine with Intelligent Throttle Control",
-  features: "• Torsional Trailing arm Independent (TTI) rear suspension...",
+  features: "• 854cc Rotax V-twin engine providing exceptional power and torque for tackling the toughest trails and workloads
+  • Continuously Variable Transmission (CVT) with high/low range for smooth, responsive power delivery in all conditions
+  • On-demand 4WD system with Visco-Lok QE front differential for outstanding traction in challenging terrain
+  • Tri-Mode Dynamic Power Steering (DPS) offering three levels of steering assist for optimal handling and comfort
+  • Heavy-duty front and rear racks with impressive cargo capacities for hauling gear, tools, or supplies
+  • Independent rear suspension (IRS) for superior ride comfort, stability, and smooth handling over rough trails
+  • Aggressive 26-inch ITP Terracross tires for excellent grip and durability in mud, dirt, and snow
+  • Multi-function digital display with key metrics such as speed, fuel gauge, trip meter, and more
+  • High ground clearance of 11 inches for easy navigation over rocks, logs, and uneven surfaces
+  • Front and rear disc brakes with a powerful braking system for smooth and consistent stopping power
+  • LED headlights and taillights for enhanced visibility in low-light or night riding conditions
+  • Comfortable, ergonomic seat and handlebars to reduce rider fatigue during extended rides
+  • Can-Am’s reputation for high-performance engineering and long-lasting reliability for minimal maintenance.",
   price: 6199,
   stock: 2,
   maximum_speed: 95,
@@ -434,7 +580,19 @@ rancher_420 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "420cc single-cylinder, fuel-injected engine",
-  features: "• Durable steel frame, independent front suspension...",
+  features: "• Reliable 420cc liquid-cooled, single-cylinder, four-stroke engine providing smooth and consistent power
+  • Available with a choice of electric shift or manual transmission for ease of use and full control
+  • Selectable 2WD/4WD system for optimal traction and versatility in various terrain conditions
+  • Independent rear suspension (IRS) for improved ride comfort and handling on rough trails and uneven ground
+  • Durable steel frame designed to withstand tough environments while offering excellent stability
+  • Advanced Programmed Fuel Injection (PGM-FI) system for reliable starts and consistent performance in all weather
+  • High ground clearance of 9.4 inches, making it ideal for navigating obstacles like rocks, logs, and mud
+  • Strong front and rear racks with a combined weight capacity for carrying tools, equipment, or cargo
+  • Ergonomic seat and handlebar design for comfort during extended rides and reduced rider fatigue
+  • Multi-function digital display with speedometer, fuel gauge, trip meter, and other essential readouts
+  • Aggressive 25-inch tires that offer exceptional traction and durability on dirt, mud, or gravel
+  • Powerful hydraulic disc brakes for dependable stopping power in all riding conditions
+  • Honda’s reputation for reliability and longevity, ensuring low maintenance and a long-lasting ATV experience.",
   price: 4299,
   stock: 10,
   maximum_speed: 70,
@@ -464,7 +622,19 @@ scrambler_xp_1000 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "952cc ProStar engine with premium suspension",
-  features: "• 14.5-inch ground clearance, FOX shocks...",
+  features: "• Powerful 952cc twin-cylinder, four-stroke engine delivering exceptional power and torque for aggressive off-road performance
+  • High-performance Electronic Fuel Injection (EFI) system for smooth power delivery and reliable starts in all conditions
+  • Dual A-arm front suspension and fully independent rear suspension (IRS) with 14 inches of travel for a smooth, controlled ride over rough terrain
+  • On-demand all-wheel drive (AWD) system with a front differential lock for superior traction in challenging conditions
+  • 27-inch tires mounted on 14-inch wheels for excellent grip and durability in mud, dirt, and rocky trails
+  • High ground clearance of 13.5 inches for easy navigation over obstacles like rocks, logs, and deep ruts
+  • Premium 10.25-inch wide stance for improved stability and handling on uneven trails and off-road obstacles
+  • Dual-disc hydraulic braking system with ventilated rotors for reliable, consistent stopping power in all environments
+  • Multi-function digital display showing speed, RPM, fuel level, trip meter, and other important metrics
+  • Aggressive, high-performance chassis and body design for maximum durability and style
+  • LED headlights and tail lights for better visibility and safety during low-light conditions
+  • Comfortable and ergonomically designed seat and handlebars for long rides with reduced rider fatigue
+  • Polaris’ renowned reliability, ensuring minimal maintenance and optimal performance for a long-lasting ATV experience.",
   price: 11299,
   stock: 2,
   maximum_speed: 110,
@@ -501,7 +671,18 @@ sportsman_xp_1000 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "952cc ProStar twin-cylinder engine with electronic power steering",
-  features: "• High-clearance A-arms, 11.5 inches of ground clearance...",
+  features: "• High-performance 952cc ProStar twin-cylinder engine delivering exceptional power, torque, and acceleration for challenging off-road trails
+  • On-demand all-wheel drive (AWD) system with an easy-to-use push-button 4WD selection for superior traction and stability on uneven terrain
+  • Independent Rear Suspension (IRS) with 9.5 inches of travel for a smooth and comfortable ride, even on the roughest trails
+  • Aggressive 27-inch tires on 14-inch cast aluminum wheels for outstanding grip, durability, and traction in all conditions
+  • 13.5 inches of ground clearance for easy navigation over rocks, logs, and deep ruts without getting stuck
+  • Electronic Fuel Injection (EFI) for reliable starting and smooth, consistent performance in varying weather and elevations
+  • Integrated front and rear cargo racks with a combined load capacity of up to 600 pounds, perfect for hauling tools or gear
+  • Dual front disc brakes and rear hydraulic disc brakes for reliable stopping power, even in wet or muddy conditions
+  • Multi-function digital display providing key metrics such as speed, fuel gauge, odometer, and maintenance alerts
+  • Ergonomically designed seat and handlebars for maximum comfort during long rides
+  • Durable steel chassis and protective skid plates for added strength and protection in tough off-road environments
+  • Polaris’ renowned reliability and build quality for minimal maintenance and lasting durability.",
   price: 10999,
   stock: 4,
   maximum_speed: 100,
@@ -537,7 +718,19 @@ outlander_max_850 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "854cc Rotax V-twin engine with Intelligent Throttle Control",
-  features: "• Passenger seat with hand grips, TTI rear suspension...",
+  features: "• Powerful 854cc Rotax V-twin engine delivering impressive power and torque for tackling tough trails and heavy-duty tasks
+  • Continuously Variable Transmission (CVT) with high/low range for smooth, responsive power delivery across varying terrains
+  • Dual-mode 4WD system with Visco-Lok QE front differential for optimal traction in mud, snow, or rocky trails
+  • Independent rear suspension (IRS) with 9 inches of travel for a smooth and comfortable ride over rough trails and obstacles
+  • High ground clearance of 11 inches, allowing easy navigation over rocks, logs, and deep ruts without getting stuck
+  • Tri-Mode Dynamic Power Steering (DPS) for three levels of steering assist, enhancing maneuverability and reducing rider fatigue
+  • Multi-function digital display with speedometer, fuel gauge, trip meter, and maintenance alerts for easy monitoring
+  • Heavy-duty front and rear racks with impressive cargo capacity, perfect for hauling tools, gear, or supplies
+  • 26-inch tires mounted on aluminum wheels for excellent durability, traction, and handling on various terrains
+  • Comfortable two-up seating with passenger backrest and grab handles for an enjoyable and secure ride for two
+  • Aggressive LED headlights and taillights for enhanced visibility and safety during night or low-light riding conditions
+  • Integrated front bumper and skid plates for added protection against rocks and debris
+  • Can-Am’s renowned engineering for high-performance durability and minimal maintenance.",
   price: 9299,
   stock: 3,
   maximum_speed: 100,
@@ -570,7 +763,19 @@ grizzly_xtr = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2021),
   description: "686cc liquid-cooled SOHC engine, Ultramatic transmission",
-  features: "WARN VRX 25 winch, Maxxis Zilla tires...",
+  features: "• Powerful 708cc liquid-cooled, SOHC, four-stroke engine providing smooth, reliable performance for rugged off-road adventures
+  • Ultramatic® automatic transmission with high/low range for seamless and responsive power delivery on any terrain
+  • On-demand 4WD system with a locking front differential for superior traction on challenging trails, mud, and snow
+  • Independent double wishbone suspension with 9.1 inches of front and 10.1 inches of rear travel for an incredibly smooth ride
+  • High ground clearance of 11.8 inches, ideal for navigating rocks, logs, and deep ruts without getting stuck
+  • Electronic Power Steering (EPS) for reduced steering effort, better control, and enhanced handling in rough environments
+  • Aggressive 27-inch Maxxis® tires mounted on cast aluminum wheels for superior grip and durability on various terrains
+  • Heavy-duty front and rear racks with a combined weight capacity of up to 270 kg for hauling gear, tools, or supplies
+  • Multifunction digital display with speedometer, fuel gauge, trip meter, and other essential metrics for convenience
+  • LED headlights and taillights for improved visibility during night riding or low-light conditions
+  • Comfortable and ergonomically designed seat and handlebar layout for reduced rider fatigue during long rides
+  • Premium steel front and rear bumpers and skid plates for added protection in tough off-road environments
+  • Yamaha’s reputation for reliability and durability, ensuring long-lasting performance with minimal maintenance.",
   price: 7899,
   stock: 5,
   maximum_speed: 85,
@@ -603,7 +808,20 @@ kingquad_500 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2025),
   description: "493cc single-cylinder, liquid-cooled engine with auto transmission",
-  features: "• Sealed front and rear axles, electronic power steering...",
+  features: "• 493cc liquid-cooled, DOHC, four-stroke engine providing strong and reliable performance for both work and recreation
+  • Advanced Power Steering (APS) for smooth, effortless handling and improved control on rough trails and uneven terrain
+  • On-demand 2WD/4WD system with a fully lockable front differential for superior traction in challenging conditions
+  • Independent Rear Suspension (IRS) for a comfortable and stable ride over rocks, logs, and rough terrain
+  • High ground clearance of 10.5 inches to easily clear obstacles like deep ruts and rocky trails
+  • Electronic Fuel Injection (EFI) for easy starts, efficient fuel use, and consistent performance across varying conditions
+  • Durable steel frame designed for maximum strength and stability in tough environments
+  • Aggressive 25-inch tires with excellent traction and durability for mud, snow, or dirt
+  • Large front and rear racks with a combined capacity for hauling tools, gear, or supplies
+  • Multifunction digital display showing speed, fuel level, trip meter, and more for convenience and easy monitoring
+  • Full-length skid plates and heavy-duty bumpers for enhanced protection and durability
+  • Comfortable ergonomic seat and handlebars for reduced rider fatigue on long rides
+  • LED headlights for superior visibility during night or low-light conditions
+  • Suzuki's reputation for long-lasting reliability and low-maintenance performance.",
   price: 10799,
   stock: 6,
   maximum_speed: 75,
@@ -638,7 +856,19 @@ renegade_xc = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "Rotax V-twin engine with advanced CVT transmission",
-  features: "• Adjustable KYB shocks, multi-mode dynamic power steering...",
+  features: "• 854cc Rotax V-twin engine delivering powerful acceleration and torque for aggressive off-road performance
+  • Continuously Variable Transmission (CVT) with high/low range for smooth, controlled power delivery on all types of terrain
+  • Advanced Visco-Lok QE front differential providing on-demand 4WD with smooth and reliable traction in challenging environments
+  • Tri-Mode Dynamic Power Steering (DPS) offering three levels of steering assist for improved handling and reduced rider fatigue
+  • Fully independent suspension with 9.5 inches of front and 9 inches of rear travel for a smooth and controlled ride over rough trails
+  • 26-inch Maxxis® Bighorn 2.0 tires for superior grip and durability in mud, dirt, and rocky terrain
+  • High ground clearance of 11 inches, perfect for navigating over obstacles like rocks, logs, and deep ruts
+  • Multifunction digital display with key information like speed, fuel level, trip meter, and maintenance alerts
+  • Aggressive LED headlights and taillights for improved visibility in low-light conditions
+  • Comfortable and ergonomic seat design with durable materials for long-lasting comfort during extended rides
+  • Front and rear racks for carrying up to 240 pounds of gear, tools, or supplies
+  • Full skid plates and reinforced bumpers for added protection in rugged conditions
+  • Can-Am's renowned build quality for reliability and minimal maintenance over the long term.",
   price: 3999,
   stock: 3,
   maximum_speed: 105,
@@ -672,7 +902,17 @@ foreman_450 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "450cc air-cooled, OHV engine, durable automatic transmission",
-  features: "• Independent front suspension, 2WD/4WD with diff lock...",
+  features: "• Reliable 450cc liquid-cooled, single-cylinder, four-stroke engine delivering smooth and consistent power for a variety of tasks
+  • Selectable 2WD/4WD system for optimal traction and control in diverse terrains, from rocky trails to muddy paths
+  • Independent Rear Suspension (IRS) providing superior ride comfort and improved handling over rough and uneven ground
+  • Rugged steel frame built for durability and stability in tough work environments and off-road adventures
+  • Easy-to-use Electric Shift Program (ESP) for quick and precise gear shifting, with a choice between manual or automatic modes
+  • High ground clearance of 9.4 inches, ideal for navigating obstacles such as rocks, logs, and deep mud without getting stuck
+  • Heavy-duty front and rear racks with a combined capacity for carrying up to 264 pounds of cargo or tools
+  • Dependable hydraulic disc brakes for strong, consistent stopping power, even in wet or muddy conditions
+  • Multifunction digital display providing essential information such as speed, fuel level, and trip meter for convenience
+  • Comfortable, ergonomically designed seat and handlebars to reduce rider fatigue on long rides
+  • Honda's renowned reliability and low-maintenance engineering for years of dependable performance in tough environments.",
   price: 4699,
   stock: 10,
   maximum_speed: 70,
@@ -705,7 +945,18 @@ foreman_500 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "518cc fuel-injected OHV engine, automatic dual-clutch transmission",
-  features: "• Electric shift, IRS suspension, TraxLok 2WD/4WD...",
+  features: "• 520cc liquid-cooled, single-cylinder, four-stroke engine delivering smooth, reliable power for demanding work and tough trails
+  • Electronic Fuel Injection (EFI) for easy starting, consistent performance, and improved fuel efficiency in all weather conditions
+  • Selectable 2WD/4WD system with automatic front differential lock for superior traction in a variety of terrains
+  • Independent Rear Suspension (IRS) with 9.1 inches of travel for a smooth, comfortable ride over rough trails and obstacles
+  • Electric Power Steering (EPS) for effortless handling, reducing steering fatigue and improving control on rugged terrain
+  • High ground clearance of 9.4 inches, ideal for navigating rocks, logs, and deep ruts without getting stuck
+  • Durable steel frame designed for toughness and long-lasting performance in both work and recreational environments
+  • Heavy-duty front and rear racks with impressive cargo capacity for carrying tools, gear, or supplies
+  • Reliable hydraulic disc brakes providing consistent stopping power in all conditions, even in mud or water
+  • Multi-function digital display showing speed, fuel level, trip meter, and other essential metrics for easy monitoring
+  • Ergonomically designed seat and handlebars for added comfort during extended rides
+  • Honda's reputation for durability and low maintenance, ensuring years of reliable service in tough conditions.",
   price: 8699,
   stock: 5,
   maximum_speed: 80,
@@ -739,7 +990,19 @@ scrambler_850 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2016),
   description: "850cc ProStar engine, all-wheel drive",
-  features: "• Sport-tuned suspension, high-clearance dual A-arms...",
+  features: "• 850cc twin-cylinder engine delivering powerful performance and exceptional acceleration for thrilling off-road adventures
+  • On-demand all-wheel drive (AWD) system with front differential lock for optimal traction and control on varied terrains
+  • Independent Rear Suspension (IRS) with 9.5 inches of travel for a smooth, comfortable ride over rough trails and obstacles
+  • Dual A-arm front suspension providing 8.2 inches of travel for excellent handling and stability on uneven terrain
+  • Aggressive 27-inch tires with excellent grip and durability, designed to tackle mud, sand, and rocky trails
+  • High ground clearance of 11.5 inches to easily navigate over rocks, logs, and deep ruts without getting stuck
+  • Premium aluminum wheels and rugged chassis designed for maximum durability and protection against harsh off-road conditions
+  • Electronic Fuel Injection (EFI) for reliable starts, consistent performance, and improved fuel efficiency
+  • Multi-function digital display showing speed, fuel level, trip meter, and maintenance alerts for convenient monitoring
+  • Dual front and rear disc brakes for powerful, consistent stopping performance in all conditions
+  • Comfortable, ergonomic seat and handlebars to reduce rider fatigue during long rides
+  • LED headlights and taillights for enhanced visibility and safety in low-light or night riding conditions
+  • Polaris’ reputation for long-lasting performance and minimal maintenance, ensuring a reliable off-road experience.",
   price: 3199,
   stock: 4,
   maximum_speed: 105,
@@ -774,7 +1037,19 @@ grizzly_700 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2024),
   description: "686cc liquid-cooled SOHC engine, Ultramatic transmission",
-  features: "• Digital LCD screen, large fuel tank, WARN winch...",
+  features: "• 708cc liquid-cooled, SOHC, four-stroke engine delivering smooth and reliable power for tackling tough trails and heavy-duty tasks
+  • Ultramatic® automatic transmission with high/low range for seamless and responsive power delivery across varying terrains
+  • On-demand 4WD system with a locking front differential for optimal traction and control on muddy, rocky, or loose terrain
+  • Independent double wishbone suspension with 9.1 inches of front and 10.1 inches of rear travel for a smooth ride over rough trails
+  • High ground clearance of 11.8 inches to easily navigate obstacles such as rocks, logs, and deep ruts without getting stuck
+  • Electronic Power Steering (EPS) for reduced steering effort, improved control, and less rider fatigue on challenging trails
+  • Aggressive 27-inch Maxxis® tires mounted on cast aluminum wheels for superior grip and durability in a variety of off-road conditions
+  • Durable, heavy-duty front and rear racks with a combined capacity of 264 pounds for hauling gear, tools, or supplies
+  • Multi-function digital display showing speed, fuel gauge, trip meter, and other key information for easy monitoring
+  • LED headlights and taillights for enhanced visibility during low-light or night riding conditions
+  • Comfortable, ergonomic seat and handlebars designed to reduce rider fatigue during long rides
+  • Full skid plates and front/rear bumpers for added protection in rugged environments
+  • Yamaha's renowned reliability and durability, ensuring a long-lasting, low-maintenance off-road experience.",
   price: 10_399,
   stock: 6,
   maximum_speed: 90,
@@ -811,7 +1086,19 @@ renegade_570 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2018),
   description: "570cc Rotax V-twin engine, intelligent throttle control",
-  features: "• FOX shocks, dynamic power steering, 25-inch tires...",
+  features: "• 570cc Rotax® EFI engine delivering a perfect balance of power and efficiency for both trail riding and work tasks
+  • Electronic Fuel Injection (EFI) system ensuring reliable starts and consistent performance in various weather conditions
+  • Advanced Visco-Lok front differential for enhanced traction on slippery or uneven terrain, providing smooth 4WD performance
+  • Tri-Mode Dynamic Power Steering (DPS) offering three levels of steering assist for improved handling and reduced rider fatigue
+  • Independent Rear Suspension (IRS) with 9 inches of travel for a smooth ride over rough trails and obstacles
+  • 26-inch ITP® Terracross tires for superior grip, durability, and handling in mud, dirt, and snow
+  • High ground clearance of 11 inches to easily navigate rocks, logs, and deep ruts without getting stuck
+  • Dual front and rear disc brakes for reliable, responsive stopping power, even in tough, muddy conditions
+  • Comfortable and ergonomic seat design for long-lasting comfort during extended rides
+  • Multifunction digital display with speedometer, fuel gauge, trip meter, and maintenance alerts for easy monitoring
+  • Durable front and rear racks for hauling tools, gear, or supplies with a combined capacity of 240 pounds
+  • Aggressive styling and robust build quality, offering both performance and durability in rugged environments
+  • Can-Am's reputation for reliability, ensuring minimal maintenance and high performance over time.",
   price: 9_799,
   stock: 4,
   maximum_speed: 90,
@@ -848,7 +1135,19 @@ brute_force_300 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2021),
   description: "271cc single-cylinder, 4-stroke engine with CVT",
-  features: "• Continuously variable transmission, front and rear racks...",
+  features: "• 271cc air-cooled, single-cylinder, four-stroke engine providing reliable and smooth power for both utility and recreational use
+  • Automatic transmission with high/low gearing for easy handling and adaptability in various terrain types
+  • On-demand 2WD/4WD system for enhanced traction and control in mud, snow, and rough trails
+  • Independent front suspension (IFS) and rear swingarm with 5.9 inches of travel for a smooth and comfortable ride
+  • High ground clearance of 6.7 inches to navigate over rocks, logs, and obstacles without getting stuck
+  • Durable steel frame designed for strength and stability in challenging off-road conditions
+  • Aggressive 22-inch tires providing solid grip on a variety of surfaces, including dirt, sand, and gravel
+  • Electronic fuel injection (EFI) for reliable starts and improved fuel efficiency in a range of conditions
+  • Multi-function digital display with essential information like speed, fuel level, and trip meter for convenience
+  • Ergonomic seat and handlebar design for comfort during extended rides with reduced rider fatigue
+  • Durable front and rear racks with a combined capacity to haul up to 132 pounds of cargo or gear
+  • Hydraulic disc brakes for responsive and effective stopping power, even in wet or muddy conditions
+  • Kawasaki's reputation for reliability and low-maintenance engineering for long-lasting off-road adventures.",
   price: 3399,
   stock: 8,
   maximum_speed: 65,
@@ -884,7 +1183,19 @@ kingquad_400 = Bike.create!(
   registration_status: "registered",
   last_modified: Date.new(2023),
   description: "376cc single-cylinder, air-cooled engine with 5-speed manual",
-  features: "• Fuel injection, independent front suspension...",
+  features: "• 376cc, single-cylinder, liquid-cooled, four-stroke engine delivering reliable power for a variety of off-road tasks and adventures
+  • Suzuki’s Fuel Injection system for efficient fuel delivery, smooth performance, and reliable starts in various weather conditions
+  • Selectable 2WD/4WD system with a fully locking front differential for superior traction on challenging terrain
+  • Independent Rear Suspension (IRS) with 6.7 inches of travel for a smooth and comfortable ride over rough and uneven trails
+  • High ground clearance of 8.7 inches to easily navigate obstacles like rocks, logs, and deep ruts without getting stuck
+  • Automatic transmission with an easy-to-use Electric Shift Program (ESP) for effortless shifting and smooth handling
+  • Durable steel frame designed for toughness and long-lasting performance in demanding work and recreational environments
+  • Aggressive 25-inch tires providing excellent grip and durability in mud, dirt, and rocky conditions
+  • Front and rear racks with impressive cargo capacity for hauling up to 220 pounds of gear, tools, or supplies
+  • Multi-function digital display showing key metrics like speed, fuel level, trip meter, and maintenance alerts for convenience
+  • Comfortable seat and ergonomic handlebars designed to reduce rider fatigue during long rides
+  • Full skid plates and protective bumpers for added protection against rocks and debris in rugged environments
+  • Suzuki’s reputation for reliability and minimal maintenance, ensuring a dependable and durable off-road experience.",
   price: 5339,
   stock: 7,
   maximum_speed: 70,

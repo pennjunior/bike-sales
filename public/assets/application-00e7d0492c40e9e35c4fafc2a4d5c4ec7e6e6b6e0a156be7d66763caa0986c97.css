@@ -7,7 +7,7 @@
 /* line 1, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_root.scss */
 :root,
 [data-bs-theme="light"] {
-  --bs-blue: #0D6EFD;
+  --bs-blue: #ff6600;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
@@ -30,7 +30,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #0D6EFD;
+  --bs-primary: #ff6600;
   --bs-secondary: #6c757d;
   --bs-success: #1EDD88;
   --bs-info: #FFC65A;
@@ -38,7 +38,7 @@
   --bs-danger: #FD1015;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 255, 102, 0;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 30, 221, 136;
   --bs-info-rgb: 255, 198, 90;
@@ -46,7 +46,7 @@
   --bs-danger-rgb: 253, 16, 21;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-primary-text-emphasis: #052c65;
+  --bs-primary-text-emphasis: #662900;
   --bs-secondary-text-emphasis: #2b2f32;
   --bs-success-text-emphasis: #0c5836;
   --bs-info-text-emphasis: #664f24;
@@ -54,7 +54,7 @@
   --bs-danger-text-emphasis: #650608;
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
-  --bs-primary-bg-subtle: #cfe2ff;
+  --bs-primary-bg-subtle: #ffe0cc;
   --bs-secondary-bg-subtle: #e2e3e5;
   --bs-success-bg-subtle: #d2f8e7;
   --bs-info-bg-subtle: #fff4de;
@@ -62,7 +62,7 @@
   --bs-danger-bg-subtle: #ffcfd0;
   --bs-light-bg-subtle: #fcfcfd;
   --bs-dark-bg-subtle: #ced4da;
-  --bs-primary-border-subtle: #9ec5fe;
+  --bs-primary-border-subtle: #ffc299;
   --bs-secondary-border-subtle: #c4c8cb;
   --bs-success-border-subtle: #a5f1cf;
   --bs-info-border-subtle: #ffe8bd;
@@ -94,11 +94,11 @@
   --bs-tertiary-bg: #f8f9fa;
   --bs-tertiary-bg-rgb: 248, 249, 250;
   --bs-heading-color: inherit;
-  --bs-link-color: #0D6EFD;
-  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-color: #ff6600;
+  --bs-link-color-rgb: 255, 102, 0;
   --bs-link-decoration: underline;
-  --bs-link-hover-color: #0a58ca;
-  --bs-link-hover-color-rgb: 10, 88, 202;
+  --bs-link-hover-color: #cc5200;
+  --bs-link-hover-color-rgb: 204, 82, 0;
   --bs-code-color: #d63384;
   --bs-highlight-color: #0E0000;
   --bs-highlight-bg: #fff4de;
@@ -119,7 +119,7 @@
   --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   --bs-focus-ring-width: 0.25rem;
   --bs-focus-ring-opacity: 0.25;
-  --bs-focus-ring-color: rgba(13, 110, 253, 0.25);
+  --bs-focus-ring-color: rgba(255, 102, 0, 0.25);
   --bs-form-valid-color: #1EDD88;
   --bs-form-valid-border-color: #1EDD88;
   --bs-form-invalid-color: #FD1015;
@@ -143,7 +143,7 @@
   --bs-tertiary-color-rgb: 222, 226, 230;
   --bs-tertiary-bg: #2b3035;
   --bs-tertiary-bg-rgb: 43, 48, 53;
-  --bs-primary-text-emphasis: #6ea8fe;
+  --bs-primary-text-emphasis: #ffa366;
   --bs-secondary-text-emphasis: #a7acb1;
   --bs-success-text-emphasis: #78ebb8;
   --bs-info-text-emphasis: #ffdd9c;
@@ -151,7 +151,7 @@
   --bs-danger-text-emphasis: #fe7073;
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
-  --bs-primary-bg-subtle: #031633;
+  --bs-primary-bg-subtle: #331400;
   --bs-secondary-bg-subtle: #161719;
   --bs-success-bg-subtle: #062c1b;
   --bs-info-bg-subtle: #332812;
@@ -159,7 +159,7 @@
   --bs-danger-bg-subtle: #330304;
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
-  --bs-primary-border-subtle: #084298;
+  --bs-primary-border-subtle: #993d00;
   --bs-secondary-border-subtle: #41464b;
   --bs-success-border-subtle: #128552;
   --bs-info-border-subtle: #997736;
@@ -168,10 +168,10 @@
   --bs-light-border-subtle: #495057;
   --bs-dark-border-subtle: #343a40;
   --bs-heading-color: inherit;
-  --bs-link-color: #6ea8fe;
-  --bs-link-hover-color: #8bb9fe;
-  --bs-link-color-rgb: 110, 168, 254;
-  --bs-link-hover-color-rgb: 139, 185, 254;
+  --bs-link-color: #ffa366;
+  --bs-link-hover-color: #ffb585;
+  --bs-link-color-rgb: 255, 163, 102;
+  --bs-link-hover-color-rgb: 255, 181, 133;
   --bs-code-color: #e685b5;
   --bs-highlight-color: #dee2e6;
   --bs-highlight-bg: #664f24;
@@ -2367,13 +2367,13 @@ progress {
 /* line 3, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/mixins/_table-variants.scss */
 .table-primary {
   --bs-table-color: #000;
-  --bs-table-bg: #cfe2ff;
-  --bs-table-border-color: #a6b5cc;
-  --bs-table-striped-bg: #c5d7f2;
+  --bs-table-bg: #ffe0cc;
+  --bs-table-border-color: #ccb3a3;
+  --bs-table-striped-bg: #f2d5c2;
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: #bacbe6;
+  --bs-table-active-bg: #e6cab8;
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: #bfd1ec;
+  --bs-table-hover-bg: #eccfbd;
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -2605,9 +2605,9 @@ progress {
 .form-control:focus {
   color: var(--bs-body-color);
   background-color: var(--bs-body-bg);
-  border-color: #86b7fe;
+  border-color: #ffb380;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 47, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-control.scss */
@@ -2802,9 +2802,9 @@ textarea.form-control-lg {
 
 /* line 28, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-select.scss */
 .form-select:focus {
-  border-color: #86b7fe;
+  border-color: #ffb380;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 39, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-select.scss */
@@ -2913,15 +2913,15 @@ textarea.form-control-lg {
 
 /* line 60, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
 .form-check-input:focus {
-  border-color: #86b7fe;
+  border-color: #ffb380;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 66, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
 .form-check-input:checked {
-  background-color: #0D6EFD;
-  border-color: #0D6EFD;
+  background-color: #ff6600;
+  border-color: #ff6600;
 }
 
 /* line 70, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
@@ -2936,8 +2936,8 @@ textarea.form-control-lg {
 
 /* line 87, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
 .form-check-input[type="checkbox"]:indeterminate {
-  background-color: #0D6EFD;
-  border-color: #0D6EFD;
+  background-color: #ff6600;
+  border-color: #ff6600;
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 
@@ -2979,7 +2979,7 @@ textarea.form-control-lg {
 
 /* line 137, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
 .form-switch .form-check-input:focus {
-  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%2386b7fe'/%3e%3c/svg%3e");
+  --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffb380'/%3e%3c/svg%3e");
 }
 
 /* line 141, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-check.scss */
@@ -3043,12 +3043,12 @@ textarea.form-control-lg {
 
 /* line 19, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #F4F4F4, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #F4F4F4, 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 20, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #F4F4F4, 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 1px #F4F4F4, 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 23, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
@@ -3063,7 +3063,7 @@ textarea.form-control-lg {
   margin-top: -0.25rem;
   -webkit-appearance: none;
           appearance: none;
-  background-color: #0D6EFD;
+  background-color: #ff6600;
   border: 0;
   border-radius: 1rem;
   -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3080,7 +3080,7 @@ textarea.form-control-lg {
 
 /* line 38, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
 .form-range::-webkit-slider-thumb:active {
-  background-color: #b6d4fe;
+  background-color: #ffd1b3;
 }
 
 /* line 43, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
@@ -3100,7 +3100,7 @@ textarea.form-control-lg {
   height: 1rem;
   -moz-appearance: none;
        appearance: none;
-  background-color: #0D6EFD;
+  background-color: #ff6600;
   border: 0;
   border-radius: 1rem;
   -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -3117,7 +3117,7 @@ textarea.form-control-lg {
 
 /* line 64, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
 .form-range::-moz-range-thumb:active {
-  background-color: #b6d4fe;
+  background-color: #ffd1b3;
 }
 
 /* line 69, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/forms/_form-range.scss */
@@ -3717,20 +3717,20 @@ textarea.form-control-lg {
 
 /* line 132, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #0D6EFD;
-  --bs-btn-border-color: #0D6EFD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0b5ed7;
-  --bs-btn-hover-border-color: #0a58ca;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0a58ca;
-  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-color: #000;
+  --bs-btn-bg: #ff6600;
+  --bs-btn-border-color: #ff6600;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ff7d26;
+  --bs-btn-hover-border-color: #ff751a;
+  --bs-btn-focus-shadow-rgb: 217, 87, 0;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ff8533;
+  --bs-btn-active-border-color: #ff751a;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #0D6EFD;
-  --bs-btn-disabled-border-color: #0D6EFD;
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #ff6600;
+  --bs-btn-disabled-border-color: #ff6600;
 }
 
 /* line 132, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_buttons.scss */
@@ -3861,19 +3861,19 @@ textarea.form-control-lg {
 
 /* line 158, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-outline-primary {
-  --bs-btn-color: #0D6EFD;
-  --bs-btn-border-color: #0D6EFD;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0D6EFD;
-  --bs-btn-hover-border-color: #0D6EFD;
-  --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0D6EFD;
-  --bs-btn-active-border-color: #0D6EFD;
+  --bs-btn-color: #ff6600;
+  --bs-btn-border-color: #ff6600;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #ff6600;
+  --bs-btn-hover-border-color: #ff6600;
+  --bs-btn-focus-shadow-rgb: 255, 102, 0;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #ff6600;
+  --bs-btn-active-border-color: #ff6600;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #0D6EFD;
+  --bs-btn-disabled-color: #ff6600;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #0D6EFD;
+  --bs-btn-disabled-border-color: #ff6600;
   --bs-gradient: none;
 }
 
@@ -4016,7 +4016,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-border-color: transparent;
   --bs-btn-box-shadow: 0 0 0 #000;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-focus-shadow-rgb: 217, 87, 0;
   text-decoration: underline;
 }
 
@@ -4149,7 +4149,7 @@ textarea.form-control-lg {
   --bs-dropdown-link-hover-color: var(--bs-body-color);
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #0D6EFD;
+  --bs-dropdown-link-active-bg: #ff6600;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
   --bs-dropdown-item-padding-x: 1rem;
   --bs-dropdown-item-padding-y: 0.25rem;
@@ -4483,7 +4483,7 @@ textarea.form-control-lg {
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --bs-dropdown-link-active-color: #fff;
-  --bs-dropdown-link-active-bg: #0D6EFD;
+  --bs-dropdown-link-active-bg: #ff6600;
   --bs-dropdown-link-disabled-color: #adb5bd;
   --bs-dropdown-header-color: #adb5bd;
 }
@@ -4662,7 +4662,7 @@ textarea.form-control-lg {
 /* line 41, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_nav.scss */
 .nav-link:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
 }
 
 /* line 47, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_nav.scss */
@@ -4717,7 +4717,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: var(--bs-border-radius);
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #0D6EFD;
+  --bs-nav-pills-link-active-bg: #ff6600;
 }
 
 /* line 112, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_nav.scss */
@@ -5564,8 +5564,8 @@ textarea.form-control-lg {
   --bs-accordion-btn-icon-width: 1.25rem;
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23052c65' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23662900' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-active-color: var(--bs-primary-text-emphasis);
@@ -5722,8 +5722,8 @@ textarea.form-control-lg {
 
 /* line 153, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_accordion.scss */
 [data-bs-theme="dark"] .accordion-button::after {
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236ea8fe'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%236ea8fe'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffa366'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffa366'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
 /* line 1, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/_breadcrumb.scss */
@@ -5779,10 +5779,10 @@ textarea.form-control-lg {
   --bs-pagination-hover-border-color: var(--bs-border-color);
   --bs-pagination-focus-color: var(--bs-link-hover-color);
   --bs-pagination-focus-bg: var(--bs-secondary-bg);
-  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
   --bs-pagination-active-color: #fff;
-  --bs-pagination-active-bg: #0D6EFD;
-  --bs-pagination-active-border-color: #0D6EFD;
+  --bs-pagination-active-bg: #ff6600;
+  --bs-pagination-active-border-color: #ff6600;
   --bs-pagination-disabled-color: var(--bs-secondary-color);
   --bs-pagination-disabled-bg: var(--bs-secondary-bg);
   --bs-pagination-disabled-border-color: var(--bs-border-color);
@@ -6032,7 +6032,7 @@ textarea.form-control-lg {
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: #fff;
-  --bs-progress-bar-bg: #0D6EFD;
+  --bs-progress-bar-bg: #ff6600;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -6107,8 +6107,8 @@ textarea.form-control-lg {
   --bs-list-group-disabled-color: var(--bs-secondary-color);
   --bs-list-group-disabled-bg: var(--bs-body-bg);
   --bs-list-group-active-color: #fff;
-  --bs-list-group-active-bg: #0D6EFD;
-  --bs-list-group-active-border-color: #0D6EFD;
+  --bs-list-group-active-bg: #ff6600;
+  --bs-list-group-active-border-color: #ff6600;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -6520,7 +6520,7 @@ textarea.form-control-lg {
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
   --bs-btn-close-opacity: 0.5;
   --bs-btn-close-hover-opacity: 0.75;
-  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-btn-close-focus-shadow: 0 0 0 0.25rem rgba(255, 102, 0, 0.25);
   --bs-btn-close-focus-opacity: 1;
   --bs-btn-close-disabled-opacity: 0.25;
   --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
@@ -8312,7 +8312,7 @@ textarea.form-control-lg {
 
 /* line 3, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/helpers/_color-bg.scss */
 .text-bg-primary {
-  color: #fff !important;
+  color: #000 !important;
   background-color: RGBA(var(--bs-primary-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
@@ -8366,8 +8366,8 @@ textarea.form-control-lg {
 
 /* line 8, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/helpers/_colored-links.scss */
 .link-primary:hover, .link-primary:focus {
-  color: RGBA(10, 88, 202, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(10, 88, 202, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(255, 133, 51, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(255, 133, 51, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 /* line 3, ../../.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/bootstrap-5.3.3/assets/stylesheets/bootstrap/helpers/_colored-links.scss */
@@ -27867,6 +27867,33 @@ readers do not read off random characters that represent icons */
   z-index: 1000;
 }
 
+/* line 7, app/assets/stylesheets/components/_alert.scss */
+.flash {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin: 8px;
+}
+
+/* line 18, app/assets/stylesheets/components/_alert.scss */
+.flash-success {
+  border: 2px solid #1EDD88;
+}
+
+/* line 22, app/assets/stylesheets/components/_alert.scss */
+.flash-warning {
+  border: 2px solid #FFC65A;
+}
+
+/* line 26, app/assets/stylesheets/components/_alert.scss */
+.flash-danger {
+  border: 2px solid #FD1015;
+}
+
 /* line 1, app/assets/stylesheets/components/_avatar.scss */
 .avatar {
   width: 40px;
@@ -27900,150 +27927,114 @@ legend ~ div.form-check:first-of-type {
   clear: left;
 }
 
-/* line 8, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar {
-  display: flex;
-  justify-content: space-between;
+/* Variables */
+/* line 7, app/assets/stylesheets/components/_navbar.scss */
+#hamburger-icon {
+  display: none;
+  /* Hidden on large screens */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  justify-content: center;
+  background-color: #ff6600;
+  border-radius: 50%;
+  /* Circular button */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* line 21, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .custom-logo .brand-link {
-  height: 41px;
-  width: auto;
+/* line 18, app/assets/stylesheets/components/_navbar.scss */
+#hamburger-icon:hover {
+  background-color: #cc5200;
+  /* Darker on hover */
+  transform: scale(1.1);
+  /* Slightly larger on hover */
+}
+
+/* line 23, app/assets/stylesheets/components/_navbar.scss */
+#hamburger-icon.active {
+  background-color: #cc5200;
+  /* Change color when active */
+  transform: scale(1.2);
+  /* Grow slightly when clicked */
 }
 
 /* line 28, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .hamburger-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #333;
-}
-
-/* line 36, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
-
-/* line 41, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item {
-  position: relative;
-}
-
-/* line 44, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item a {
-  text-decoration: none;
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* line 51, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item a:hover {
-  background-color: #ff6600;
+#hamburger-icon i {
   color: #fff;
+  font-size: 20px;
+  /* Default icon size */
+  transition: transform 0.3s ease;
 }
 
-/* line 59, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item.dropdown .dropdown-menu {
+/* line 33, app/assets/stylesheets/components/_navbar.scss */
+#hamburger-icon i.rotate {
+  transform: rotate(90deg);
+  /* Rotate icon when active */
+}
+
+/* Show menus when the 'show' class is added */
+/* line 40, app/assets/stylesheets/components/_navbar.scss */
+.nav-links,
+.user-links {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 10px 0;
-  border-radius: 4px;
+  /* Hidden by default */
+  flex-direction: column;
+  /* Stack links in a column */
+}
+
+/* line 46, app/assets/stylesheets/components/_navbar.scss */
+.nav-links.show,
+.user-links.show {
+  display: flex;
+  /* Show when 'show' class is added */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* line 53, app/assets/stylesheets/components/_navbar.scss */
+  #hamburger-icon {
+    display: flex;
+    /* Show hamburger icon on mobile */
+    margin-left: auto;
+    /* Push to the right */
+  }
+  /* line 58, app/assets/stylesheets/components/_navbar.scss */
+  .menu-wrapper {
+    flex-direction: column;
+    /* Stack menus vertically */
+  }
+}
+
+/* line 7, app/assets/stylesheets/components/_footer.scss */
+footer {
+  margin-bottom: 0%;
+  width: 100%;
   z-index: 1000;
 }
 
-/* line 71, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item.dropdown .dropdown-menu li {
-  padding: 5px 20px;
-}
-
-/* line 74, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item.dropdown .dropdown-menu li a {
-  text-decoration: none;
-  color: #333;
-}
-
-/* line 78, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item.dropdown .dropdown-menu li a:hover {
-  background-color: #cc5200;
-  color: #fff;
-}
-
-/* line 86, app/assets/stylesheets/components/_navbar.scss */
-.custom-navbar .nav-links .nav-item.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  /* line 96, app/assets/stylesheets/components/_navbar.scss */
-  .hamburger-icon {
-    display: block;
-  }
-  /* line 100, app/assets/stylesheets/components/_navbar.scss */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-  }
-  /* line 111, app/assets/stylesheets/components/_navbar.scss */
-  .nav-links.show {
-    display: flex;
-  }
-  /* line 115, app/assets/stylesheets/components/_navbar.scss */
-  .nav-links .nav-item {
-    margin: 0;
-  }
-  /* line 118, app/assets/stylesheets/components/_navbar.scss */
-  .nav-links .nav-item a {
-    padding: 10px 20px;
-    text-align: left;
-  }
-}
-
-/* line 8, app/assets/stylesheets/components/_footer.scss */
+/* line 13, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer {
   background-color: #1b1b1b;
   color: #e0e0e0;
   padding: 40px 20px;
 }
 
-/* line 13, app/assets/stylesheets/components/_footer.scss */
+/* line 18, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-/* line 18, app/assets/stylesheets/components/_footer.scss */
+/* line 23, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section {
   flex: 1;
   min-width: 200px;
   margin: 10px 20px;
 }
 
-/* line 23, app/assets/stylesheets/components/_footer.scss */
+/* line 28, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-heading {
   color: #ff6600;
   font-size: 1.5em;
@@ -28051,60 +28042,60 @@ legend ~ div.form-check:first-of-type {
   font-weight: bold;
 }
 
-/* line 30, app/assets/stylesheets/components/_footer.scss */
+/* line 35, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-text {
   color: #e0e0e0;
   font-size: 0.9em;
   margin-bottom: 10px;
 }
 
-/* line 36, app/assets/stylesheets/components/_footer.scss */
+/* line 41, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-links {
   list-style: none;
   padding: 0;
 }
 
-/* line 40, app/assets/stylesheets/components/_footer.scss */
+/* line 45, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-links li {
   margin-bottom: 10px;
 }
 
-/* line 43, app/assets/stylesheets/components/_footer.scss */
+/* line 48, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-links li a {
   color: #e0e0e0;
   text-decoration: none;
 }
 
-/* line 47, app/assets/stylesheets/components/_footer.scss */
+/* line 52, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .footer-section .footer-links li a:hover {
   color: #ff6600;
 }
 
-/* line 56, app/assets/stylesheets/components/_footer.scss */
+/* line 61, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .social-icons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
-/* line 61, app/assets/stylesheets/components/_footer.scss */
+/* line 66, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .social-icons a {
   color: #e0e0e0;
   font-size: 1.5em;
 }
 
-/* line 65, app/assets/stylesheets/components/_footer.scss */
+/* line 70, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .social-icons a:hover {
   color: #ff6600;
 }
 
-/* line 72, app/assets/stylesheets/components/_footer.scss */
+/* line 77, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .newsletter-form {
   display: flex;
   margin-top: 10px;
 }
 
-/* line 76, app/assets/stylesheets/components/_footer.scss */
+/* line 81, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .newsletter-form .newsletter-input {
   padding: 8px;
   border: 1px solid #ff6600;
@@ -28113,7 +28104,7 @@ legend ~ div.form-check:first-of-type {
   color: #e0e0e0;
 }
 
-/* line 83, app/assets/stylesheets/components/_footer.scss */
+/* line 88, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .newsletter-form .newsletter-input::-moz-placeholder {
   color: #e0e0e0;
 }
@@ -28121,7 +28112,7 @@ legend ~ div.form-check:first-of-type {
   color: #e0e0e0;
 }
 
-/* line 88, app/assets/stylesheets/components/_footer.scss */
+/* line 93, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .newsletter-form .newsletter-button {
   padding: 8px 15px;
   background-color: #ff6600;
@@ -28131,12 +28122,12 @@ legend ~ div.form-check:first-of-type {
   cursor: pointer;
 }
 
-/* line 96, app/assets/stylesheets/components/_footer.scss */
+/* line 101, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-content .newsletter-form .newsletter-button:hover {
   background-color: #ff8533;
 }
 
-/* line 103, app/assets/stylesheets/components/_footer.scss */
+/* line 108, app/assets/stylesheets/components/_footer.scss */
 .luxury-footer .footer-bottom {
   text-align: center;
   margin-top: 20px;
@@ -28153,7 +28144,7 @@ legend ~ div.form-check:first-of-type {
   height: 70%;
   padding: 7rem 5rem;
   text-align: center;
-  position: relative;
+  position: fixed;
 }
 
 /* line 11, app/assets/stylesheets/components/_hero.scss */
@@ -28161,31 +28152,20 @@ legend ~ div.form-check:first-of-type {
   font-size: 3rem;
   margin-top: 10rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
-/* line 17, app/assets/stylesheets/components/_hero.scss */
+/* line 18, app/assets/stylesheets/components/_hero.scss */
 .hero p {
   font-size: 1.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  text-align: center;
 }
 
-/* line 25, app/assets/stylesheets/components/_hero.scss */
-.options-color {
-  color: black;
-}
-
-/* line 29, app/assets/stylesheets/components/_hero.scss */
-.benefits-list {
-  list-style-type: none;
-  padding: 0;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-}
-
-/* line 36, app/assets/stylesheets/components/_hero.scss */
+/* line 28, app/assets/stylesheets/components/_hero.scss */
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
@@ -28196,7 +28176,7 @@ legend ~ div.form-check:first-of-type {
   text-decoration: none;
 }
 
-/* line 49, app/assets/stylesheets/components/_hero.scss */
+/* line 41, app/assets/stylesheets/components/_hero.scss */
 .suggested-bikes-title {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
@@ -28293,76 +28273,29 @@ legend ~ div.form-check:first-of-type {
 }
 
 /* line 1, app/assets/stylesheets/components/_search_form.scss */
-.search-form {
-  max-width: 100%;
-  height: auto;
-  left: 20px;
-  background: white;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 10;
-  color: black;
-}
-
-/* line 13, app/assets/stylesheets/components/_search_form.scss */
-.search-box {
+.search-form-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
 }
 
-/* line 19, app/assets/stylesheets/components/_search_form.scss */
-.search-select,
-.price-input,
-.year-input,
+/* line 6, app/assets/stylesheets/components/_search_form.scss */
 .search-input {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 16px;
+  flex-grow: 1;
   border-radius: 4px;
-  font-size: 1rem;
-  background: #f9f9f9;
-}
-
-/* line 30, app/assets/stylesheets/components/_search_form.scss */
-.search-input {
-  width: 100%;
-  border-radius: 4px 0 0 4px;
-}
-
-/* line 33, app/assets/stylesheets/components/_search_form.scss */
-.search-input:focus {
-  outline: none;
-  border-color: #ff6600;
-}
-
-/* line 39, app/assets/stylesheets/components/_search_form.scss */
-.search-button {
-  background-color: #ff6600;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 1rem;
-  width: 100%;
-  border-radius: 4px;
-  margin-top: 10px;
-}
-
-/* line 50, app/assets/stylesheets/components/_search_form.scss */
-.search-button:hover {
-  background-color: #ff6600;
+  border: 1px solid #ccc;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  /* line 57, app/assets/stylesheets/components/_search_form.scss */
+  /* line 16, app/assets/stylesheets/components/_search_form.scss */
   .hero {
     flex-direction: column;
     align-items: center;
     padding: 10px;
   }
-  /* line 63, app/assets/stylesheets/components/_search_form.scss */
+  /* line 22, app/assets/stylesheets/components/_search_form.scss */
   .search-form {
     display: none;
   }
@@ -28483,38 +28416,32 @@ img {
 
 /* line 2, app/assets/stylesheets/bikes/_home.scss */
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
-/* line 7, app/assets/stylesheets/bikes/_home.scss */
-html, body {
-  height: 100%;
-  /* Ensures the page height spans the full viewport */
+/* line 6, app/assets/stylesheets/bikes/_home.scss */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 /* line 11, app/assets/stylesheets/bikes/_home.scss */
 body {
-  display: flex;
-  flex-direction: column;
-  /* Stacks the content and footer vertically */
+  height: 100%;
+  /* Ensures the page height spans the full viewport */
+  width: 100%;
+  margin: 0;
 }
 
-/* line 16, app/assets/stylesheets/bikes/_home.scss */
-.entire-content {
-  flex: 1;
-}
-
-/* line 20, app/assets/stylesheets/bikes/_home.scss */
+/* line 18, app/assets/stylesheets/bikes/_home.scss */
 .bike-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   margin: 0 20px;
 }
 
-/* line 27, app/assets/stylesheets/bikes/_home.scss */
+/* line 25, app/assets/stylesheets/bikes/_home.scss */
 .bike-card {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -28526,14 +28453,14 @@ body {
   /* Hover Effects */
 }
 
-/* line 35, app/assets/stylesheets/bikes/_home.scss */
+/* line 33, app/assets/stylesheets/bikes/_home.scss */
 .bike-card .bike-image {
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
 
-/* line 39, app/assets/stylesheets/bikes/_home.scss */
+/* line 37, app/assets/stylesheets/bikes/_home.scss */
 .bike-card .bike-image img {
   width: 100%;
   height: 100%;
@@ -28541,12 +28468,12 @@ body {
      object-fit: cover;
 }
 
-/* line 47, app/assets/stylesheets/bikes/_home.scss */
+/* line 45, app/assets/stylesheets/bikes/_home.scss */
 .bike-card .bike-info {
   padding: 15px;
 }
 
-/* line 49, app/assets/stylesheets/bikes/_home.scss */
+/* line 47, app/assets/stylesheets/bikes/_home.scss */
 .bike-card .bike-info h3.bike-title, .bike-card .bike-info .bike-title.h3 {
   font-size: 1.5rem;
   color: #ff6600;
@@ -28554,27 +28481,27 @@ body {
   text-decoration: none;
 }
 
-/* line 60, app/assets/stylesheets/bikes/_home.scss */
+/* line 58, app/assets/stylesheets/bikes/_home.scss */
 .bike-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* line 66, app/assets/stylesheets/bikes/_home.scss */
+/* line 64, app/assets/stylesheets/bikes/_home.scss */
 .bike-card {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 20px;
 }
 
-/* line 72, app/assets/stylesheets/bikes/_home.scss */
+/* line 70, app/assets/stylesheets/bikes/_home.scss */
 .bike-photos img {
   margin: 5px;
   border: 1px solid #ccc;
   max-width: 100%;
 }
 
-/* line 78, app/assets/stylesheets/bikes/_home.scss */
+/* line 76, app/assets/stylesheets/bikes/_home.scss */
 h2, .h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
@@ -28584,7 +28511,7 @@ h2, .h2 {
 }
 
 /* Container for all categories */
-/* line 87, app/assets/stylesheets/bikes/_home.scss */
+/* line 85, app/assets/stylesheets/bikes/_home.scss */
 .categories-container {
   margin: 20px;
   display: flex;
@@ -28593,7 +28520,7 @@ h2, .h2 {
 }
 
 /* Each category section */
-/* line 95, app/assets/stylesheets/bikes/_home.scss */
+/* line 93, app/assets/stylesheets/bikes/_home.scss */
 .category-section {
   border: 1px solid #ddd;
   padding: 20px;
@@ -28602,7 +28529,7 @@ h2, .h2 {
 }
 
 /* Category title */
-/* line 103, app/assets/stylesheets/bikes/_home.scss */
+/* line 101, app/assets/stylesheets/bikes/_home.scss */
 .category-title {
   font-size: 2.2em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28612,7 +28539,7 @@ h2, .h2 {
 }
 
 /* Container for bikes in a category */
-/* line 112, app/assets/stylesheets/bikes/_home.scss */
+/* line 110, app/assets/stylesheets/bikes/_home.scss */
 .bikes-container {
   display: flex;
   flex-wrap: wrap;
@@ -28620,24 +28547,23 @@ h2, .h2 {
 }
 
 /* Individual bike card */
-/* line 119, app/assets/stylesheets/bikes/_home.scss */
+/* line 117, app/assets/stylesheets/bikes/_home.scss */
 .bike-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
-  max-width: 300px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
-/* line 129, app/assets/stylesheets/bikes/_home.scss */
+/* line 126, app/assets/stylesheets/bikes/_home.scss */
 .bike-card:hover {
   transform: scale(1.05);
 }
 
 /* Bike image */
-/* line 134, app/assets/stylesheets/bikes/_home.scss */
+/* line 131, app/assets/stylesheets/bikes/_home.scss */
 .bike-card img {
   width: 100%;
   height: auto;
@@ -28645,19 +28571,19 @@ h2, .h2 {
 }
 
 /* Bike info */
-/* line 141, app/assets/stylesheets/bikes/_home.scss */
+/* line 138, app/assets/stylesheets/bikes/_home.scss */
 .bike-info {
   padding: 15px;
 }
 
-/* line 145, app/assets/stylesheets/bikes/_home.scss */
+/* line 142, app/assets/stylesheets/bikes/_home.scss */
 .bike-title {
   font-size: 1.2em;
   color: #333;
   margin: 0 0 10px;
 }
 
-/* line 151, app/assets/stylesheets/bikes/_home.scss */
+/* line 148, app/assets/stylesheets/bikes/_home.scss */
 .bike-info p {
   margin: 5px 0;
   font-size: 0.9em;
@@ -28666,9 +28592,13 @@ h2, .h2 {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-  /* line 159, app/assets/stylesheets/bikes/_home.scss */
+  /* line 156, app/assets/stylesheets/bikes/_home.scss */
   .bike-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  /* line 159, app/assets/stylesheets/bikes/_home.scss */
+  #searchForm {
+    display: none;
   }
 }
 
@@ -28676,6 +28606,14 @@ h2, .h2 {
   /* line 165, app/assets/stylesheets/bikes/_home.scss */
   .bike-container {
     grid-template-columns: 1fr;
+  }
+  /* line 168, app/assets/stylesheets/bikes/_home.scss */
+  #searchForm {
+    display: none;
+  }
+  /* line 171, app/assets/stylesheets/bikes/_home.scss */
+  * {
+    box-sizing: border-box;
   }
 }
 
@@ -29052,11 +28990,35 @@ h2, .h2 {
 }
 
 /* Image Styling */
-/* line 30, app/assets/stylesheets/bikes/_category.scss */
+/* line 26, app/assets/stylesheets/bikes/_category.scss */
+.cat-img {
+  text-align: center;
+}
+
+/* line 32, app/assets/stylesheets/bikes/_category.scss */
 .cat-img img {
   width: 100px;
   height: 100px;
   gap: 1px;
+  text-align: center;
+}
+
+/* line 38, app/assets/stylesheets/bikes/_category.scss */
+.cat-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  /* line 44, app/assets/stylesheets/bikes/_category.scss */
+  .category-blog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* line 48, app/assets/stylesheets/bikes/_category.scss */
+  .cat-img {
+    width: 100%;
+  }
 }
 
 /* line 1, app/assets/stylesheets/bikes/_article.scss */

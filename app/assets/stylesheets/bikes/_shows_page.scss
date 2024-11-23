@@ -1,4 +1,22 @@
 /* General Styles for Bike Show Page */
+.bike-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Slider Section */
+.bike-slider {
+  flex: 2; /* Takes 2/3 of the container */
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
 
 .bike-main-image {
   margin-left: 2%;
@@ -36,6 +54,17 @@
   }
 }
 
+.bike-form {
+  flex: 1; /* Takes 1/3 of the container */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .bike-show-title {
   text-align: left;
   font-size: 2rem;
@@ -45,6 +74,9 @@
   margin-bottom: 30px;
 }
 
+.custom-bike-form {
+  width: 100%; /* Take full width */
+}
 
 /* Bike Details */
 .bike-details {
@@ -110,15 +142,35 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .bike-main-image .main-image {
-    max-height: 400px;
+    max-height: 500px;
+    width: 100%;
   }
 
   .thumbnails {
-    flex-direction: column;
-    align-items: center;
+    display: none;
+  }
+
+  .thumbnails {
+    display: none;
   }
 
   .bike-details {
     font-size: 1rem;
+  }
+
+  .bike-container {
+    flex-direction: column;
+  }
+
+  .bike-form {
+    width: 100%; /* Take full width */
+  }
+
+  .custom-bike-form {
+    width: 100%; /* Take full width */
+  }
+
+  .bike-details {
+    width: 90%;
   }
 }

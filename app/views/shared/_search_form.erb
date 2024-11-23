@@ -1,21 +1,9 @@
-<div class="container">
-  <form action="" class="search-form">
-    <div class="search-box">
-      <select name="brand" class="search-select">
-        <% @brands.each do |brand| %>
-          <option class="options-color"><%= brand.name %></option>
-        <% end %>
-      </select>
-      <select name="category" class="search-select">
-        <% @categories.each do |category| %>
-          <option class="options-color"><%= category.name %></option>
-        <% end %>
-      </select>
-      <input type="number" name="price_min" placeholder="Min Price" class="price-input">
-      <input type="number" name="price_max" placeholder="Max Price" class="price-input">
-      <input type="number" name="year_from" placeholder="Year From" class="year-input">
-      <input type="number" name="year_to" placeholder="Year To" class="year-input">
-      <button type="submit" class="search-button">🔍</button>
-    </div>
-  </form>
+<div class="search-bar">
+  <%= form_with url: bikes_path, method: :get, class: "search-form" do %>
+    <%= text_field_tag :query,
+          params[:query],
+          class: "search-input",
+          placeholder: "Find A Bike" %>
+    <%= submit_tag "Search", name: "", class: "search-button" %>
+  <% end %>
 </div>
