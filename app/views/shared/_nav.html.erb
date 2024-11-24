@@ -10,20 +10,19 @@
   <ul class="nav-links" id="navbarMenu">
     <li class="nav-item"><%= link_to "Home", root_path %></li>
     <li class="nav-item dropdown">
-      <a class="dropdown-toggle" href="#" role="button">Inventory</a>
+      <a href="#">Inventory</a>
       <ul class="dropdown-menu">
-        <% Category.all.each do |category| %>
-          <li><%= link_to category.name, category_path(category) %></li>
-        <% end %>
+        <li><a href="#">Category 1</a></li>
+        <li><a href="#">Category 2</a></li>
       </ul>
     </li>
     <li class="nav-item dropdown">
-      <a class="dropdown-toggle" href="#" role="button">Dealer</a>
-      <ul class="dropdown-menu">
-        <li><%= link_to "Reviews", reviews_path %></li>
-        <li><a href="#">Get-Quote</a></li>
-      </ul>
-    </li>
+    <a href="#">Dealer</a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Articles</a></li>
+    </ul>
+  </li>
     <li class="nav-item"><a href="#">About Us</a></li>
     <li class="nav-item"><a href="#">Services</a></li>
     <li class="nav-item"><a href="#">Contact</a></li>
