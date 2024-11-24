@@ -1,6 +1,7 @@
 class BikesController < ApplicationController
   before_action :set_bike, only: %i[show edit update destroy]
   before_action :strong_params, only: %i[create update]
+  before_action :authorize_admin, only: %i[new edit destroy]
   def index
     if params[:query].present?
       @bikes = Bike.global_search(params[:query]).limit(8)
@@ -77,5 +78,9 @@ class BikesController < ApplicationController
   def strong_params
     @bikes = params.require(:bike).permit(:model, :kilometers, :body, :colour, :engine_capacity, :last_modified, :registration_status, :description,
     :features, :price, :stock, :maximum_speed, :fuel_type, :category_id, :brand_id, photos: [] )
+  end
+
+  def authorize_admin
+    redirect_to root_path, alert: "Not authorized!" unless current_user&.admin?
   end
 end

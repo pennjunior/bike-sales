@@ -1,0 +1,22 @@
+<h1>Filter Bikes</h1>
+<%= form_with(url: category_path, method: :get, local: true) do %>
+  <div class="form-group">
+    <%= label_tag :min_price, "Min Price" %>
+    <%= number_field_tag :min_price, params[:min_price], class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :max_price, "Max Price" %>
+    <%= number_field_tag :max_price, params[:max_price], class: "form-control" %> <!-- Fixed this line -->
+  </div>
+  <div class="form-group">
+    <%= label_tag :brand, "Brand" %>
+    <%= text_field_tag :brand, params[:brand], class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :engine_capacity, "Engine Capacity" %>
+    <%= number_field_tag :engine_capacity, params[:engine_capacity], class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= submit_tag "Filter", class: "search-button" %>
+  </div>
+<% end %>

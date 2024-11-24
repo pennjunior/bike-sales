@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
   before_action :authorize_admin, only: [:index]
   def index
     @orders = Order.all
@@ -23,5 +22,12 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:name, :email, :phone, :quantity)
+  end
+
+  def authorize_admin
+    unless current_user&.admin?
+      flash[:alert] = "You are not authorized to perform this action."
+      redirect_to root_path
+    end
   end
 end

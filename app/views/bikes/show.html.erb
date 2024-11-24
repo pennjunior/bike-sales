@@ -8,7 +8,7 @@
           <% @bike.photos.each_with_index do |photo, index| %>
             <div class="mySlides">
               <div class="numbertext">
-                <i class="fa-solid fa-camera"></i> <%= index + 1 %>/<%= @bike.photos.count %>
+                <i class="fa-solid fa-camera"></i><%= index + 1 %>/<%= @bike.photos.count %>
               </div>
               <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
             </div>
