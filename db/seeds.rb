@@ -43,26 +43,26 @@
 # end
 # puts "Brands created: #{Brand.count}"
 
-User.destroy_all
-puts "All users destroyed."
+# User.destroy_all
+# puts "All users destroyed."
 
-# Creating admin user
-admin_user = User.create!(
-  email: "admin@quan.com",
-  password: "29w@jV7!4!tQ",
-  password_confirmation: "29w@jV7!4!tQ",
-  admin: true
-)
-puts "Admin user created with email: #{admin_user.email} and password: #{admin_user.password}"
+# # Creating admin user
+# admin_user = User.create!(
+#   email: "admin@quan.com",
+#   password: "29w@jV7!4!tQ",
+#   password_confirmation: "29w@jV7!4!tQ",
+#   admin: true
+# )
+# puts "Admin user created with email: #{admin_user.email} and password: #{admin_user.password}"
 
-# Create a visitor user
-visitor_user = User.create!(
-  email: "visitor@quan.com",
-  password: "123456",
-  password_confirmation: "123456",
-  admin: false
-)
-puts "Visitor user created with email: #{visitor_user.email} and password: #{visitor_user.password}"
+# # Create a visitor user
+# visitor_user = User.create!(
+#   email: "visitor@quan.com",
+#   password: "123456",
+#   password_confirmation: "123456",
+#   admin: false
+# )
+# puts "Visitor user created with email: #{visitor_user.email} and password: #{visitor_user.password}"
 
 # Bike.destroy_all
 # puts "Destroyed Bikes"
