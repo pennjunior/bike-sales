@@ -2,7 +2,7 @@
   <!-- Logo Section -->
   <div class="custom-logo">
     <%= link_to root_path do %>
-      <%= image_tag "bikelogo.jpg", alt: "Bike Logo", class: "brand-link" %>
+      <%= image_tag "bike-logo.png", alt: "Bike Logo", class: "brand-link" %>
     <% end %>
   </div>
 
@@ -12,15 +12,16 @@
     <li class="nav-item dropdown">
       <a href="#">Inventory</a>
       <ul class="dropdown-menu">
-        <li><a href="#">Category 1</a></li>
-        <li><a href="#">Category 2</a></li>
+        <% Category.all.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li>
+        <% end %>
       </ul>
     </li>
     <li class="nav-item dropdown">
     <a href="#">Dealer</a>
     <ul class="dropdown-menu">
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Articles</a></li>
+      <li><%= link_to "Reviews", reviews_path %></li>
+      <li><a href="#">Get-Quote</a></li>
     </ul>
   </li>
     <li class="nav-item"><a href="#">About Us</a></li>
@@ -43,27 +44,74 @@
       </li>
     <% end %>
   </ul>
-  <!-- Hamburger Icon for Mobile -->
-  <div id="hamburger-icon">
-    <i class="fa-solid fa-bars"></i>
+</div>
+
+<div class="mobile-navbar">
+  <!-- Top Section with Logo and Hamburger -->
+  <div class="mobile-navbar-header">
+    <!-- Logo Section -->
+    <div class="mobile-logo">
+      <%= link_to root_path do %>
+        <%= image_tag "bike-logo.png", alt: "Bike Logo", class: "brand-link" %>
+      <% end %>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div id="mobile-hamburger-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </div>
 
+  <!-- Dropdown Menu -->
+  <ul class="mobile-menu" id="mobileMenu">
+    <li class="mobile-nav-item"><%= link_to "Home", root_path %></li>
+    <li class="mobile-nav-item dropdown">
+      <a href="#" class="dropdown-toggle">Inventory</a>
+      <ul class="mobile-dropdown-menu">
+        <% Category.all.each do |category| %>
+          <li><%= link_to category.name, category_path(category) %></li>
+        <% end %>
+      </ul>
+    </li>
+    <li class="mobile-nav-item dropdown">
+      <a href="#" class="dropdown-toggle">Dealer</a>
+      <ul class="mobile-dropdown-menu">
+        <li><%= link_to "Reviews", reviews_path %></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </li>
+    <li class="mobile-nav-item"><a href="#">About Us</a></li>
+    <li class="mobile-nav-item"><a href="#">Services</a></li>
+    <li class="mobile-nav-item"><a href="#">Contact</a></li>
+
+    <!-- User Links -->
+    <% if user_signed_in? %>
+      <li class="mobile-user-item"><%= button_to "Logout", destroy_user_session_path, method: :delete %></li>
+    <% else %>
+      <li class="mobile-user-item"><%= link_to "Login", new_user_session_path %></li>
+      <li class="mobile-user-item"><%= link_to "Sign Up", new_user_registration_path %></li>
+    <% end %>
+  </ul>
 </div>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerIcon = document.getElementById("hamburger-icon");
-    const navbarMenu = document.getElementById("navbarMenu");
-    const userMenu = document.getElementById("userMenu");
+  const mobileHamburgerIcon = document.getElementById("mobile-hamburger-icon");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    // Attach event listener to the hamburger icon
-    hamburgerIcon.addEventListener("click", function () {
-      // Toggle visibility for nav and user menus
-      navbarMenu.classList.toggle("show");
-      userMenu.classList.toggle("show");
+  // Toggle the mobile menu
+  mobileHamburgerIcon.addEventListener("click", function () {
+    mobileMenu.classList.toggle("show");
+  });
 
-      // Add 'active' class to animate the hamburger icon
-      this.classList.toggle("active");
+  // Handle dropdown submenus
+  const dropdownToggles = document.querySelectorAll(".mobile-nav-item.dropdown .dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent default link behavior
+      this.parentElement.classList.toggle("show");
     });
   });
+});
 </script>

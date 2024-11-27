@@ -9,7 +9,9 @@
 </section>
 <%= render "shared/categories" %>
 <h1 class="suggested-bikes-title">Featured Bikes</h1>
-<div class="bike-container">
+<div class="bike-container" id="bikes-section" data-controller="scroll"
+  data-scroll-target="bikeSection"
+  <%= @search_performed ? '' : 'style="display: none;"' %>>
   <% @bikes.each do |bike| %>
     <div class="bike-card">
       <%= link_to bike_path(bike) do %>
@@ -89,3 +91,19 @@
     <% end %>
   </div>
 </div>
+<% if @scroll_to_bikes %>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Scroll to the bikes section
+      const bikesSection = document.getElementById('bikes-section');
+      if (bikesSection) {
+        bikesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      bikesSection.style.transition = 'background-color 0.5s';
+    bikesSection.style.backgroundColor = '#fffae6'; // Highlight color
+    setTimeout(() => {
+      bikesSection.style.backgroundColor = ''; // Remove highlight
+    }, 1500);
+    });
+  </script>
+<% end %>

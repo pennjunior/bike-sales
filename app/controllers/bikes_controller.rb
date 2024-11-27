@@ -5,6 +5,8 @@ class BikesController < ApplicationController
   def index
     if params[:query].present?
       @bikes = Bike.global_search(params[:query]).limit(8)
+
+      @scroll_to_bikes = true
     else
       @bikes = Bike.all.limit(8)
     end
