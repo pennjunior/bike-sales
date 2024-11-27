@@ -32,16 +32,41 @@
   <!-- User Links -->
   <ul class="user-links" id="userMenu">
     <% if user_signed_in? %>
-      <li class="user-item">
-        <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link" %>
-      </li>
+    <div class="nav-item dropdown profile-li">
+        <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+          <i class="fa-solid fa-user"></i>
+          <div>Profile</div>
+        <% end %>
+
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li class="user-item">
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link center" %>
+        </li>
+        <li>
+          <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+        </li>
+      </ul>
+    </div>
     <% else %>
-      <li class="user-item">
-        <%= link_to "Login", new_user_session_path, class: "login-link" %>
-      </li>
-      <li class="user-item">
-        <%= link_to "Sign Up", new_user_registration_path, class: "signup-link" %>
-      </li>
+      <div class="nav-item dropdown profile-li">
+        <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+          <i class="fa-solid fa-user"></i>
+          <div>Profile</div>
+        <% end %>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+          </li>
+          <li>
+            <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+          </li>
+          <li>
+            <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
+          </li>
+        </ul>
+      </div>
+
     <% end %>
   </ul>
 </div>
@@ -56,6 +81,47 @@
       <% end %>
     </div>
 
+  <div class="another">
+      <!-- User Links -->
+  <ul class="user-links" id="userMenu">
+    <% if user_signed_in? %>
+    <div class="nav-item dropdown profile-li">
+        <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+          <i class="fa-solid fa-user"></i>
+          <div>Profile</div>
+        <% end %>
+
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li class="user-item">
+          <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link center" %>
+        </li>
+        <li>
+          <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+        </li>
+      </ul>
+    </div>
+    <% else %>
+      <div class="nav-item dropdown profile-li">
+        <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
+          <i class="fa-solid fa-user"></i>
+        <% end %>
+
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li>
+            <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+          </li>
+          <li>
+            <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+          </li>
+          <li>
+            <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
+          </li>
+        </ul>
+      </div>
+
+    <% end %>
+  </ul>
+  </div>
     <!-- Hamburger Icon -->
     <div id="mobile-hamburger-icon">
       <i class="fa-solid fa-bars"></i>

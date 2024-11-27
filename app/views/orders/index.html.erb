@@ -5,7 +5,7 @@
       <div class="bike-card">
       <!-- Display the first photo for each bike -->
         <% if order.bike.photos.any? %>
-          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo" c %>
+          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo"%>
         <% else %>
           <p>No photos available for this bike.</p>
         <% end %>
