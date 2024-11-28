@@ -37,18 +37,20 @@ class BikesController < ApplicationController
   end
 
   def update
-    # if @bike.update(strong_params)
-    #   redirect_to bike_path(@bike), notice: "Bike was successfully updated."
-    # end
-    if strong_params[:photos].present?
-      @bike.photos.attach(strong_params[:photos])
-    end
-
-    if @bike.update(strong_params.except(:photos))
-      redirect_to @bike, notice: "Bike was successfully updated."
+    if @bike.update(strong_params)
+      redirect_to bike_path(@bike), notice: "Bike was successfully updated."
     else
       render :edit
     end
+    # if strong_params[:photos].present?
+    #   @bike.photos.attach(strong_params[:photos])
+    # end
+
+    # if @bike.update(strong_params.except(:photos))
+    #   redirect_to @bike, notice: "Bike was successfully updated."
+    # else
+    #   render :edit
+    # end
   end
 
 
