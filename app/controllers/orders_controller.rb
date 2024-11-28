@@ -12,10 +12,15 @@ class OrdersController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @order = @bike.orders.new(order_params)
     if @order.save
-      redirect_to orders_path, notice: "Order successfully placed!"
+      redirect_to order_confirmation_path(@order), notice: "Your order has been placed successfully!"
     else
+      flash.now[:alert] = "There was an issue with your order. Please try again."
       render :new
     end
+  end
+
+  def confirmation
+    @order = Order.find(params[:id])
   end
 
   private

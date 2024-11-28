@@ -24,9 +24,8 @@
       <li><a href="#">Get-Quote</a></li>
     </ul>
   </li>
-    <li class="nav-item"><a href="#">About Us</a></li>
-    <li class="nav-item"><a href="#">Services</a></li>
-    <li class="nav-item"><a href="#">Contact</a></li>
+    <li class="nav-item"><%= link_to "About Us", about_path %></li>
+    <li class="nav-item"><%= link_to "Contact Us", contact_path %></li>
   </ul>
 
   <!-- User Links -->
@@ -42,9 +41,11 @@
         <li class="user-item">
           <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link center" %>
         </li>
-        <li>
-          <%= link_to "Orders", orders_path, class: "dropdown-item" %>
-        </li>
+        <% if current_user&.admin? %>
+            <li>
+              <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+            </li>
+          <% end %>
       </ul>
     </div>
     <% else %>
@@ -55,9 +56,6 @@
         <% end %>
 
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li>
-            <%= link_to "Orders", orders_path, class: "dropdown-item" %>
-          </li>
           <li>
             <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
           </li>
@@ -94,9 +92,11 @@
         <li class="user-item">
           <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "logout-link center" %>
         </li>
-        <li>
-          <%= link_to "Orders", orders_path, class: "dropdown-item" %>
-        </li>
+        <% if current_user&.admin? %>
+            <li>
+              <%= link_to "Orders", orders_path, class: "dropdown-item" %>
+            </li>
+        <% end %>
       </ul>
     </div>
     <% else %>
@@ -104,11 +104,7 @@
         <%= link_to "#", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-bs-toggle": "dropdown", "aria-expanded": "false" do %>
           <i class="fa-solid fa-user"></i>
         <% end %>
-
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li>
-            <%= link_to "Orders", orders_path, class: "dropdown-item" %>
-          </li>
           <li>
             <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
           </li>
@@ -145,9 +141,8 @@
         <li><a href="#">Articles</a></li>
       </ul>
     </li>
-    <li class="mobile-nav-item"><a href="#">About Us</a></li>
-    <li class="mobile-nav-item"><a href="#">Services</a></li>
-    <li class="mobile-nav-item"><a href="#">Contact</a></li>
+    <li class="nav-item"><%= link_to "About Us", about_path %></li>
+    <li class="mobile-nav-item"><%= link_to "Contact Us", contact_path %></li>
 
     <!-- User Links -->
     <% if user_signed_in? %>

@@ -41,6 +41,20 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  domain: 'https://bike-sales-5dc6c4bee24a.herokuapp.com', # Replace with your app's domain
+  user_name: 'martinkunis114@gmail.com', # Your Gmail address
+  password: 'RUqn#9%^^RV', # Your Gmail app password
+  authentication: 'plain',
+  enable_starttls_auto: true
+}
+
+config.action_mailer.default_url_options = { host: 'https://bike-sales-5dc6c4bee24a.herokuapp.com' }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

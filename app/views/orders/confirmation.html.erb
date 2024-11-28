@@ -1,0 +1,39 @@
+  <div class="thank-you-section">
+    <h1>Thank You for Your Inquiry!</h1>
+    <p>We’ve received your order and will be in touch soon with more details.</p>
+  </div>
+
+  <div class="order-summary">
+    <h2>Order Summary</h2>
+    <p><strong>Order Number:</strong> #<%= @order.id %></p>
+    <p><strong>Date:</strong> <%= @order.created_at.strftime('%B %d, %Y') %></p>
+
+    <div class="order-items">
+        <div class="order-item">
+          <%= image_tag @order.bike.photos.first, alt: @order.bike.model, class: "bike-thumbnail" %>
+          <div>
+            <p><strong>Bike:</strong> <%= @order.bike.model %></p>
+            <p><strong>Price:</strong> <%= number_to_currency(@order.bike.price) %></p>
+          </div>
+        </div>
+    </div>
+
+    <p><strong>Total:</strong> <%= number_to_currency(@order.bike.price) %></p>
+  </div>
+
+  <div class="customer-info">
+    <h2>Customer Information</h2>
+    <p><strong>Name:</strong> <%= @order.name %></p>
+    <p><strong>Email:</strong> <%= @order.email %></p>
+    <p><strong>Phone:</strong> <%= @order.phone %></p>
+  </div>
+
+  <div class="next-steps">
+    <h2>What’s Next?</h2>
+    <p>We will contact you within 12 hours to confirm the details of your order. If you have any questions, don’t hesitate to reach out!</p>
+  </div>
+
+  <div class="actions">
+    <%= link_to "Explore More Bikes", root_path, class: "search-button" %>
+  </div>
+</div>
