@@ -55,8 +55,14 @@ class BikesController < ApplicationController
 
 
   def destroy
-    @bike.destroy
-    redirect_to bikes_path, status: :see_other
+    @bike = Bike.find(params[:id])
+    if @bike.category && @bike.brand
+      @bike.destroy
+      redirect_to bikes_path, status: :see_other
+    else
+      flash[:alert] = "Bike cannot be deleted due to associated category or brand."
+      redirect_to bikes_path
+    end
   end
 
   def create_order

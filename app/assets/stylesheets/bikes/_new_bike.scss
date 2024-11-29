@@ -82,6 +82,17 @@ $background-color: #fff;
   }
 }
 
+input.is-invalid, select.is-invalid, textarea.is-invalid {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .custom-bike-form {

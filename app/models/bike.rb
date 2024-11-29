@@ -1,11 +1,11 @@
 class Bike < ApplicationRecord
   belongs_to :category
-  belongs_to :brand
+  belongs_to :brand, optional: true
   has_many :reviews, dependent: :destroy
   has_many :orders, dependent: :destroy
   include PgSearch::Model
 
-  enum registration_status: [:registered, :unregistered]
+  enum registration_status: { registered: 0, unregistered: 1 }
   has_many_attached :photos
 
   pg_search_scope :global_search,
@@ -18,6 +18,5 @@ class Bike < ApplicationRecord
     tsearch: { prefix: true } # Allows partial matching, e.g., "mount" matches "mountain"
   }
 
-  # validates :model, :kilometers, :body, :colour, :engine_capacity, :price,
-  #   :last_modified, :registration_status, :description, :features, :stock, :maximum_speed, :fuel_type, presence: true
+  validates :model, :kilometers, :body, :colour, :engine_capacity, :price, :registration_status, :description, :features, :maximum_speed, :fuel_type, presence: true
 end

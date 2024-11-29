@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @order = @bike.orders.new(order_params)
     if @order.save
+      flash[:notice] = "Your bike order has been placed successfully!"
       redirect_to order_confirmation_path(@order), notice: "Your order has been placed successfully!"
     else
       flash.now[:alert] = "There was an issue with your order. Please try again."

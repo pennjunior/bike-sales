@@ -23,7 +23,12 @@
     <%= form.input :last_modified, as: :date, label: false, placeholder: "Select last modified date" %>
   </div>
   <div class="form-group">
-    <%= form.input :registration_status, placeholder: "Enter registration status", label: false %>
+    <%= form.input :registration_status,
+                  as: :select,
+                  collection: Bike.registration_statuses.keys,
+                  prompt: "Enter registration status",
+                  label: false %>
+  </div>
   </div>
   <div class="form-group">
     <%= form.input :description, placeholder: "Enter a brief description", label: false %>
@@ -33,9 +38,6 @@
   </div>
   <div class="form-group">
     <%= form.input :price, placeholder: "Enter price in currency", label: false %>
-  </div>
-  <div class="form-group">
-    <%= form.input :stock, placeholder: "Enter stock count", label: false %>
   </div>
   <div class="form-group">
     <%= form.input :maximum_speed, placeholder: "Enter maximum speed in km/h", label: false %>

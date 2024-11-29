@@ -1,26 +1,74 @@
-#flash-messages {
-  position: fixed; /* Always visible at the top */
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1050; /* Above other elements */
-  width: 90%;
-  max-width: 600px; /* Keep it manageable */
+/* Flash Container */
+#flash-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+  width: 300px;
 }
 
-.flash-message {
+/* Flash Message Styles */
+.flash {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
   margin-bottom: 10px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 14px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  animation: fade-in 0.5s ease;
 }
 
-.flash-message .close {
-  color: inherit; /* Keep the close button matching */
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  float: right;
-  margin-left: 10px;
+/* Flash Types */
+.flash-notice {
+  background-color: #28a745; /* Success green */
+}
+
+.flash-alert {
+  background-color: #dc3545; /* Danger red */
+}
+
+.flash-error {
+  background-color: #ff6600; /* Custom orange for errors */
+}
+
+.flash-warning {
+  background-color: #ffc107; /* Warning yellow */
+}
+
+/* Flash Content */
+.flash-content {
+  flex: 1;
+  text-align: left;
+  margin-right: 10px;
+}
+
+/* Close Button */
+.flash-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flash-close:hover {
+  transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
