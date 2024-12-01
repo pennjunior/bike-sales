@@ -1,29 +1,29 @@
 <h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
-<div class="bike-and-filter">
+<div>
   <%# <div class="bike-filters"> %>
     <%#= render "shared/filter" %>
   <%# </div> %>
-  <div class="bike-wrapper">
-    <% @bikes.each do |bike| %>
-      <div class="shows-bike">
-        <%= link_to bike_path(bike) do %>
-          <div class="bike-image">
-            <% if bike.photos.first.present? %>
-              <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
-            <% else %>
-              <%= image_tag 'san_francisco.jpg', height: 300, width: 400, crop: :fill, alt: 'Default bike image' %>
-            <% end %>
-          </div>
-
-          <div class="bike-info">
-            <h3 class="bike-title"><%= bike.model %></h3>
-            <p><strong>Category: </strong><%= bike.brand.name %></p>
-            <p><strong>Price: </strong><%= number_to_currency(bike.price) %></p>
-            <p><strong>Engine: </strong><%= bike.engine_capacity %> CC</p>
-          </div>
-        <% end %>
+  <div class="bike-container"%>
+  <% @bikes.each do |bike| %>
+    <div class="bike-card">
+      <%= link_to bike_path(bike) do %>
+        <div class="bike-image">
+          <% if bike.photos.first.present? %>
+            <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
+          <% else %>
+            <%= image_tag 'san_francisco.jpg', height: 300, width: 400, crop: :fill, alt: 'Default bike image' %>
+          <% end %>
         </div>
-    <% end %>
-  </div>
+
+        <div class="bike-info">
+          <h3 class="bike-title"><%= bike.model %></h3>
+          <p><strong>Category: </strong><%= bike.brand.name %></p>
+          <p><strong>Price: </strong><%= number_to_currency(bike.price) %></p>
+          <p><strong>Engine: </strong><%= bike.engine_capacity %> CC</p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
 </div>
 <%= paginate @bikes %>

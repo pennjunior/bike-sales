@@ -2,17 +2,20 @@
 <div class="bike-container">
   <% if @orders.any? %>
     <% @orders.each do |order| %>
-      <div class="bike-card">
       <!-- Display the first photo for each bike -->
-        <% if order.bike.photos.any? %>
-          <%= cl_image_tag order.bike.photos.first.key, width: 200, height: 200, crop: :fill, alt: "Bike photo"%>
-        <% else %>
-          <p>No photos available for this bike.</p>
-        <% end %>
+      <div class="order-container">
+        <div class="order-items">
+        <div class="order-item">
+          <%= image_tag order.bike.photos.first, alt: order.bike.model, class: "bike-thumbnail" %>
+        <div>
+            <p><strong>Bike:</strong> <%= order.bike.model %></p>
+            <p><strong>Price:</strong> <%= number_to_currency(order.bike.price) %></p>
+              </div>
+            </div>
+        </div>
 
         <!-- Display the bike details -->
         <div class="bike-info">
-          <p><strong>Bike Name: </strong><%= order.bike.model %></p>
           <p><strong>Order ID: </strong><%= order.id %></p>
           <p><strong>Name: </strong><%= order.name %></p>
           <p><strong>Email: </strong><%= order.email %></p>
@@ -25,4 +28,5 @@
   <% else %>
     <p>No orders yet.</p>
   <% end %>
+
 </div>
