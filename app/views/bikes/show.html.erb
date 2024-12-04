@@ -44,7 +44,7 @@
       html: { class: "custom-bike-form" } do |form| %>
       <div class="row">
         <div class="col-8">
-          <h1 class="bike-show-title"><%= @bike.model %></h1>
+          <h1 class="bike-show-title"><%= @bike.model %> For Sale</h1>
           <h1 class="bike-show-title"><%= number_to_currency(@bike.price) %></h1>
         </div>
       <div class="col-4">
@@ -91,7 +91,25 @@
 
 <!-- Bike Information Section -->
 <div class="bike-details">
-  <table>
+  <div class="popularity-stats">
+  <h2 class="stats-title"><i class="fa-solid fa-chart-line"></i> Popularity Stats</h2>
+  <div class="stats-row">
+    <div class="stats-item">
+      <i class="fa-solid fa-eye"></i>
+      <span><strong>Seen:</strong> 74 times (last 30 days)</span>
+    </div>
+    <div class="stats-item">
+      <i class="fa-solid fa-bookmark"></i>
+      <span><strong>Saved:</strong> by 2 people</span>
+    </div>
+    <div class="stats-item">
+      <i class="fa-solid fa-tags"></i>
+      <span><strong>Price Update:</strong> The price recently decreased by $1,000</span>
+    </div>
+  </div>
+</div>
+
+  <table class="mt-5">
     <tr>
       <td><strong>Category:</strong></td>
       <td><%= @bike.category.name %></td>

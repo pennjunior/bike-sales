@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'articles/index'
   root 'bikes#index'
   resources :categories, only: [:index, :show]
   resources :orders, only: [:index]

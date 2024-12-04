@@ -1,0 +1,24 @@
+<!-- Articles section -->
+<div class="a-container">
+  <% @articles.each do |article| %>
+    <% if article.photos.present? %>
+      <div
+        class="article-card"
+        style="background-image: url('<%= cl_image_path(article.photos.first.key) %>');">
+        <div class="overlay">
+          <h2 class="article-title"><%= article.title %></h2>
+          <p class="article-date"><%= article.date %></p>
+          <p><%= article.article_type %></p>
+          <p class="article-description"><%= truncate(article.description, length: 350, separator: ' ') %></p>
+        </div>
+      </div>
+
+    <% else %>
+      <div class="article-default">
+        <h2 class="article-title"><%= article.title %></h2>
+        <p class="article-date"><%= article.date %></p>
+        <p class="article-description"><%= article.description %></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
