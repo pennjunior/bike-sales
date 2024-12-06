@@ -4,6 +4,17 @@ $hover-color: #cc5200;
 $text-color: #333;
 $background-color: #fff;
 
+.search-container {
+  position: fixed;
+  right: 1px;
+}
+
+.search-icon {
+  font-size: 44px; /* Adjust size for your icon */
+  cursor: pointer;
+  padding: 10px;
+  color: $primary-color;
+}
 /* Search Bar Styling */
 .search-bar {
   display: flex;

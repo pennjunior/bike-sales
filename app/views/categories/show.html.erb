@@ -1,8 +1,26 @@
-<h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
-<div>
-  <%# <div class="bike-filters"> %>
-    <%#= render "shared/filter" %>
-  <%# </div> %>
+<% if @category.present? %>
+  <h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
+<% else %>
+  <h1 class="text-center mt-5 mb-3"></h1>
+<% end %>
+<div class="search-container">
+  <!-- Search Icon -->
+  <div class="search-icon" onclick="toggleSearchBar()">
+    <i class="fa fa-search"></i>
+  </div>
+
+  <!-- Search Form (Initially Hidden) -->
+  <div id="search-bar" class="search-bar" style="display: none;">
+    <%= form_with url: category_path, method: :get, class: "search-form" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "search-input",
+            placeholder: "Find A Bike" %>
+      <%= submit_tag "Search", name: "", class: "search-button" %>
+    <% end %>
+  </div>
+</div>
+
   <div class="bike-container"%>
   <% @bikes.each do |bike| %>
     <div class="bike-card">
@@ -27,3 +45,27 @@
 </div>
 </div>
 <%= paginate @bikes %>
+<script>
+  function toggleSearchBar() {
+  const searchBar = document.getElementById('search-bar');
+
+  // Check if the search bar is visible
+  if (searchBar.style.display === "block") {
+    // If it's visible, hide it
+    searchBar.style.display = "none";
+  } else {
+    // Otherwise, show the search bar
+    searchBar.style.display = "block";
+  }
+}
+// Close the search bar if clicked outside
+document.addEventListener('click', function(event) {
+  const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.querySelector('.search-icon');
+
+  // Close the search bar if the click was outside of the search bar and search icon
+  if (!searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
+    searchBar.style.display = 'none';
+  }
+});
+</script>

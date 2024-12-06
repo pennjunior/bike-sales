@@ -53,10 +53,10 @@ body {
   }
 
   /* Hover Effects */
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
+  // &:hover {
+  //   transform: translateY(-5px);
+  //   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  // }
 }
 
 .bike-card {
@@ -121,9 +121,9 @@ h2 {
   transition: transform 0.2s;
 }
 
-.bike-card:hover {
-  transform: scale(1.05);
-}
+// .bike-card:hover {
+//   transform: scale(1.05);
+// }
 
 /* Bike image */
 .bike-card img {
