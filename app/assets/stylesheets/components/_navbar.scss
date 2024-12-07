@@ -206,8 +206,10 @@ $background-color: #fff;
 
   /* Dropdown Menus */
   .mobile-nav-item.dropdown .mobile-dropdown-menu {
+    list-style: none;
     display: none;
     padding-left: 15px;
+    padding: 5px;
     background-color: #f9f9f9;
   }
 

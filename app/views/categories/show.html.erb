@@ -48,14 +48,17 @@
 <script>
   function toggleSearchBar() {
   const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.querySelector('.search-icon');
 
   // Check if the search bar is visible
   if (searchBar.style.display === "block") {
+    searchIcon.style.display = "block";
     // If it's visible, hide it
     searchBar.style.display = "none";
   } else {
     // Otherwise, show the search bar
     searchBar.style.display = "block";
+    searchIcon.style.display = "none";
   }
 }
 // Close the search bar if clicked outside
@@ -63,9 +66,11 @@ document.addEventListener('click', function(event) {
   const searchBar = document.getElementById('search-bar');
   const searchIcon = document.querySelector('.search-icon');
 
-  // Close the search bar if the click was outside of the search bar and search icon
+   // Check if the click was outside the search bar and not on the search icon
   if (!searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
     searchBar.style.display = 'none';
+    // Keep the search icon always visible
+    searchIcon.style.display = "block";
   }
 });
 </script>
