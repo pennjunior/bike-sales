@@ -119,10 +119,17 @@
       <td><strong>Category:</strong></td>
       <td><%= @bike.category.name %></td>
     </tr>
-    <tr>
-      <td><strong>Brand:</strong></td>
-      <td><%= @bike.brand.name %></td>
-    </tr>
+    <% if @bike.category.name == "Electric" %>
+      <tr>
+        <td><strong>Make:</strong></td>
+        <td><%= @bike.make %></td>
+      </tr>
+    <% else %>
+      <tr>
+        <td><strong>Brand:</strong></td>
+        <td><%= @bike.brand.name %></td>
+      </tr>
+    <% end %>
     <tr>
       <td><strong>Kilometers:</strong></td>
       <td><%= @bike.kilometers %> km</td>

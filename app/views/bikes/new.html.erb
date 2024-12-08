@@ -46,6 +46,9 @@
     <%= form.input :fuel_type, placeholder: "Enter fuel type (e.g., petrol, electric)", label: false %>
   </div>
   <div class="form-group">
+    <%= form.input :make, placeholder: "Enter Make", label: false %>
+  </div>
+  <div class="form-group">
     <%= form.input :category_id, as: :select, collection: Category.all, prompt: "Select a Category", label: false %>
   </div>
   <div class="form-group">
