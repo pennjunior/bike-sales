@@ -212,6 +212,9 @@ $background-color: #fff;
     padding: 5px;
     background-color: #f9f9f9;
   }
+  .mobile-nav-item.dropdown .mobile-dropdown-menu li {
+    padding: 10px 15px;
+  }
 
   .mobile-nav-item.dropdown.show .mobile-dropdown-menu {
     display: block;
