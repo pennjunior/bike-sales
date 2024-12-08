@@ -1,19 +1,24 @@
 class ContactsController < ApplicationController
   def new
-    # Render the contact form
+    @contact = OpenStruct.new # For form_with compatibility
   end
 
   def create
-    contact_params = params.require(:contact).permit(:name, :email, :subject, :message)
+    # Fetch the contact form params
+    name = params[:name]
+    email = params[:email]
+    subject = params[:subject]
+    message = params[:message]
 
     # Send the email
-    ContactMailer.contact_email(contact_params).deliver_now
+    ContactMailer.contact_email(name, email, subject, message).deliver_now
 
-    # Show a success message
+    # Success message and redirect
     flash[:notice] = "Your message has been sent successfully. We'll get back to you soon!"
     redirect_to contact_path
   rescue StandardError => e
     # Handle errors gracefully
+    Rails.logger.error("Error sending email: #{e.message}")
     flash[:alert] = "Failed to send your message. Please try again later."
     render :new
   end

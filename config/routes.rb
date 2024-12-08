@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     resources :reviews, only: [:index, :new, :create]
   end
   get '/contact', to: 'contacts#new', as: 'contact'
-  get '/about', to: 'pages#about'
   post '/contact', to: 'contacts#create'
+  get '/about', to: 'pages#about'
   get '/orders/:id/confirmation', to: 'orders#confirmation', as: 'order_confirmation'
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
     @bike = Bike.find(params[:bike_id])
     @order = @bike.orders.new(order_params)
     if @order.save
+      OrderMailer.order_notification(@order).deliver_now
       flash[:notice] = "Your bike order has been placed successfully!"
       redirect_to order_confirmation_path(@order), notice: "Your order has been placed successfully!"
     else
@@ -27,7 +28,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name, :email, :phone, :quantity)
+    params.require(:order).permit(:name, :email, :phone, :location, :quantity)
   end
 
   def authorize_admin

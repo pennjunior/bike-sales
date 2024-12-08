@@ -1,0 +1,17 @@
+<h1>New Order Received</h1>
+
+<p><strong>Order Details:</strong></p>
+<ul>
+  <li><strong>Name:</strong> <%= @order.name %></li>
+  <li><strong>Email:</strong> <%= @order.email %></li>
+  <li><strong>Phone:</strong> <%= @order.phone %></li>
+  <li><strong>Bike:</strong> <%= @order.bike.model %></li>
+  <li><strong>Quantity:</strong> <%= @order.quantity %></li>
+  <li><strong>Location:</strong> <%= @order.location %></li>
+  <li><strong>Ordered At:</strong> <%= @order.created_at.strftime('%d %b %Y, %H:%M %p') %></li>
+</ul>
+<% if @order.bike.photos.attached? %>
+  <%= image_tag url_for(@order.bike.photos.first), alt: @order.bike.model, style: "max-width: 300px; border-radius: 10px;" %>
+<% else %>
+  <p>No photo available for this bike.</p>
+<% end %>

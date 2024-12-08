@@ -1,15 +1,14 @@
 class ContactMailer < ApplicationMailer
-  default from: 'no-reply@example.com'
+  default from: 'contact@bikezsale.us'
 
-  def contact_email(contact_params)
-    @name = contact_params[:name]
-    @message = contact_params[:message]
-    @subject = contact_params[:subject]
-    @sender_email = contact_params[:email]
+  def contact_email(name, email, subject, message)
+    @name = name
+    @message = message
 
     mail(
-      to: 'martinkunis114@gmail.com',
-      subject: "New Contact Form Submission: #{@subject}"
+      to: 'contact@bikezsale.us',
+      subject: "New Contact Form Submission: #{subject}",
+      reply_to: email
     )
   end
 end
