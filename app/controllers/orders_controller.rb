@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:name, :email, :phone, :location, :quantity)
+    params.require(:order).permit(:bike_id, :name, :email, :phone, :quantity, :location)
   end
 
   def authorize_admin

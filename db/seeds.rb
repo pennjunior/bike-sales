@@ -69,6 +69,6 @@
 # require_relative "seeds/atvs"
 # require_relative "seeds/cruisers"
 # require_relative "seeds/scooter"
-# require_relative "seeds/utvs"
+require_relative "seeds/utvs"
 # require_relative "seeds/reviews"
 # require_relative "seeds/articles"
