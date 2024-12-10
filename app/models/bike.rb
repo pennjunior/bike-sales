@@ -1,4 +1,7 @@
 class Bike < ApplicationRecord
+  extend FriendlyId
+  friendly_id :model, use: :slugged
+
   belongs_to :category
   belongs_to :brand, optional: true
   has_many :reviews, dependent: :destroy

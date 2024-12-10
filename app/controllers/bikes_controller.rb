@@ -56,7 +56,7 @@ class BikesController < ApplicationController
 
 
   def destroy
-    @bike = Bike.find(params[:id])
+    @bike = Bike.friendly.find(params[:id])
     if @bike.category && @bike.brand
       @bike.destroy
       redirect_to bikes_path, status: :see_other
@@ -67,7 +67,7 @@ class BikesController < ApplicationController
   end
 
   def create_order
-    @bike = Bike.find(params[:bike_id])  # Get the bike from params
+    @bike = Bike.friendly.find(params[:bike_id])  # Get the bike from params
     @order = @bike.orders.new(order_params)
 
     if @order.save
@@ -79,7 +79,7 @@ class BikesController < ApplicationController
 
   private
   def set_bike
-    @bike = Bike.find(params[:id])
+    @bike = Bike.friendly.find(params[:id])
   end
 
   def order_params

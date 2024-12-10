@@ -38,7 +38,7 @@ gem 'cloudinary'
 gem "dotenv-rails"
 gem 'activerecord-import'
 gem "kaminari"
-
+gem 'friendly_id', '~> 5.4.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

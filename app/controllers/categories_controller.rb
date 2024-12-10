@@ -10,12 +10,11 @@ class CategoriesController < ApplicationController
       @bikes = Bike.global_search(params[:query]).page(params[:page]).per(10)
       @scroll_to_bikes = true
     else
-      # Find the category by ID
-      @category = Category.find_by(id: params[:id]) # Use `find_by` to avoid exceptions
-
+      @category = Category.friendly.find(params[:id]) # Used `find_by` to avoid exceptions
+      Category.find_each(&:save)
       if @category.nil?
         flash[:alert] = "Category not found."
-        redirect_to categories_path and return # Redirect to the categories index
+        redirect_to categories_path and return
       else
         @bikes = @category.bikes.page(params[:page]).per(10)
       end

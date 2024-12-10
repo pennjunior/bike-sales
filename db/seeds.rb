@@ -7,7 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-# require "open-uri"
+require "open-uri"
 
 # Category.destroy_all
 # puts "Destroyed all categories"
@@ -69,7 +69,7 @@
 # require_relative "seeds/atvs"
 # require_relative "seeds/cruisers"
 # require_relative "seeds/scooter"
-# require_relative "seeds/utvs"
-# require_relative "seeds/reviews"
-# require_relative "seeds/articles"
+require_relative "seeds/utvs"
 require_relative "seeds/electric"
+require_relative "seeds/reviews"
+require_relative "seeds/articles"
