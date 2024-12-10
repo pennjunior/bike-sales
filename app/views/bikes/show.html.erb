@@ -48,7 +48,7 @@
           <h1 class="bike-show-title"><%= number_to_currency(@bike.price) %></h1>
         </div>
       <div class="col-4">
-        <%= image_tag "blackfriday.jpg", height: 70, width: 250, crop: :fill %>
+        <%= image_tag "christmas.webp", height: 100, width: 350, crop: :fill %>
       </div>
       </div>
       <% if @order.errors.any? %>
@@ -142,10 +142,17 @@
       <td><strong>Colour:</strong></td>
       <td><%= @bike.colour %></td>
     </tr>
-    <tr>
+    <% if @bike.category.name == "Electric" %>
+      <tr>
+      <td><strong>Engine Capacity:</strong></td>
+      <td><%= @bike.engine_capacity %> W</td>
+    </tr>
+    <% else %>
+      <tr>
       <td><strong>Engine Capacity:</strong></td>
       <td><%= @bike.engine_capacity %> cc</td>
     </tr>
+    <% end %>
     <tr>
       <td><strong>Maximum Speed:</strong></td>
       <td><%= @bike.maximum_speed %> km/h</td>
