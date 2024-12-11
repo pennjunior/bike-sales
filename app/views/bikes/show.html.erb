@@ -101,15 +101,15 @@
   <div class="stats-row">
     <div class="stats-item">
       <i class="fa-solid fa-eye"></i>
-      <span><strong>Seen:</strong> 74 times (last 30 days)</span>
+      <span><strong>Seen:</strong> <%= rand(30..100) %> times (last 30 days)</span>
     </div>
     <div class="stats-item">
       <i class="fa-solid fa-bookmark"></i>
-      <span><strong>Saved:</strong> by 2 people</span>
+      <span><strong>Saved:</strong> by <%= rand(2..10) %> people</span>
     </div>
     <div class="stats-item">
       <i class="fa-solid fa-tags"></i>
-      <span><strong>Price Update:</strong> The price recently decreased by $1,000</span>
+      <span><strong>Price Update:</strong> The price recently decreased by $<%= rand(1000..5000) %></span>
     </div>
   </div>
 </div>
