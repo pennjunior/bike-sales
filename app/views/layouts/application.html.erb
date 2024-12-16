@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BikeSales</title>
+    <title>Bike Sales</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <link rel="icon" href="<%= asset_path 'favicon.png' %>" type="image/x-icon">
@@ -26,6 +24,7 @@
 
       gtag('config', 'AW-16811416950');
     </script>
+    <script src="/packs/js/application.js" defer></script>
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="0053ca98-0124-48b3-b4c1-27e3a6e2970d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
   </head>
 

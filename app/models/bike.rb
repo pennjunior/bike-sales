@@ -6,6 +6,8 @@ class Bike < ApplicationRecord
   belongs_to :brand, optional: true
   has_many :reviews, dependent: :destroy
   has_many :orders, dependent: :destroy
+  has_many :saved_bikes, dependent: :destroy
+  has_many :users, through: :saved_bikes
   include PgSearch::Model
 
   enum registration_status: { registered: 0, unregistered: 1 }

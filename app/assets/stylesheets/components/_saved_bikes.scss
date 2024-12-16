@@ -1,0 +1,104 @@
+/* Overall Saved Bikes Container */
+.saved-title {
+  text-align: center;
+  color: #444;
+  margin-bottom: 5.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.saved-bikes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Small spacing between cards */
+  padding: 0;
+  margin-bottom: 30%;
+}
+
+.saved-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.saved-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bike Image */
+.saved-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Bike Title Link */
+.bike-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.bike-link {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.bike-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Saved Date */
+.saved-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Remove Button */
+.remove-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove-btn:hover {
+  color: #c82333;
+}
+
+.remove-btn i {
+  pointer-events: none; /* Ensures only the button click works */
+}
+
+/* No Saved Bikes */
+.alert-info {
+  margin-bottom: 30%;
+}
+.alert i {
+    margin-bottom: 10px;
+  }
+
+@media (max-width: 576px) {
+  .saved-bikes-list {
+    margin-bottom: 10%;
+  }
+}

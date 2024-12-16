@@ -1,27 +1,49 @@
 <!-- Main Image Section -->
 <div class="bike-contain">
   <!-- Bike Slider Section -->
-  <div class="bike-slider">
-    <div class="slider-container">
-      <div class="bike-main-image">
-        <% if @bike.photos.attached? %>
-          <% @bike.photos.each_with_index do |photo, index| %>
-            <div class="mySlides">
-              <div class="numbertext">
-                <i class="fa-solid fa-camera"></i><%= index + 1 %>/<%= @bike.photos.count %>
-              </div>
-              <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
+  <%# <div class="bike-slider">
+  <div class="slider-container"> %>
+  <div class="bike-main-content">
+    <!-- Main Image Slider -->
+    <div class="bike-main-image">
+      <% if @bike.photos.attached? %>
+        <% @bike.photos.each_with_index do |photo, index| %>
+          <div class="mySlides">
+            <div class="numbertext">
+              <i class="fa-solid fa-camera"></i><%= index + 1 %>/<%= @bike.photos.count %>
             </div>
-          <% end %>
+            <%= cl_image_tag photo.key, alt: @bike.model, class: "main-image" %>
+          </div>
         <% end %>
+      <% end %>
 
-        <!-- Navigation buttons -->
-        <div class="slider-nav">
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
-        </div>
+      <!-- Navigation Buttons -->
+      <div class="slider-nav">
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
       </div>
+      <!-- Saved Bikes Section -->
+    <div class="saved-bike">
+      <% if user_signed_in? %>
+        <%= button_to bike_saved_bike_path(@bike),
+        method: :post,
+        remote: true,
+        class: "btn",
+        data: { controller: "save-bike", action: "click->save-bike#toggle" } do %>
+          <i class="fa-regular fa-heart"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "btn" do %>
+          <i class="fa-regular fa-heart"></i>
+        <% end %>
+      <% end %>
     </div>
+    </div>
+
+<%#
+  </div>
+</div> %>
+
 
     <!-- Bike Gallery -->
     <div class="bike-gallery">

@@ -28624,9 +28624,83 @@ img {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
+/* Main Image Container */
 /* line 25, app/assets/stylesheets/components/_slider.scss */
-.prev,
+.bike-main-image {
+  position: relative;
+  width: 100%;
+}
+
+/* Number Text - Left Side */
+/* line 31, app/assets/stylesheets/components/_slider.scss */
+.numbertext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Align to the left */
+  margin-left: 2%;
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  background-color: black;
+  z-index: 1;
+  /* Ensure it overlays the image */
+}
+
+/* Saved Bike Button - Right Side */
+/* line 44, app/assets/stylesheets/components/_slider.scss */
+.saved-bike {
+  position: absolute;
+  top: 2%;
+  /* Align at the top */
+  right: 0;
+  /* Align to the right */
+  margin-right: 3%;
+  z-index: 1;
+  /* Ensure it overlays the image */
+}
+
+/* line 52, app/assets/stylesheets/components/_slider.scss */
+.saved-bike .btn {
+  background: rgba(0, 0, 0, 0.5);
+  /* Optional: Slightly transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 3px 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 64, app/assets/stylesheets/components/_slider.scss */
+.saved-bike .btn i {
+  font-size: 20px;
+}
+
+/* Next & previous buttons */
+/* line 69, app/assets/stylesheets/components/_slider.scss */
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  margin-left: 0%;
+  font-weight: 900;
+}
+
+/* Position the "next button" to the right */
+/* line 87, app/assets/stylesheets/components/_slider.scss */
 .next {
   cursor: pointer;
   position: absolute;
@@ -28636,46 +28710,24 @@ img {
   margin-top: -50px;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 0 3px 3px 0;
   -moz-user-select: none;
        user-select: none;
   -webkit-user-select: none;
-  margin-left: 3%;
+  margin-right: 12%;
   font-weight: 900;
-}
-
-/* Position the "next button" to the right */
-/* line 44, app/assets/stylesheets/components/_slider.scss */
-.next {
-  font-weight: 900;
-  margin-right: 15%;
-  color: white;
-  right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-/* line 53, app/assets/stylesheets/components/_slider.scss */
+/* line 105, app/assets/stylesheets/components/_slider.scss */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
-/* line 59, app/assets/stylesheets/components/_slider.scss */
-.numbertext {
-  margin-left: 2%;
-  color: white;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  background-color: black;
-}
-
 /* Container for image text */
-/* line 70, app/assets/stylesheets/components/_slider.scss */
+/* line 123, app/assets/stylesheets/components/_slider.scss */
 .caption-container {
   text-align: center;
   background-color: #222;
@@ -28683,7 +28735,7 @@ img {
   color: white;
 }
 
-/* line 77, app/assets/stylesheets/components/_slider.scss */
+/* line 130, app/assets/stylesheets/components/_slider.scss */
 .row:after {
   content: "";
   display: table;
@@ -28691,22 +28743,33 @@ img {
 }
 
 /* Six columns side by side */
-/* line 84, app/assets/stylesheets/components/_slider.scss */
+/* line 137, app/assets/stylesheets/components/_slider.scss */
 .column {
   float: left;
   width: 16.66%;
 }
 
 /* Add a transparency effect for thumnbail images */
-/* line 90, app/assets/stylesheets/components/_slider.scss */
+/* line 143, app/assets/stylesheets/components/_slider.scss */
 .demo {
   opacity: 0.6;
 }
 
-/* line 94, app/assets/stylesheets/components/_slider.scss */
+/* line 147, app/assets/stylesheets/components/_slider.scss */
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+@media screen {
+  /* line 152, app/assets/stylesheets/components/_slider.scss */
+  .next {
+    font-weight: 900;
+    margin-right: 0%;
+    color: white;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
 }
 
 /* line 1, app/assets/stylesheets/components/_filter.scss */
@@ -28813,6 +28876,129 @@ img {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Overall Saved Bikes Container */
+/* line 2, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-title {
+  text-align: center;
+  color: #444;
+  margin-bottom: 5.5rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* line 10, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-bikes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  /* Small spacing between cards */
+  padding: 0;
+  margin-bottom: 30%;
+}
+
+/* line 19, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* line 33, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bike Image */
+/* line 39, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Bike Title Link */
+/* line 46, app/assets/stylesheets/components/_saved_bikes.scss */
+.bike-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* line 53, app/assets/stylesheets/components/_saved_bikes.scss */
+.bike-link {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+/* line 59, app/assets/stylesheets/components/_saved_bikes.scss */
+.bike-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Saved Date */
+/* line 65, app/assets/stylesheets/components/_saved_bikes.scss */
+.saved-date {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Remove Button */
+/* line 72, app/assets/stylesheets/components/_saved_bikes.scss */
+.remove-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* line 84, app/assets/stylesheets/components/_saved_bikes.scss */
+.remove-btn:hover {
+  color: #c82333;
+}
+
+/* line 88, app/assets/stylesheets/components/_saved_bikes.scss */
+.remove-btn i {
+  pointer-events: none;
+  /* Ensures only the button click works */
+}
+
+/* No Saved Bikes */
+/* line 93, app/assets/stylesheets/components/_saved_bikes.scss */
+.alert i {
+  margin-bottom: 10px;
+}
+
+@media screen {
+  /* line 97, app/assets/stylesheets/components/_saved_bikes.scss */
+  .saved-bikes-list {
+    margin-bottom: 10%;
+  }
+  /* line 100, app/assets/stylesheets/components/_saved_bikes.scss */
+  .alert i {
+    margin-bottom: 10%;
   }
 }
 
@@ -29009,32 +29195,23 @@ h2, .h2 {
 /* line 2, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-contain {
   display: flex;
+  flex: 1;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
+  gap: 5px;
   margin: 20px;
 }
 
 /* Slider Section */
-/* line 11, app/assets/stylesheets/bikes/_shows_page.scss */
-.bike-slider {
+/* line 22, app/assets/stylesheets/bikes/_shows_page.scss */
+.bike-main-image {
   flex: 2;
-  /* Takes 2/3 of the container */
-}
-
-/* line 15, app/assets/stylesheets/bikes/_shows_page.scss */
-.slider-container {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-/* line 21, app/assets/stylesheets/bikes/_shows_page.scss */
-.bike-main-image {
   margin-bottom: 10px;
 }
 
-/* line 23, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 28, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-main-image .main-image {
   max-width: 100%;
   max-height: 600px;
@@ -29045,12 +29222,12 @@ h2, .h2 {
 }
 
 /* Gallery Thumbnails */
-/* line 33, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 38, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-gallery {
   margin-left: 1%;
 }
 
-/* line 35, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 40, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-gallery .thumbnails {
   margin-left: 1%;
   display: flex;
@@ -29058,7 +29235,7 @@ h2, .h2 {
   flex-wrap: wrap;
 }
 
-/* line 42, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 47, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-gallery .thumbnail {
   border: 2px solid #ddd;
   border-radius: 8px;
@@ -29066,25 +29243,22 @@ h2, .h2 {
   transition: transform 0.3s ease;
 }
 
-/* line 48, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 53, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-gallery .thumbnail:hover {
   transform: scale(1.1);
   border-color: #ff6600;
 }
 
-/* line 55, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 60, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-form {
   flex: 1;
   /* Takes 1/3 of the container */
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* line 65, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 70, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-show-title {
   text-align: left;
   font-size: 2rem;
@@ -29094,14 +29268,14 @@ h2, .h2 {
   margin-bottom: 30px;
 }
 
-/* line 74, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 79, app/assets/stylesheets/bikes/_shows_page.scss */
 .custom-bike-form {
-  width: 100%;
+  width: 80%;
   /* Take full width */
 }
 
 /* Bike Details */
-/* line 79, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 84, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details {
   margin: 20px;
   font-size: 1.2rem;
@@ -29109,52 +29283,52 @@ h2, .h2 {
   border-collapse: collapse;
 }
 
-/* line 85, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 90, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details p {
   margin-bottom: 10px;
 }
 
-/* line 89, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 94, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details strong {
   color: #ff6600;
 }
 
-/* line 93, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 98, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details table {
   width: 100%;
   border: 1px solid #ddd;
 }
 
-/* line 98, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 103, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details td {
   padding: 10px;
   border: 1px solid #ddd;
   vertical-align: top;
 }
 
-/* line 104, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 109, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details td:first-child {
   font-weight: bold;
   width: 35%;
 }
 
-/* line 109, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 114, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details td:last-child {
   color: #333;
 }
 
-/* line 113, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 118, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-/* line 117, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 122, app/assets/stylesheets/bikes/_shows_page.scss */
 .bike-details tr:hover {
   background-color: #f1f1f1;
 }
 
 /* Back Link */
-/* line 124, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 129, app/assets/stylesheets/bikes/_shows_page.scss */
 .back-link {
   display: inline-block;
   background-color: #ff6600;
@@ -29166,37 +29340,37 @@ h2, .h2 {
   text-align: center;
 }
 
-/* line 134, app/assets/stylesheets/bikes/_shows_page.scss */
+/* line 139, app/assets/stylesheets/bikes/_shows_page.scss */
 .back-link:hover {
   background-color: #cc5200;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  /* line 141, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 146, app/assets/stylesheets/bikes/_shows_page.scss */
   .bike-main-image .main-image {
     max-height: 500px;
     width: 100%;
   }
-  /* line 146, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 151, app/assets/stylesheets/bikes/_shows_page.scss */
   .bike-details {
     font-size: 1rem;
   }
-  /* line 150, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 155, app/assets/stylesheets/bikes/_shows_page.scss */
   .bike-contain {
     flex-direction: column;
   }
-  /* line 154, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 159, app/assets/stylesheets/bikes/_shows_page.scss */
   .bike-form {
     width: 100%;
     /* Take full width */
   }
-  /* line 158, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 163, app/assets/stylesheets/bikes/_shows_page.scss */
   .custom-bike-form {
     width: 100%;
     /* Take full width */
   }
-  /* line 162, app/assets/stylesheets/bikes/_shows_page.scss */
+  /* line 167, app/assets/stylesheets/bikes/_shows_page.scss */
   .bike-details {
     width: 90%;
   }
@@ -29555,14 +29729,14 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   }
 }
 
-/* line 2, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 1, app/assets/stylesheets/bikes/_show_cat.scss */
 .bike-and-filter {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-/* line 9, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 8, app/assets/stylesheets/bikes/_show_cat.scss */
 .bike-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -29571,7 +29745,7 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
 }
 
 /* Image Styling */
-/* line 17, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 16, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   border: 1px solid #ddd;
@@ -29585,14 +29759,14 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   /* Hover Effects */
 }
 
-/* line 26, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 25, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike .bike-image {
   width: auto;
   height: 350px;
   overflow: hidden;
 }
 
-/* line 30, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 29, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike .bike-image img {
   width: auto;
   height: auto;
@@ -29600,12 +29774,12 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
      object-fit: cover;
 }
 
-/* line 38, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 37, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike .bike-info {
   padding: 15px;
 }
 
-/* line 40, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 39, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike .bike-info h3.bike-title, .shows-bike .bike-info .bike-title.h3 {
   font-size: 1.5rem;
   color: #ff6600;
@@ -29613,20 +29787,20 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   text-decoration: none;
 }
 
-/* line 49, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 48, app/assets/stylesheets/bikes/_show_cat.scss */
 .shows-bike:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* line 54, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 53, app/assets/stylesheets/bikes/_show_cat.scss */
 .bike-photos img {
   margin: 5px;
   border: 1px solid #ccc;
   max-width: 100%;
 }
 
-/* line 59, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 58, app/assets/stylesheets/bikes/_show_cat.scss */
 .popularity-stats {
   background: #f9f9f9;
   /* Light background for contrast */
@@ -29638,7 +29812,7 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   margin-bottom: 30px;
 }
 
-/* line 68, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 67, app/assets/stylesheets/bikes/_show_cat.scss */
 .stats-title {
   font-size: 1.5rem;
   color: #ff6600;
@@ -29649,14 +29823,14 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   margin-bottom: 15px;
 }
 
-/* line 77, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 76, app/assets/stylesheets/bikes/_show_cat.scss */
 .stats-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* line 83, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 82, app/assets/stylesheets/bikes/_show_cat.scss */
 .stats-item {
   display: flex;
   align-items: center;
@@ -29666,20 +29840,20 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
   /* Darker text for readability */
 }
 
-/* line 91, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 90, app/assets/stylesheets/bikes/_show_cat.scss */
 .stats-item i {
   color: #ff6600;
   /* Icon color matches primary theme */
   font-size: 1.2rem;
 }
 
-/* line 96, app/assets/stylesheets/bikes/_show_cat.scss */
+/* line 95, app/assets/stylesheets/bikes/_show_cat.scss */
 .stats-item span {
   font-size: 1rem;
 }
 
 @media (min-width: 768px) {
-  /* line 101, app/assets/stylesheets/bikes/_show_cat.scss */
+  /* line 100, app/assets/stylesheets/bikes/_show_cat.scss */
   .stats-row {
     flex-direction: row;
     /* Side-by-side layout for larger screens */
@@ -29688,18 +29862,18 @@ input.is-invalid, select.is-invalid, textarea.is-invalid {
 }
 
 @media (max-width: 768px) {
-  /* line 108, app/assets/stylesheets/bikes/_show_cat.scss */
+  /* line 107, app/assets/stylesheets/bikes/_show_cat.scss */
   .bike-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  /* line 113, app/assets/stylesheets/bikes/_show_cat.scss */
+  /* line 112, app/assets/stylesheets/bikes/_show_cat.scss */
   .shows-bike .bike-image {
     width: 100%;
     height: 200px;
     overflow: hidden;
   }
-  /* line 117, app/assets/stylesheets/bikes/_show_cat.scss */
+  /* line 116, app/assets/stylesheets/bikes/_show_cat.scss */
   .shows-bike .bike-image img {
     width: 100%;
     height: 100%;

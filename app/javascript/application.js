@@ -4,3 +4,5 @@ import "controllers"
 import "bootstrap"
 import "@popperjs/core"
 import "../stylesheets/custom_bootstrap";
+import { Application } from "@hotwired/stimulus"
+window.Stimulus = Application.start()

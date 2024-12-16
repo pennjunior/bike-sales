@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :orders, only: [:index]
   resources :reviews, only: [:index]
+  # resources :saved_bike, only: [:index]
   resources :bikes do
     resources :orders, only: [:new, :create]
-    resources :reviews, only: [:index, :new, :create]
+    resources :reviews, only: [:new, :create]
+    resource :saved_bike, only: [:index, :create, :destroy]
   end
+  get '/saved', to: 'pages#saved'
   get '/contact', to: 'contacts#new', as: 'contact'
   post '/contact', to: 'contacts#create'
   get '/about', to: 'pages#about'

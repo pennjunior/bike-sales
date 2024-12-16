@@ -1,24 +1,29 @@
 /* General Styles for Bike Show Page */
 .bike-contain {
   display: flex;
+  flex: 1;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
+  // align-items: flex-start;
+  gap: 5px;
   margin: 20px;
 }
 
 /* Slider Section */
-.bike-slider {
-  flex: 2; /* Takes 2/3 of the container */
-}
+// .bike-slider {
+//   flex: 3; /* Takes 2/3 of the container */
+// }
 
-.slider-container {
+// .slider-container {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.bike-main-image {
+  flex: 2;
   position: relative;
   display: flex;
   flex-direction: column;
-}
-
-.bike-main-image {
   margin-bottom: 10px;
   .main-image {
     max-width: 100%;
@@ -57,9 +62,9 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  // background-color: #f9f9f9;
+  // border-radius: 5px;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .bike-show-title {
@@ -72,7 +77,7 @@
 }
 
 .custom-bike-form {
-  width: 100%; /* Take full width */
+  width: 80%; /* Take full width */
 }
 
 /* Bike Details */
