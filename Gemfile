@@ -25,7 +25,8 @@ gem "importmap-rails"
 gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+# gem "stimulus-rails"
+# gem 'vue_js'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "bootstrap", "~> 5.2"
@@ -33,12 +34,13 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "devise"
-gem "jbuilder"
+# gem "jbuilder"
 gem 'cloudinary'
 gem "dotenv-rails"
 gem 'activerecord-import'
 gem "kaminari"
 gem 'friendly_id', '~> 5.4.0'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

@@ -1,14 +1,14 @@
 <section class="hero">
   <div class="hero-text">
     <h1>Looking to Purchase Bikes with Unmatched Quality?</h1>
-    <p>Our bikes use only premium materials and cutting-edge technology</p>
-    <p>cutting-edge technology to ensure</p>
-    <p>durability and safety for every adventure.</p>
+    <p>Find the best ATVs for sale, including the latest models from Honda, Can-Am, and Polaris.</p>
+    <%# <p>Perfect for off-road adventures and utility work.</p> %>
+    <p>Explore our collection of new and used ATVs, all available at competitive prices.</p>
   </div>
   <%= render "shared/search_form" %>
 </section>
 <%= render "shared/categories" %>
-<h1 class="suggested-bikes-title">Featured Bikes</h1>
+<h1 class="suggested-bikes-title">Bikes & ATVs for Sale</h1>
 <div class="bike-container" id="bikes-section" data-controller="scroll"
   data-scroll-target="bikeSection"
   <%= @search_performed ? '' : 'style="display: none;"' %>>
@@ -62,31 +62,7 @@
   <% end %>
 </div>
 <!-- Articles section -->
-<div class="a-container">
-  <% @articles.each do |article| %>
-    <% if article.photos.present? %>
-      <div
-        class="article-card"
-        style="background-image: url('<%= cl_image_path(article.photos.first.key) %>');">
-        <div class="overlay">
-          <h2 class="article-title"><%= article.title %></h2>
-          <p class="article-date"><%= article.date %></p>
-          <p><%= article.article_type %></p>
-          <p class="article-description"><%= truncate(article.description, length: 60, separator: ' ') %></p>
-        </div>
-      </div>
-
-    <% else %>
-      <div class="article-default">
-        <h2 class="article-title"><%= article.title %></h2>
-        <p class="article-date"><%= article.date %></p>
-        <p class="article-description"><%= article.description %></p>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-
-
+<%= render "shared/articles" %>
 <!-- Reviews Section -->
 <div class="container">
   <div class="bike-reviews">

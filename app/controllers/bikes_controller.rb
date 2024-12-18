@@ -13,7 +13,7 @@ class BikesController < ApplicationController
     @categories = Category.all
     @brands = Brand.all
     @reviews = Review.all.limit(4)
-    @articles = Article.all.limit(5)
+    @articles = Article.all.limit(6)
     @e_bikes = Bike.joins(:category).where(categories: { name: "Electric" }).order(created_at: :desc).limit(4)
   end
 

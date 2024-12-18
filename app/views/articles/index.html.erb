@@ -10,6 +10,28 @@
           <p class="article-date"><%= article.date %></p>
           <p><%= article.article_type %></p>
           <p class="article-description"><%= truncate(article.description, length: 350, separator: ' ') %></p>
+                    <!-- Trigger Button -->
+          <p
+              class="view-more"
+              style="text-decoration: underline;"
+              data-controller="modal"
+              data-action="click->modal#show"
+              data-article-id="<%= article.id %>"
+            >
+              View More
+            </p>
+          <!-- Pop-Up Modal -->
+          <div
+              id="pop-up-<%= article.id %>"
+              class="pop-up hidden"
+              data-controller="modal"
+              data-action="click->modal#closeOnOutsideClick"
+            >
+            <div class="pop-up-content">
+              <span class="close-btn">&times;</span> <!-- Close Button -->
+              <p style="color: black; margin-top: 30px;"><%= article.description %></p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -22,3 +44,46 @@
     <% end %>
   <% end %>
 </div>
+
+
+
+
+
+
+
+
+<%# <script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Select all "View More" buttons
+  const viewMoreButtons = document.querySelectorAll('.view-more');
+
+  viewMoreButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const articleId = button.getAttribute('data-article-id'); // Get the article ID
+      const popUp = document.querySelector(`#pop-up-${articleId}`); // Find the corresponding pop-up
+      popUp.classList.remove('hidden'); // Show the pop-up
+    });
+  });
+
+  // Close button functionality
+  const closeButtons = document.querySelectorAll('.close-btn');
+
+  closeButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const popUp = button.closest('.pop-up'); // Find the parent pop-up
+      popUp.classList.add('hidden'); // Hide the pop-up
+    });
+  });
+
+  // Optional: Close modal when clicking outside the content
+  const popUps = document.querySelectorAll('.pop-up');
+
+  popUps.forEach((popUp) => {
+    popUp.addEventListener('click', (event) => {
+      if (event.target === popUp) {
+        popUp.classList.add('hidden');
+      }
+    });
+  });
+});
+</script> %>

@@ -122,6 +122,8 @@ article8 = Article.create!(
   article_type: "Lifestyle",
   date: Date.new(2024)
 )
+article8_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734453964/Adventure-moto-Wordpress-6_mz32ea.jpg"
+article8.photos.attach(io: URI.open(article8_url), filename: "article8.jpg", content_type: "image/jpg")
 # "adventure motorcycles"
 # "all-terrain motorcycles"
 # "motorcycles for long-distance riding"
@@ -135,6 +137,8 @@ article9 = Article.create!(
   article_type: "Tech",
   date: Date.new(2024)
 )
+article9_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734453962/compact-foldable-electric-scooter-ecofriendly-urban-commuting_38013-75343_uyxl13.jpg"
+article9.photos.attach(io: URI.open(article9_url), filename: "article9.jpg", content_type: "image/jpg")
 # "compact electric scooters"
 # "urban commuting scooters"
 # "eco-friendly city transport"
@@ -147,6 +151,8 @@ article10 = Article.create!(
   article_type: "Tech",
   date: Date.new(2024, 5, 10)
 )
+article10_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734453707/quilor_Ebikes_129_14787345-3df9-439c-be64-ce6f2fd7f059_p9nxwk.webp"
+article10.photos.attach(io: URI.open(article10_url), filename: "article10.jpg", content_type: "image/jpg")
 
 # Article 2: UTVs Boosting Efficiency in Agriculture
 article11 = Article.create!(
@@ -155,7 +161,8 @@ article11 = Article.create!(
   article_type: "News",
   date: Date.new(2024, 3, 21)
 )
-
+article11_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734453708/can-am-dale-brisby-defender-pro18_fjyavj.jpg"
+article11.photos.attach(io: URI.open(article11_url), filename: "article11.jpg", content_type: "image/jpg")
 # Article 3: ATVs in Adventure Tourism
 article12 = Article.create!(
   title: "All-Terrain Vehicles (ATVs) are Expanding Adventure Tourism",
@@ -163,6 +170,8 @@ article12 = Article.create!(
   article_type: "Industry",
   date: Date.new(2024, 6, 15)
 )
+article12_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734452947/146_o4el6v.jpg"
+article12.photos.attach(io: URI.open(article12_url), filename: "article12.jpg", content_type: "image/jpg")
 
 # Article 4: Eco-Friendly Scooters and Urban Mobility
 article13 = Article.create!(
@@ -171,7 +180,8 @@ article13 = Article.create!(
   article_type: "Tech",
   date: Date.new(2024, 7, 5)
 )
-
+article13_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734452949/4VK5FUAQVREJFDGDNXLL6SMLQE_d29oiv.jpg"
+article13.photos.attach(io: URI.open(article13_url), filename: "article13.jpg", content_type: "image/jpg")
 # Article 5: The Rise of Adventure Motorbikes for Off-Road Exploration
 article14 = Article.create!(
   title: "The Rise of Adventure Motorbikes for Off-Road Exploration",
@@ -179,7 +189,8 @@ article14 = Article.create!(
   article_type: "Adventure",
   date: Date.new(2024, 4, 30)
 )
-
+article14_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734454168/2021-crf300l-gallery-04-2400xauto-1614832472_ytrjxf.jpg"
+article14.photos.attach(io: URI.open(article14_url), filename: "article14.jpg", content_type: "image/jpg")
 # Article 6: Trends in Smart Motorcycle Helmets
 article15 = Article.create!(
   title: "Trends in Smart Motorcycle Helmets and Safety",
@@ -187,7 +198,8 @@ article15 = Article.create!(
   article_type: "Innovation",
   date: Date.new(2024, 8, 12)
 )
-
+article15_url = "https://res.cloudinary.com/drxr1eiwp/image/upload/v1734454155/skully-hud-helmet_fkhuvr.webp"
+article15.photos.attach(io: URI.open(article15_url), filename: "article15.jpg", content_type: "image/jpg")
 # Article 7: Sustainable Manufacturing in the Motorbike Industry
 article16 = Article.create!(
   title: "Sustainable Manufacturing Practices in the Motorbike Industry",
