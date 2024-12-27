@@ -67,8 +67,7 @@
         <%= button_to bike_saved_bike_path(@bike),
         method: :post,
         remote: true,
-        class: "btn",
-        data: { controller: "save-bike", action: "click->save-bike#toggle" } do %>
+        class: "btn" do %>
           <i class="fa-regular fa-heart"></i>
         <% end %>
       <% else %>
@@ -258,6 +257,15 @@ let yDown = null;
 
 document.getElementById("slider").addEventListener('touchstart', handleTouchStart, false);
 document.getElementById("slider").addEventListener('touchmove', handleTouchMove, false);
+
+
+let clickElements = document.querySelectorAll(".i");
+clickElements.forEach(element => {
+  element.addEventListener("click", () => {
+    element.style.color = "red";
+  });
+});
+
 
 function handleTouchStart(evt) {
   const firstTouch = evt.touches[0];
