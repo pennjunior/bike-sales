@@ -1,7 +1,7 @@
-<% if @category.present? %>
-  <h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
+<% if @category.name == "Electric" %>
+  <h1 class="text-center mt-5 mb-3">Fat Tire Eclectric bikes for sale</h1>
 <% else %>
-  <h1 class="text-center mt-5 mb-3"></h1>
+  <h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
 <% end %>
 <div class="search-container">
   <!-- Search Icon -->

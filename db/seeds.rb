@@ -35,13 +35,12 @@ require "open-uri"
 
 # puts "Categories created: #{Category.count}"
 
-
-brands = ["Honda", "Yamaha", "Kawasaki", "BMW", "Suzuki", "Ducati", "Segway", "Can-Am", "CFMOTO",
-            "Polaris", "Harley Davidson", "Royal Enfield", "Indian", "KYMCO", "Piaggio", "SYM", "Harley", "KTM", "Steve McQueen", "Arctic Cat" ]
-brands.map do |brand_name|
-    Brand.find_or_create_by!(name: brand_name)
-end
-  puts "Brands created: #{Brand.count}"
+# brands = ["Honda", "Yamaha", "Kawasaki", "BMW", "Suzuki", "Ducati", "Segway", "Can-Am", "CFMOTO",
+#             "Polaris", "Harley Davidson", "Royal Enfield", "Indian", "KYMCO", "Piaggio", "SYM", "Harley", "KTM", "Steve McQueen", "Arctic Cat" ]
+# brands.map do |brand_name|
+#     Brand.find_or_create_by!(name: brand_name)
+# end
+#   puts "Brands created: #{Brand.count}"
 
 # User.destroy_all
 # puts "All users destroyed."
@@ -72,4 +71,4 @@ end
 # require_relative "seeds/utvs"
 # require_relative "seeds/electric"
 # require_relative "seeds/reviews"
-require_relative "seeds/articles"
+# require_relative "seeds/articles"
