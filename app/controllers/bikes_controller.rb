@@ -38,28 +38,36 @@ class BikesController < ApplicationController
   end
 
   def update
-    if @bike.update(strong_params)
-      redirect_to bike_path(@bike), notice: "Bike was successfully updated."
-    else
-      render :edit
-    end
+    # if @bike.update(strong_params)
+    #   redirect_to bike_path(@bike), notice: "Bike was successfully updated."
+    # # else
+    # #   render :edit
+    # end
     # if strong_params[:photos].present?
     #   @bike.photos.attach(strong_params[:photos])
     # end
+    if strong_params[:photos].present?
+      # Update photos and other attributes separately
+      if @bike.update(strong_params.except(:photos)) && @bike.photos.attach(strong_params[:photos])
+        redirect_to bike_path(@bike), notice: "Bike and photos were successfully updated."
+      else
+        render :edit
+      end
+    else
+      # No photos to update, just update other attributes
+      if @bike.update(strong_params.except(:photos))
+        redirect_to bike_path(@bike), notice: "Bike was successfully updated."
+      else
+        render :edit
+      end
+    end
 
-    # if @bike.update(strong_params.except(:photos))
-    #   redirect_to @bike, notice: "Bike was successfully updated."
-    # else
-    #   render :edit
-    # end
   end
 
 
   def destroy
-    @bike = Bike.friendly.find(params[:id])
-    if @bike.category && @bike.brand
-      @bike.destroy
-      redirect_to bikes_path, status: :see_other
+    if @bike.destroy
+      redirect_to bikes_path, status: :see_other, notice: "Bike was successfully deleted."
     else
       flash[:alert] = "Bike cannot be deleted due to associated category or brand."
       redirect_to bikes_path

@@ -42,6 +42,9 @@ gem "dotenv-rails"
 gem 'activerecord-import'
 gem "kaminari"
 gem 'friendly_id', '~> 5.4.0'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+
 
 
 # Use Redis adapter to run Action Cable in production

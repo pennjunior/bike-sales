@@ -36,15 +36,19 @@
 
 /* Gallery Thumbnails */
 .bike-gallery {
+  max-width: 100%;
   margin-left: 1%;
   .thumbnails {
     margin-left: 1%;
     display: flex;
     gap: 2px;
     flex-wrap: wrap;
+
   }
 
   .thumbnail {
+    width: 60px;
+    height: 60px;
     border: 2px solid #ddd;
     border-radius: 8px;
     cursor: pointer;
@@ -166,5 +170,9 @@
 
   .bike-details {
     width: 90%;
+  }
+  .thumbnail {
+    width: 40px;
+    height: 40px;
   }
 }

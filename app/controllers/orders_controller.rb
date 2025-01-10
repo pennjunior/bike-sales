@@ -4,15 +4,25 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
   def new
-    @bike = Bike.find(params[:bike_id])
+    @bike = Bike.friendly.find(params[:bike_id])
     @order = Order.new
   end
 
   def create
-    @bike = Bike.find(params[:bike_id])
+    @bike = Bike.friendly.find(params[:bike_id])
     @order = @bike.orders.new(order_params)
+
     if @order.save
-      OrderMailer.order_notification(@order).deliver_now
+      # Generate the Cloudinary URL directly
+      bike_photo_url = if @bike.photos.attached?
+                         Cloudinary::Utils.cloudinary_url(@bike.photos.first.key)
+                       else
+                         'https://res.cloudinary.com/your_cloud_name/image/upload/v1234567890/placeholder_bike.jpg'
+                       end
+
+      # Pass the photo URL to the mailer
+      OrderMailer.order_notification(@order, bike_photo_url).deliver_now
+
       flash[:notice] = "Your bike order has been placed successfully!"
       redirect_to order_confirmation_path(@order), notice: "Your order has been placed successfully!"
     else
@@ -20,6 +30,9 @@ class OrdersController < ApplicationController
       render :new
     end
   end
+
+
+
 
   def confirmation
     @order = Order.find(params[:id])

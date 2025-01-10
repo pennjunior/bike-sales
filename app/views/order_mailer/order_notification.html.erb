@@ -1,17 +1,106 @@
-<h1>New Order Received</h1>
-
-<p><strong>Order Details:</strong></p>
-<ul>
-  <li><strong>Name:</strong> <%= @order.name %></li>
-  <li><strong>Email:</strong> <%= @order.email %></li>
-  <li><strong>Phone:</strong> <%= @order.phone %></li>
-  <li><strong>Bike:</strong> <%= @order.bike.model %></li>
-  <li><strong>Quantity:</strong> <%= @order.quantity %></li>
-  <li><strong>Location:</strong> <%= @order.location %></li>
-  <li><strong>Ordered At:</strong> <%= @order.created_at.strftime('%d %b %Y, %H:%M %p') %></li>
-</ul>
-<% if @order.bike.photos.attached? %>
-  <%= image_tag url_for(@order.bike.photos.first), alt: @order.bike.model, style: "max-width: 300px; border-radius: 10px;" %>
-<% else %>
-  <p>No photo available for this bike.</p>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #333;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .email-header {
+      background-color:rgb(255, 111, 0);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    .email-header img {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 100px;
+    }
+    .email-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .email-body {
+      padding: 20px;
+    }
+    .email-body ul {
+      list-style: none;
+      padding: 0;
+    }
+    .email-body li {
+      margin-bottom: 10px;
+    }
+    .email-body strong {
+      color: #555;
+    }
+    .email-body img {
+      display: block;
+      margin: 20px auto;
+      max-width: 300px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+    .no-photo {
+      text-align: center;
+      color: #999;
+      margin: 20px 0;
+    }
+    .email-footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 12px;
+      color: #777;
+      border-top: 1px solid #ddd;
+      background-color: #f5f5f5;
+    }
+    .highlight {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header">
+      <img src="bike-logo.png" alt="Bike Logo">
+      <h1>New Order Received</h1>
+    </div>
+    <div class="email-body">
+      <p><strong class="highlight">Order Details:</strong></p>
+      <ul>
+        <li><strong>Name:</strong> <%= @order.name %></li>
+        <li><strong>Email:</strong> <%= @order.email %></li>
+        <li><strong>Phone:</strong> <%= @order.phone %></li>
+        <li><strong>Bike:</strong> <%= @order.bike.model %></li>
+        <li><strong>Quantity:</strong> <%= @order.quantity %></li>
+        <li><strong>Location:</strong> <%= @order.location %></li>
+        <li><strong>Ordered At:</strong> <%= @order.created_at.strftime('%d %b %Y, %H:%M %p') %></li>
+      </ul>
+      <% if @bike_photo_url.present? %>
+        <img src="<%= @bike_photo_url %>" alt="<%= @order.bike.model %>" style="max-width: 300px; border-radius: 10px;">
+      <% else %>
+        <p class="no-photo">No photo available for this bike.</p>
+      <% end %>
+    </div>
+    <div class="email-footer">
+      <p>Thank you for your order!</p>
+      <p>&copy; 2021 Bike Store</p>
+    </div>
+  </div>
+</body>
+</html>

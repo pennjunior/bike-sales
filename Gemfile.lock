@@ -129,6 +129,8 @@ GEM
     drb (2.2.1)
     error_highlight (0.6.0)
     erubi (1.13.0)
+    et-orbi (1.2.11)
+      tzinfo
     execjs (2.10.0)
     faraday (2.12.0)
       faraday-net_http (>= 2.0, < 3.4)
@@ -147,6 +149,9 @@ GEM
       sassc (~> 2.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
+    fugit (1.11.1)
+      et-orbi (~> 1, >= 1.2.11)
+      raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.6)
@@ -218,6 +223,7 @@ GEM
     public_suffix (6.0.1)
     puma (6.4.3)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.8.1)
     rack (3.1.8)
     rack-session (2.0.0)
@@ -258,6 +264,8 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
+    redis-client (0.23.0)
+      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
@@ -266,6 +274,8 @@ GEM
       railties (>= 5.2)
     rexml (3.3.9)
     rubyzip (2.3.2)
+    rufus-scheduler (3.9.2)
+      fugit (~> 1.1, >= 1.11.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -281,6 +291,15 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (7.3.7)
+      connection_pool (>= 2.3.0)
+      logger
+      rack (>= 2.2.4)
+      redis-client (>= 0.22.2)
+    sidekiq-scheduler (5.0.6)
+      rufus-scheduler (~> 3.2)
+      sidekiq (>= 6, < 8)
+      tilt (>= 1.4.0, < 3)
     simple_form (5.3.1)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -346,6 +365,8 @@ DEPENDENCIES
   rails (~> 7.1.5)
   sassc-rails
   selenium-webdriver
+  sidekiq
+  sidekiq-scheduler
   simple_form
   sitemap_generator
   sprockets-rails

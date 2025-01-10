@@ -5,21 +5,26 @@ class SavedBikesController < ApplicationController
   #   @saved_bikes = current_user.saved_bikes.all
   # end
   # Action to save the bike
-  def create
-    @saved_bike = current_user.saved_bikes.new(bike: @bike)
+  include SavedBikesHelper
 
-    if @saved_bike.save
-      respond_to do |format|
-        format.html { redirect_to @bike, notice: "Bike saved successfully!" }
-        format.json { render json: { success: true, saved: true } }
-      end
-    else
-      respond_to do |format|
-        format.html { redirect_to @bike, alert: "Already Saved" }
-        format.json { render json: { success: false, error: @saved_bike.errors.full_messages }, status: :unprocessable_entity }
-      end
+def create
+  @saved_bike = current_user.saved_bikes.new(bike: @bike)
+
+  if @saved_bike.save
+    BikeMailer.bike_saved_notification(@saved_bike).deliver_now
+    respond_to do |format|
+      format.html { redirect_to @bike, notice: "Bike saved successfully!" }
+      format.json { render json: { success: true, saved: true } }
+      format.js { render js: update_button_js(@bike) }
+    end
+  else
+    respond_to do |format|
+      format.html { redirect_to @bike, alert: "Already Saved" }
+      format.json { render json: { success: false, error: @saved_bike.errors.full_messages }, status: :unprocessable_entity }
     end
   end
+end
+
 
   # Action to unsave the bike
   def destroy

@@ -67,24 +67,17 @@
         <%= button_to bike_saved_bike_path(@bike),
         method: :post,
         remote: true,
-        class: "btn" do %>
-          <i class="fa-regular fa-heart"></i>
-        <% end %>
+        class: "btn favorite-btn",
+        data: { id: @bike.id } do %>
+        <i class="fa-regular fa-heart"></i>
+      <% end %>
       <% else %>
         <%= link_to new_user_session_path, class: "btn" do %>
           <i class="fa-regular fa-heart"></i>
         <% end %>
       <% end %>
     </div>
-    </div>
-
-<%#
-  </div>
-</div> %>
-
-
-    <!-- Bike Gallery -->
-    <div class="bike-gallery">
+<div class="bike-gallery">
       <% if @bike.photos.attached? %>
         <div class="thumbnails">
           <% @bike.photos.each_with_index do |photo, index| %>
@@ -95,6 +88,14 @@
       <% end %>
     </div>
   </div>
+
+    </div>
+
+
+
+
+    <!-- Bike Gallery -->
+
 
   <!-- Order Form Section -->
   <div class="bike-form">
@@ -240,7 +241,7 @@
     <i class="fas fa-edit"></i> Edit Bike
   <% end %>
 
-  <%= link_to bike_path(@bike), method: :delete, data: { confirm: 'Are you sure?' }, class: "back-link" do %>
+  <%= button_to bike_path(@bike), method: :delete, data: { confirm: 'Are you sure?' }, class: "back-link" do %>
     <i class="fas fa-trash-alt"></i> Delete
   <% end %>
 <% end %>
