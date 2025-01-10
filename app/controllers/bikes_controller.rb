@@ -8,7 +8,7 @@ class BikesController < ApplicationController
 
       @scroll_to_bikes = true
     else
-      @bikes = Bike.all.limit(8)
+      @bikes = Bike.order("RANDOM()").limit(8)
     end
     @categories = Category.all
     @brands = Brand.all

@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
         flash[:alert] = "Category not found."
         redirect_to categories_path and return
       else
-        @bikes = @category.bikes.page(params[:page]).per(10)
+        @bikes = @category.bikes.page(params[:page]).order("RANDOM()").per(15)
       end
     end
   end
