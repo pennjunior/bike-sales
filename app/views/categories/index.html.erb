@@ -1,35 +1,86 @@
-<h1 class="text-center mt-5 mb-3">All Categories</h1>
-
 <div class="categories-container">
-  <% @categories.each do |category| %>
-    <div class="category-section">
-      <!-- Category Title -->
-      <h2 class="category-title"><%= category.name %></h2>
+   <!-- Search Form (Initially Hidden) -->
+  <div id="search-bar" class="search-bar" style="display: none;">
+    <%= form_with url: categories_path, method: :get, class: "search-form" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "search-input",
+            placeholder: "Find A Bike" %>
+      <%= submit_tag "Search", name: "", class: "search-button" %>
+  <% end %>
+  </div>
+<h1 class="suggested-bikes-title"> Bikes and ATV Available for Sale</h1>
+<div class="bike-container" id="bikes-section" data-controller="scroll"
+  data-scroll-target="bikeSection"
+  <%= @search_performed ? '' : 'style="display: none;"' %>>
+  <% if @bikes.present? %>
 
-      <!-- Bikes in the Category -->
-      <div class="bikes-container">
-        <% if category.bikes.any? %>
-          <% category.bikes.each do |bike| %>
-            <div class="bike-card">
-              <%= link_to bike_path(bike) do %>
-                <% if bike.photos.attached? %>
-                  <%= image_tag bike.photos.first,alt: bike.model%>
-                <% else %>
-                  <%= image_tag 'default_bike.jpg', height: 200, width: 300, crop: :fill, alt: 'Default bike image' %>
-                <% end %>
 
-                <div class="bike-info">
-                  <h3 class="bike-title"><%= bike.model %></h3>
-                  <p><strong>Price:</strong> <%= number_to_currency(bike.price) %></p>
-                  <p><strong>Engine:</strong> <%= bike.engine_capacity %> CC</p>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
-        <% else %>
-          <p>No bikes available in this category.</p>
+    <% @bikes.each do |bike| %>
+      <div class="bike-card">
+        <%= link_to bike_path(bike) do %>
+          <div class="bike-image">
+            <% if bike.photos.first.present? %>
+              <%= image_tag bike.photos.first, height: 300, width: 400, crop: :fill, alt: bike.model %>
+            <% else %>
+              <%= image_tag 'san_francisco.jpg', height: 300, width: 400, crop: :fill, alt: 'Default bike image' %>
+            <% end %>
+          </div>
+
+          <div class="bike-info">
+            <h3 class="bike-title"><%= bike.model %></h3>
+            <% if bike.category.name == "Electric" %>
+              <p><strong>Make: </strong><%= bike.make %></p>
+            <% else %>
+              <p><strong>Make: </strong><%= bike.brand.name %></p>
+            <% end %>
+            <p><strong>Price: </strong><%= number_to_currency(bike.price) %></p>
+            <p><strong>Engine: </strong><%= bike.engine_capacity %> CC</p>
+          </div>
         <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+    <% else %>
+  <div class="no-results">
+    <h3>Sorry, we couldn't find any bikes matching "<%= params[:query] %>".</h3>
+    <p>Here are some tips to improve your search:</p>
+    <ul>
+      <li>Check your spelling and try again.</li>
+      <li>Try using broader keywords (e.g., "Suzuki" instead of "Suzuki Gixxer").</li>
+      <li>Adjust your filters to include more options.</li>
+    </ul>
+    <p>Or, <%= link_to "browse all bikes", categories_path, class: "browse-link" %>.</p>
+  </div>
+<% end %>
 </div>
+  <%= paginate @bikes%>
+</div>
+<script>
+  function toggleSearchBar() {
+  const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.querySelector('.search-icon');
+
+  // Check if the search bar is visible
+  if (searchBar.style.display === "block") {
+    searchIcon.style.display = "block";
+    // If it's visible, hide it
+    searchBar.style.display = "none";
+  } else {
+    // Otherwise, show the search bar
+    searchBar.style.display = "block";
+    searchIcon.style.display = "none";
+  }
+}
+// Close the search bar if clicked outside
+document.addEventListener('click', function(event) {
+  const searchBar = document.getElementById('search-bar');
+  const searchIcon = document.querySelector('.search-icon');
+
+   // Check if the click was outside the search bar and not on the search icon
+  if (!searchBar.contains(event.target) && !searchIcon.contains(event.target)) {
+    searchBar.style.display = 'none';
+    // Keep the search icon always visible
+    searchIcon.style.display = "block";
+  }
+});
+</script>

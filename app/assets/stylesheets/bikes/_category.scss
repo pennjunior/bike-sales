@@ -40,6 +40,48 @@
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     }
   }
+
+  .no-results {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    color: #555;
+    max-width: 600px;
+  }
+
+  .no-results h3 {
+    color: #e74c3c; /* Red accent for the heading */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .no-results p {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+
+  .no-results ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .no-results li {
+    margin-bottom: 5px;
+  }
+
+  .browse-link {
+    color: #e74c3c; /* Blue accent for the link */
+    text-decoration: underline;
+  }
+
+  .browse-link:hover {
+    color: #2c3e50; /* Darker blue on hover */
+  }
+
   @media (max-width: 768px) {
   .category-blog {
     display: grid;

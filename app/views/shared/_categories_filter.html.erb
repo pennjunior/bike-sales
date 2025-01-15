@@ -1,0 +1,47 @@
+<%= form_with url: category_path, method: :get, class: "search-form" do |f| %>
+  <%= f.text_field :query,
+        value: params[:query],
+        class: "search-input",
+        placeholder: "Find A Bike e.g.(suzuki)" %>
+
+  <div class="col">
+    <label>Category:</label>
+    <%= f.select :category, options_for_select(@categories, params[:category]), { prompt: "Any" }, class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <label>Brand:</label>
+    <%= f.select :brand, options_for_select(@brands, params[:brand]), { prompt: "Any" }, class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <label>Model:</label>
+    <%= f.select :model, options_for_select(@model, params[:model]), { prompt: "Any" }, class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <label>Electric:</label>
+    <%= f.select :make, options_for_select(@make, params[:make]), { prompt: "Any" }, class: "form-control" %>
+  </div>
+
+
+
+  <div class="col">
+    <label>Min Price:</label>
+    <%= f.number_field :min_price, value: params[:min_price], placeholder: "Min Price", class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <label>Max Price:</label>
+    <%= f.number_field :max_price, value: params[:max_price], placeholder: "Max Price", class: "form-control" %>
+  </div>
+
+  <div class="col">
+    <label>Colour:</label>
+    <%= f.select :colour, options_for_select(@colour, params[:colour]), { prompt: "Any" }, class: "form-control" %>
+  </div>
+
+  <div class="col-12">
+    <%= f.submit "Search", class: "search-button" %>
+  </div>
+<% end %>

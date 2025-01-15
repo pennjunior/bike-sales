@@ -1,8 +1,3 @@
-<% if @category.name == "Electric" %>
-  <h1 class="text-center mt-5 mb-3">Fat Tire Eclectric bikes for sale</h1>
-<% else %>
-  <h1 class="text-center mt-5 mb-3">Bikes in <%= @category.name %> Category</h1>
-<% end %>
 <div class="search-container">
   <!-- Search Icon -->
   <div class="search-icon" onclick="toggleSearchBar()">
@@ -20,8 +15,9 @@
     <% end %>
   </div>
 </div>
-
-  <div class="bike-container"%>
+<% if @bikes.present? %>
+  <h1 class="suggested-bikes-title"> <%= @category.name %> Available for Sale</h1>
+  <div class="bike-container">
   <% @bikes.each do |bike| %>
     <div class="bike-card">
       <%= link_to bike_path(bike) do %>
@@ -47,6 +43,19 @@
     </div>
   <% end %>
 </div>
+<% else %>
+  <div class="no-results">
+    <h3>Sorry, we couldn't find any bikes matching "<%= params[:query] %>".</h3>
+    <p>Here are some tips to improve your search:</p>
+    <ul>
+      <li>Check your spelling and try again.</li>
+      <li>Try using broader keywords (e.g., "Suzuki" instead of "Suzuki Gixxer").</li>
+      <li>Adjust your filters to include more options.</li>
+    </ul>
+    <p>Or, <%= link_to "browse all bikes", categories_path, class: "browse-link" %>.</p>
+  </div>
+<% end %>
+
 </div>
 <%= paginate @bikes %>
 <script>

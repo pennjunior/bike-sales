@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-      @categories = Category.all
+      @bikes = Bike.page(params[:page]).per(10)
       @categories_index = Category.includes(:bikes)
   end
 
