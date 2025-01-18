@@ -23,5 +23,5 @@ class Bike < ApplicationRecord
     tsearch: { prefix: true } # Allows partial matching, e.g., "mount" matches "mountain"
   }
 
-  validates :model, :kilometers, :body, :colour, :engine_capacity, :price, :description, :features, :maximum_speed, :fuel_type, presence: true
+  # validates :model, :kilometers, :body, :colour, :engine_capacity, :price, :description, :features, :maximum_speed, :fuel_type, presence: true
 end
