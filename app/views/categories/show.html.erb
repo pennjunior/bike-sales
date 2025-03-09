@@ -1,3 +1,40 @@
+
+<% content_for :title do %>
+  <% if @bike.category.name  == "ATVs/Quad" %>
+    <%= "#{@bike.model} ATV for Sale | Affordable Off-Road Adventure" %>
+  <% elsif @bike.category.name  == "UTVs" %>
+    <%= "#{@bike.model} UTV for Sale | Durable Utility Vehicles for Work & Play" %>
+  <% elsif @bike.category.name == "Electric" %>
+    <%= "#{@bike.model} Electric Bike for Sale | Eco-Friendly and High-Performance" %>
+  <% elsif @bike.category.name == "Scooter" %>
+    <%= "#{@bike.model} Scooter for Sale | Stylish, Compact, and Reliable" %>
+  <% elsif @bike.category.name == "Cruisers" %>
+    <%= "#{@bike.model} Cruisers Bike for Sale | Comfort and Long-Distance Touring" %>
+  <% elsif @bike.category.name == "Dirt Bikes" %>
+    <%= "#{@bike.model} Dirt Bikes for Sale | Perfect for Off-Road Adventure" %>
+  <% else %>
+    <%= "#{@bike.model} for Sale | Explore Features, Pricing, and Availability" %>
+  <% end %>
+<% end %>
+
+<% content_for :meta_description do %>
+  <% if @bike.category.name == "ATVs/Quad" %>
+    <%= "#{@bike.model} is a high-performance ATV designed for off-road adventures. Learn about its price, features, and availability!" %>
+  <% elsif @bike.category.name == "UTVs" %>
+    <%= "#{@bike.model} is a durable UTV built for work and play. Check out its features, price, and availability today!" %>
+  <% elsif @bike.category.name == "Electric" %>
+    <%= "#{@bike.model} is an eco-friendly electric bike that offers high performance and sustainability. See details here!" %>
+  <% elsif @bike.category.name == "Scooter" %>
+    <%= "#{@bike.model} is a stylish and reliable scooter, perfect for urban commuting. Explore its features and price now!" %>
+  <% elsif @bike.category.name == "Cruisers" %>
+    <%= "#{@bike.model} is a cruiser bike offering comfort and long-distance touring capabilities. Check availability now!" %>
+  <% elsif @bike.category.name == "Dirt Bikes" %>
+    <%= "#{@bike.model} is a dirt bike perfect for tackling rugged off-road terrains. See its price and features here!" %>
+  <% else %>
+    <%= "#{@bike.model} is a reliable option for your next adventure. Discover pricing, features, and availability!" %>
+  <% end %>
+<% end %>
+
 <div class="search-container">
   <!-- Search Icon -->
   <div class="search-icon" onclick="toggleSearchBar()">
