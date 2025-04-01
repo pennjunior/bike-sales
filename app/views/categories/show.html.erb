@@ -1,39 +1,41 @@
-
 <% content_for :title do %>
-  <% if @bike.category.name  == "ATVs/Quad" %>
+  <% case @bike&.category&.name %>
+  <% when "ATVs/Quad" %>
     <%= "#{@bike.model} ATV for Sale | Affordable Off-Road Adventure" %>
-  <% elsif @bike.category.name  == "UTVs" %>
+  <% when "UTVs" %>
     <%= "#{@bike.model} UTV for Sale | Durable Utility Vehicles for Work & Play" %>
-  <% elsif @bike.category.name == "Electric" %>
+  <% when "Electric" %>
     <%= "#{@bike.model} Electric Bike for Sale | Eco-Friendly and High-Performance" %>
-  <% elsif @bike.category.name == "Scooter" %>
+  <% when "Scooter" %>
     <%= "#{@bike.model} Scooter for Sale | Stylish, Compact, and Reliable" %>
-  <% elsif @bike.category.name == "Cruisers" %>
-    <%= "#{@bike.model} Cruisers Bike for Sale | Comfort and Long-Distance Touring" %>
-  <% elsif @bike.category.name == "Dirt Bikes" %>
-    <%= "#{@bike.model} Dirt Bikes for Sale | Perfect for Off-Road Adventure" %>
+  <% when "Cruisers" %>
+    <%= "#{@bike.model} Cruiser Bike for Sale | Comfort and Long-Distance Touring" %>
+  <% when "Dirt Bikes" %>
+    <%= "#{@bike.model} Dirt Bike for Sale | Perfect for Off-Road Adventure" %>
   <% else %>
-    <%= "#{@bike.model} for Sale | Explore Features, Pricing, and Availability" %>
+    <%= "#{@bike&.model || 'Bike'} for Sale | Explore Features, Pricing, and Availability" %>
   <% end %>
 <% end %>
 
 <% content_for :meta_description do %>
-  <% if @bike.category.name == "ATVs/Quad" %>
-    <%= "#{@bike.model} is a high-performance ATV designed for off-road adventures. Learn about its price, features, and availability!" %>
-  <% elsif @bike.category.name == "UTVs" %>
-    <%= "#{@bike.model} is a durable UTV built for work and play. Check out its features, price, and availability today!" %>
-  <% elsif @bike.category.name == "Electric" %>
-    <%= "#{@bike.model} is an eco-friendly electric bike that offers high performance and sustainability. See details here!" %>
-  <% elsif @bike.category.name == "Scooter" %>
-    <%= "#{@bike.model} is a stylish and reliable scooter, perfect for urban commuting. Explore its features and price now!" %>
-  <% elsif @bike.category.name == "Cruisers" %>
-    <%= "#{@bike.model} is a cruiser bike offering comfort and long-distance touring capabilities. Check availability now!" %>
-  <% elsif @bike.category.name == "Dirt Bikes" %>
-    <%= "#{@bike.model} is a dirt bike perfect for tackling rugged off-road terrains. See its price and features here!" %>
+  <% case @bike&.category&.name %>
+  <% when "ATVs/Quad" %>
+    <%= "Take on any terrain with the #{@bike.model} ATV. Built for adventure, durability, and performance. Check out specs, pricing, and deals today!" %>
+  <% when "UTVs" %>
+    <%= "Need power and versatility? The #{@bike.model} UTV is perfect for work and play. Explore features, pricing, and availability now!" %>
+  <% when "Electric" %>
+    <%= "Go green with the #{@bike.model} electric bike! A perfect blend of eco-friendliness, power, and style. Discover range, price, and features." %>
+  <% when "Scooter" %>
+    <%= "Looking for a stylish, fuel-efficient ride? The #{@bike.model} scooter is perfect for urban travel. See features and deals here!" %>
+  <% when "Cruisers" %>
+    <%= "Experience the thrill of the open road with the #{@bike.model} cruiser. Designed for comfort and long rides. Check pricing & availability!" %>
+  <% when "Dirt Bikes" %>
+    <%= "Dominate off-road trails with the #{@bike.model} dirt bike. Built for thrill-seekers who love adventure. See specs & pricing today!" %>
   <% else %>
-    <%= "#{@bike.model} is a reliable option for your next adventure. Discover pricing, features, and availability!" %>
+    <%= "#{@bike&.model || 'This bike'} offers top performance, great pricing, and reliability. Explore specs, availability, and deals!" %>
   <% end %>
 <% end %>
+
 
 <div class="search-container">
   <!-- Search Icon -->
