@@ -75,7 +75,7 @@
           <% else %>
             <p><strong>Make: </strong><%= bike.brand.name %></p>
           <% end %>
-          <p><strong>Price: </strong><%= number_to_currency(bike.price) %></p>
+          <p><strong>Price: </strong><%= bike.price %>€</p>
           <p><strong>Engine: </strong><%= bike.engine_capacity %> CC</p>
         </div>
       <% end %>
