@@ -27,7 +27,6 @@ class FeedController < ApplicationController
               xml["g"].link bike_url(bike) # Assuming bike_url is a valid path helper
               xml["g"].image_link bike_image_url(bike) # Make sure your image logic is correct
               xml["g"].price "#{bike.price} USD"
-              xml["g"].availability bike.stock > 0 ? "in stock" : "out of stock"
               xml["g"].condition "used"  # All bikes are used for now
               xml["g"].brand bike.brand.name  # Fetch the brand name from the associated Brand
               xml["g"].category bike.category.name  # Fetch the category name from the associated Category
@@ -37,7 +36,7 @@ class FeedController < ApplicationController
               xml["g"].maximum_speed bike.maximum_speed
               xml["g"].registration_status bike.registration_status
               xml["g"].features bike.features
-              # xml["g"].availability "in stock"
+              xml["g"].availability "in stock"
             }
           end
         }
