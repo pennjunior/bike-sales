@@ -37,7 +37,7 @@ class FeedController < ApplicationController
               xml["g"].maximum_speed bike.maximum_speed
               xml["g"].registration_status bike.registration_status
               xml["g"].features bike.features
-              xml["g"].availability "in stock"
+              # xml["g"].availability "in stock"
             }
           end
         }
