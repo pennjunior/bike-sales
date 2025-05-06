@@ -37,7 +37,13 @@ class FeedController < ApplicationController
               xml["g"].registration_status bike.registration_status
               xml["g"].features bike.features
               xml["g"].availability "in stock"
+              xml["g"].tax do
+                xml["g"].country "US"
+                xml["g"].rate "0.0"
+                xml["g"].tax_ship false
+              end
             }
+
           end
         }
       }
