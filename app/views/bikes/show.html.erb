@@ -71,7 +71,7 @@
         <h1 style="font-size: 1.5rem;"><i class="fa-solid fa-phone" style="color: green;"></i>  Contact the Dealer (341)223-3974</h1>
         <div class="col-8">
           <h1 class="bike-show-title"><%= @bike.model %> For Sale</h1>
-          <h1 class="bike-show-title" ><%= @bike.price %>€</h1>
+          <h1 class="bike-show-title" ><%= number_to_currency(@bike.price) %></h1>
         </div>
       <div class="col-4">
         <%= image_tag "offer.jpg", height: 100, width: 350, crop: :fill %>

@@ -14,7 +14,11 @@ Rails.application.routes.draw do
   get '/contact', to: 'contacts#new', as: 'contact'
   post '/contact', to: 'contacts#create'
   get '/about', to: 'pages#about'
+  get '/privacy_policy', to: 'pages#privacy_policy'
+  get '/return_and_refund', to: 'pages#return_and_refund'
+  get '/terms_and_conditions', to: 'pages#terms_and_conditions'
   get '/orders/:id/confirmation', to: 'orders#confirmation', as: 'order_confirmation'
+  get 'feed/google', to: 'feed#google', defaults: { format: 'xml' }
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
