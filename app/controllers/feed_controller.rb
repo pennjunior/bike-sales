@@ -42,6 +42,12 @@ class FeedController < ApplicationController
                 xml["g"].rate "0.0"
                 xml["g"].tax_ship false
               end
+              xml["g"].image_link bike_image_url(bike) # main photo
+              bike.photos.drop(1).each do |photo|
+                xml["g"].additional_image_link url_for(photo)
+              end
+              xml["g"].google_product_category "Vehicles & Parts > Vehicle Parts & Accessories > Powersports Parts & Accessories"
+
             }
 
           end
