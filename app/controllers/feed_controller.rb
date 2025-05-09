@@ -15,9 +15,9 @@ class FeedController < ApplicationController
     builder = Nokogiri::XML::Builder.new do |xml|
       xml.rss(version: "2.0", "xmlns:g" => "http://base.google.com/ns/1.0") {
         xml.channel {
-          xml.title "BikezSale Product Feed"
+          xml.title "Bikez ATV Sale Product Feed"
           xml.link "https://bikezsale.us"
-          xml.description "Product feed for Google Merchant Center"
+          xml.description "A rugged utility ATV perfect for heavy-duty tasks and adventurous trails."
 
           bikes.each do |bike|
             xml.item {
