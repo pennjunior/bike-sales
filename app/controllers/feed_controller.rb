@@ -46,7 +46,6 @@ class FeedController < ApplicationController
               bike.photos.drop(1).each do |photo|
                 xml["g"].additional_image_link url_for(photo)
               end
-              xml["g"].google_product_category "Vehicles & Parts > Vehicle Parts & Accessories > Powersports Parts & Accessories"
 
             }
 
