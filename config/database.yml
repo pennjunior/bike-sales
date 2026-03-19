@@ -15,15 +15,15 @@ development:
   encoding: unicode
   database: pennjunior_development
   pool: 5
-  username: penn          # PostgreSQL username
-  password: Jupercho11    # PostgreSQL password
+  username: nkenglandele          # PostgreSQL username
+  password: ndele1234    # PostgreSQL password
   host: localhost         # Ensure this is correct`
 
 test:
   <<: *default
   database: pennjunior_test
-  username: penn
-  password: Jupercho11
+  username: nkenglandele
+  password: ndele1234 
   host: localhost
 
 production:
