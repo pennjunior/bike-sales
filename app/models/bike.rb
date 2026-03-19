@@ -9,6 +9,7 @@ class Bike < ApplicationRecord
   has_many :saved_bikes, dependent: :destroy
   has_many :users, through: :saved_bikes
   include PgSearch::Model
+  //we made a test comment here
 
   enum registration_status: { registered: 0, unregistered: 1 }
   has_many_attached :photos
