@@ -1,3 +1,4 @@
+puts "Seeding reviews..."
 review1 = Review.create!(
   bike_id: Bike.find_by(model: "Polaris RZR Pro XP Ultimate")&.id,
   rating: 4.5,

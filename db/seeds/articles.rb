@@ -1,5 +1,6 @@
+puts "Seeding articles..."
 Article.destroy_all
-puts "Destroyed all article"
+puts "Destroyed all articles"
 article1 = Article.create!(
   title: "Royal Enfield Goes Electric with New 'Flying Flea' Sub-Brand",
   description: "In a bold move towards sustainability, Royal Enfield has announced an all-new electric motorcycle sub-brand named 'Flying Flea.' Known for their rugged and reliable motorcycles, Royal Enfield’s leap into the electric market comes as part of a broader effort to reduce carbon emissions while keeping up with evolving consumer demands. This electric line is expected to maintain the brand’s signature look and feel, appealing to both traditional motorcycle enthusiasts and the growing eco-conscious market. \n

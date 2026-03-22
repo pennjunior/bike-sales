@@ -65,6 +65,7 @@ puts "Visitor user created with email: #{visitor_user.email} and password: #{vis
 
 Bike.destroy_all
 puts "Destroyed Bikes"
+
 require_relative "seeds/atvs"
 require_relative "seeds/cruisers"
 require_relative "seeds/scooter"
@@ -73,3 +74,5 @@ require_relative "seeds/electric"
 require_relative "seeds/reviews"
 require_relative "seeds/articles"
 require_relative "seeds/bike2.rb"
+
+puts "Total bikes: #{Bike.count}"

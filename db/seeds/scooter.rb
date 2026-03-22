@@ -1,3 +1,4 @@
+puts "Seeding scooters..."
 scooter_category_id = Category.find_by(name: "Scooters" )&.id
 
 honda_brand_id = Brand.find_by(name: "Honda")&.id
@@ -36,6 +37,7 @@ agility_rs_125 = Bike.create!(
   brand_id: kymco_brand_id,
   category_id: scooter_category_id
 )
+puts "Created: #{agility_rs_125.model}"
 agility_rs_125_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731153534/IMG_8577_ogx1qz.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731153533/IMG_8576_uu1mb4.jpg",
@@ -82,6 +84,7 @@ honda_pcx_160 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: scooter_category_id
 )
+puts "Created: #{honda_pcx_160.model}"
 honda_pcx_160_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731154364/6726fb4b2e70fe41084309e7_ro7vka.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731154363/6726fb4b2e70fe41084309e6_wvfbj3.webp",
@@ -127,6 +130,7 @@ yamaha_nmax_155 = Bike.create!(
   brand_id: yamaha_brand_id,
   category_id: scooter_category_id
 )
+puts "Created: #{yamaha_nmax_155.model}"
 yamaha_nmax_155_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731155239/999767660_4_z6mqig.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731155240/999767660_1_bc1wtl.jpg",
@@ -169,6 +173,7 @@ suzuki_110 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: scooter_category_id,
 )
+puts "Created: #{suzuki_110.model}"
 suzuki_110_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731155621/463313266_122104627376566265_2295488743821595373_n_z9ws1e.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731155622/463338591_122104627550566265_3314160515106552687_n_xfjmex.jpg",
@@ -211,6 +216,7 @@ piaggio_bv_350 = Bike.create!(
   brand_id: piaggio_brand_id,
   category_id: scooter_category_id,
 )
+puts "Created: #{piaggio_bv_350.model}"
 piaggio_bv_350_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156447/6728c54aaaa79776526f1419_gklnsd.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156447/6728c54c93be3f3d231707df_vczv9u.webp",
@@ -256,6 +262,7 @@ sym_jet14_200 = Bike.create!(
   brand_id: sym_brand_id,
   category_id: scooter_category_id,
 )
+puts "Created: #{sym_jet14_200.model}"
 sym_jet14_200_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156800/66b07fd874b0483d88596c4c_jfcliz.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731156797/66b07fd2a7a3676acc508709_qu1dyh.webp",
@@ -272,3 +279,4 @@ sym_jet14_200_urls.each_with_index do |url, index|
   sym_jet14_200.photos.attach(io: file, filename: "sym_jet14_200_#{index + 1}", content_type: "image/jpg")
 end
 puts "Images attached for sym_jet14_200 = #{sym_jet14_200.photos.attached?}"
+puts "Scooters seeded. Total bikes: #{Bike.count}"
