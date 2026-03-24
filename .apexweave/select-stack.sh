@@ -14,4 +14,8 @@ if [ ! -f "$DOCKERFILE" ]; then
     exit 1
 fi
 sed -i "s|FROM registry\.apexweaveapp\.com:5000/apexweave-stack-[a-z]*:[0-9.]*|FROM registry.apexweaveapp.com:5000/apexweave-stack-${LANG}:${VER}|" "$DOCKERFILE"
+<<<<<<< HEAD
 echo "[ApexWeave] FROM updated to: apexweave-stack-${LANG}:${VER}"
+=======
+echo "[ApexWeave] FROM updated to: apexweave-stack-${LANG}:${VER}"
+>>>>>>> 2bb89bddea9e6495ba4dc31ad5599a64e3ee4f49
