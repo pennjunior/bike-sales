@@ -1,3 +1,4 @@
+puts "Seeding ATVs..."
 cruiser_category_id = Category.find_by(name: "Cruisers")&.id
 atv_category_id = Category.find_by(name: "ATVs/Quad" )&.id
 dirtbike_category_id = Category.find_by(name: "Dirt Bikes" )&.id
@@ -36,6 +37,7 @@ villain = Bike.create!(
   brand_id: segway_brand_id
 )
 
+puts "Created: #{villain.model}"
 villain_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1730679316/IMG_3097_io34pq.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1730679314/IMG_3094_uwx9p6.jpg",
@@ -84,6 +86,7 @@ kingquad = Bike.create!(
   maximum_speed: 65,
   fuel_type: "Gas"
 )
+puts "Created: #{kingquad.model}"
   kingquad_urls = [
     "https://res.cloudinary.com/drxr1eiwp/image/upload/v1730637756/IMG_3113_fuyl4f.jpg",
     "https://res.cloudinary.com/drxr1eiwp/image/upload/v1730637756/IMG_3111_hr3sc5.jpg",
@@ -132,6 +135,7 @@ honda_crf = Bike.create!(
   category_id: dirtbike_category_id,
 )
 
+puts "Created: #{honda_crf.model}"
 honda_crf_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731059318/464835135_122112225692566265_3600363701933991500_n_kubzsq.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731059314/464755486_122112226004566265_2414815065483848386_n_dq2adq.jpg",
@@ -179,6 +183,7 @@ polaris = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{polaris.model}"
 polaris_url = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731096020/IMG_8544_fbbjrg.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731096021/IMG_8543_mrr3zk.jpg",
@@ -226,6 +231,7 @@ cforce = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{cforce.model}"
 cforce_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731096021/IMG_8555_eupolw.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731096021/IMG_8554_y8i55m.jpg",
@@ -274,6 +280,7 @@ renegade_xmr = Bike.create!(
   brand_id: canam_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{renegade_xmr.model}"
 renegade_xmr_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731112245/66cf498abd18380f9773775b_lmwdo6.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731112245/66cf493e9fda6a47e763b094_bn3zac.webp",
@@ -321,6 +328,7 @@ grizzly_eps = Bike.create!(
   brand_id: yamaha_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{grizzly_eps.model}"
 grizzly_eps_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731122324/671e1db4f8a23b7b546d9cf4_1_j45quk.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731122324/671e1db5f8a23b7b546d9cf5_mvk79o.webp",
@@ -366,6 +374,7 @@ foreman_rubicon = Bike.create!(
   brand_id: honda_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{foreman_rubicon.model}"
 foreman_rubicon_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731123042/6724719e4654f3321f7638aa_fmmghb.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731123042/6724719d4654f3321f7638a6_gmoqua.webp",
@@ -414,6 +423,7 @@ brute_force_750 = Bike.create!(
   brand_id: kawasaki_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{brute_force_750.model}"
 brute_force_750_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731124491/670fd5e19cc1e37eed129126_okibfl.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731124491/670fd5e49cc1e37eed12912c_kszhyr.webp",
@@ -461,6 +471,7 @@ sportsman_570 = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{sportsman_570.model}"
 sportsman_570_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731125099/67261176b5574d45ed02b074_pioncq.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731125099/67261174b5574d45ed02b070_fc8fzl.webp",
@@ -507,6 +518,7 @@ kingquad_750 = Bike.create!(
   brand_id: suzuki_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{kingquad_750.model}"
 kingquad_750_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731127006/6708a57a42578251c0076856_fyptg4.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731127006/6708a57b42578251c0076857_rrlna3.jpg",
@@ -554,6 +566,7 @@ outlander_850 = Bike.create!(
   brand_id: canam_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{outlander_850.model}"
 outlander_850_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731127917/657ca31e40ca191ec646e7a6_zu7cx2.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731127916/665fe642a98f2d5f6a4177f8_btladb.webp",
@@ -600,6 +613,7 @@ rancher_420 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{rancher_420.model}"
 rancher_420_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731128347/670b65daf5feaf38953aa627_ccb34j.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731128347/670b65dff5feaf38953aa629_lyvnbf.webp",
@@ -642,6 +656,7 @@ scrambler_xp_1000 = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{scrambler_xp_1000.model}"
 scrambler_xp_1000_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731129015/6729a98fa2b5a811af7715cc_qy82un.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731129015/6729a98fc50fa5486363754e_ncpsyu.webp",
@@ -690,6 +705,7 @@ sportsman_xp_1000 = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{sportsman_xp_1000.model}"
 sportsman_xp_1000_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731129810/A9DF7125-2744-406D-BA60-29ACC5857100_sah52d.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731129810/07457E7D-2477-44DF-863E-8D965ACB9212_qtvhq0.jpg",
@@ -738,6 +754,7 @@ outlander_max_850 = Bike.create!(
   brand_id: canam_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{outlander_max_850.model}"
 outlander_max_850_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731130419/6711df9011e4c339cc7a4fb7_l1kggk.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731130419/6711df9011e4c339cc7a4fb8_easott.webp",
@@ -783,6 +800,7 @@ grizzly_xtr = Bike.create!(
   brand_id: yamaha_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{grizzly_xtr.model}"
 grizzly_xtr_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731131340/66fc1e2e7bbcb87b8a48f2b8_vq60yg.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731131339/66fc1e2d7bbcb87b8a48f2b6_l2mth9.webp",
@@ -829,6 +847,7 @@ kingquad_500 = Bike.create!(
   brand_id: suzuki_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{kingquad_500.model}"
 kingquad_500_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731131992/6721271d0cfe621deb22a343_lqbkkb.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731131992/6721271d7b3fc41b845965a3_zeftre.webp",
@@ -876,6 +895,7 @@ renegade_xc = Bike.create!(
   brand_id: canam_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{renegade_xc.model}"
 renegade_xc_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731132515/6706d35b0f155373225ab518_j8a6ls.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731132516/6706d35a0f155373225ab517_yff8ue.webp",
@@ -920,6 +940,7 @@ foreman_450 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{foreman_450.model}"
 foreman_450_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731133101/671b36c72805f479ab0a7a7f_rjz9sp.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731133102/671b36c92805f479ab0a7a84_gmqsct.webp",
@@ -964,6 +985,7 @@ foreman_500 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{foreman_500.model}"
 foreman_500_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731139012/672668b60004e27c867fe174_twj7tb.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731139018/672668b66932fa65410ca334_labtni.webp",
@@ -1010,6 +1032,7 @@ scrambler_850 = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{scrambler_850.model}"
 scrambler_850_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731139491/670fd5dcbdb59a7f9e0f28a7_oduifj.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731139492/670fd5dcee2bab61d80669c1_grkpyt.webp",
@@ -1057,6 +1080,7 @@ grizzly_700 = Bike.create!(
   brand_id: yamaha_brand_id,
   category_id: atv_category_id
 )
+puts "Created: #{grizzly_700.model}"
 grizzly_700_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731140152/6722208ff014c66f3d2b1426_ufdpkd.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731140152/6722208f6061813d6e78fe46_nk5rxl.webp",
@@ -1106,6 +1130,7 @@ renegade_570 = Bike.create!(
   brand_id: canam_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{renegade_570.model}"
 renegade_570_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731140870/67093aead8794611ff330795_vgayfm.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731140871/67093aead8794611ff330796_ldxtir.webp",
@@ -1155,6 +1180,7 @@ brute_force_300 = Bike.create!(
   brand_id: kawasaki_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{brute_force_300.model}"
 brute_force_300_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731141307/6710a89a12ea5c283b5dd6a6_mojofs.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731141308/6710a89a12ea5c283b5dd6a7_drhrgi.webp",
@@ -1203,6 +1229,7 @@ kingquad_400 = Bike.create!(
   brand_id: suzuki_brand_id,
   category_id: atv_category_id,
 )
+puts "Created: #{kingquad_400.model}"
 kingquad_400_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731141778/67132fc4c2c0a613ab0e392e_sc6uxa.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731141779/67132fc4c2c0a613ab0e392f_sxu8yd.webp",

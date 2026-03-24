@@ -1,3 +1,4 @@
+puts "Seeding cruisers..."
 cruiser_category_id = Category.find_by(name: "Cruisers")&.id
 
 segway_brand_id = Brand.find_by(name: "Segway")&.id
@@ -43,6 +44,7 @@ heritage_classic_114 = Bike.create!(
   brand_id: harley_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{heritage_classic_114.model}"
 heritage_classic_114_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731147914/6710a88f67fa9c709f7aab88_ahjmuc.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731147914/6710a88f67fa9c709f7aab89_se0dnr.webp",
@@ -91,6 +93,7 @@ indian_chief_dark_horse = Bike.create!(
   brand_id: indian_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{indian_chief_dark_horse.model}"
 indian_chief_dark_horse_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731148745/6712b940c8535a10f451c9f0_mzxxkz.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731148743/6712b93a0f4cb62f8c640c82_abmfd9.jpg",
@@ -137,6 +140,7 @@ rebel_1100 = Bike.create!(
   brand_id: honda_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{rebel_1100.model}"
 rebel_1100_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731149995/67272238c3bb773c6271f947_wpzbdr.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731149994/67272239c3bb773c6271f948_vl4q2a.webp",
@@ -183,6 +187,7 @@ vulcan_900_classic = Bike.create!(
   brand_id: kawasaki_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{vulcan_900_classic.model}"
 vulcan_900_classic_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731150560/269CA93D-3E31-460E-AEE9-5949EDDE6F58_famsxy.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731150560/6BDDD72B-CF85-4BEA-B1CE-71FFB15CA20C_uah4cj.jpg",
@@ -225,6 +230,7 @@ boulevard_c50 = Bike.create!(
   brand_id: suzuki_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{boulevard_c50.model}"
 boulevard_c50_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731151038/6711fb8f4c8b7c2b391a8564_wecedo.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731151038/6711fb904c8b7c2b391a8565_wgmy4c.webp",
@@ -271,6 +277,7 @@ fat_bob_114 = Bike.create!(
   brand_id: harley_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{fat_bob_114.model}"
 fat_bob_114_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731152182/671199b896751a03b60a3dfc_mcain9.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731152183/671199b880f3a91288195953_n7apd8.jpg",
@@ -316,6 +323,7 @@ harley_davidson = Bike.create!(
   brand_id: royal_enfield_brand_id,
   category_id: cruiser_category_id,
 )
+puts "Created: #{harley_davidson.model}"
 harley_davidson_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731058184/465009684_122112229112566265_6511613803801765087_n_fqkun2.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731057153/hpsjzrjbxypr1ed2erts.jpg",
@@ -329,3 +337,4 @@ harley_davidson_urls.each_with_index do |url, index|
   harley_davidson.photos.attach(io: file, filename: "harley_dividson#{index +1}.jpg", content_type: "image/jpg")
 end
 puts "photos were attached = #{harley_davidson.photos.attached?}"
+puts "Cruisers seeded. Total bikes: #{Bike.count}"

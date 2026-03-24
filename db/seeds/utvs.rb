@@ -1,3 +1,4 @@
+puts "Seeding UTVs..."
 # UTV 1
 require "open-uri"
 utv_category_id = Category.find_by(name: "UTVs" )&.id
@@ -40,6 +41,7 @@ uforce_600 = Bike.create!(
   brand_id: cfmoto_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{uforce_600.model}"
 uforce_600_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731143394/670f3e431ecbc311052a4457_wl1sjk.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731143395/670f3e4347137e35e379241b_xhs7mx.webp",
@@ -86,6 +88,7 @@ ranger_xp_1000 = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{ranger_xp_1000.model}"
 ranger_xp_1000_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731143869/66d9be366e5a0c080b4cee19_ucret1.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731143869/66d9be36f1be1338b162da42_dcgv1y.webp",
@@ -131,6 +134,7 @@ mule_pro_fx = Bike.create!(
   brand_id: kawasaki_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{mule_pro_fx.model}"
 mule_pro_fx_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731144435/671c880f8aba3276cb3c416a_f2bpwp.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731144434/671c880e8aba3276cb3c4168_uo0xog.webp",
@@ -181,6 +185,7 @@ defender_hd10 = Bike.create!(
   brand_id: canam_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{defender_hd10.model}"
 defender_hd10_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731145033/6726378ce8bcb5298973f976_qkqmzz.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731145033/67263796c2f83705ef58a31b_jlmt3c.webp",
@@ -229,6 +234,7 @@ pro_xp_ultimate = Bike.create!(
   brand_id: polaris_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{pro_xp_ultimate.model}"
 pro_xp_ultimate_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731145593/66f5c90fbfe37b4a9f340803_ak9nhk.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731145597/66f5cc5297c4a540b56b8c89_klvzai.webp",
@@ -273,6 +279,7 @@ teryx_krx_1000 = Bike.create!(
   brand_id: kawasaki_brand_id,
   category_id: utv_category_id,
 )
+puts "Created: #{teryx_krx_1000.model}"
 teryx_krx_1000_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731146290/67285c4c0ed6ce71406a2e77_qmskzy.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1731146290/67285c4d0ed6ce71406a2e7a_ohoedf.webp",

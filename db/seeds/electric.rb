@@ -1,10 +1,8 @@
+puts "Seeding electric bikes..."
 require "open-uri"
 
 electric_category = Category.find_by(name: "Electric")
 suzuki_brand_id = Brand.find_by(name: "Suzuki")&.id
-require "open-uri"
-
-electric_category = Category.find_by(name: "Electric")
 
 # Trek Allant+ 8S
 trek_allant_plus_8s = Bike.create!(
@@ -29,6 +27,7 @@ trek_allant_plus_8s = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Trek Bikes"
 )
+puts "Created: #{trek_allant_plus_8s.model}"
 trek_allant_plus_8s_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756000/IMG_8930_uedafh.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756000/IMG_8929_xx9zn6.jpg",
@@ -64,6 +63,7 @@ vvolt_alpha_2 = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Vvolt Alpha"
 )
+puts "Created: #{vvolt_alpha_2.model}"
 vvolt_alpha_2_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756408/VvoltAlphaII24_1220x_crop_center_ewh8q7.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756407/VvoltAlphaII22_1220x_crop_center_dnntab.webp",
@@ -101,6 +101,7 @@ schwinn_coston_dx = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Schwinn Coston"
 )
+puts "Created: #{schwinn_coston_dx.model}"
 schwinn_coston_dx_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756889/s-l1600_kaygxd.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733756889/s-l1600_3_wejpww.webp",
@@ -137,6 +138,7 @@ specialized_turbo_vado = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Turbo Vado"
 )
+puts "Created: #{specialized_turbo_vado.model}"
 specialized_turbo_vado_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733757238/s-l1600_5_juhac1.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733757253/s-l1600_16_sx3d3i.webp",
@@ -176,6 +178,7 @@ coswheel_t20 = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Coswheel"
   )
+puts "Created: #{coswheel_t20.model}"
 coswheel_t20_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733757621/IMG_8939_njxskt.avif",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733757621/IMG_8938_ev7cdl.avif",
@@ -211,6 +214,7 @@ smart_traver = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Smart Traver"
 )
+puts "Created: #{smart_traver.model}"
 smart_traver_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733759805/IMG_8940_kfrmgg.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733759807/IMG_8941_v2mmud.jpg",
@@ -250,6 +254,7 @@ super73 = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Super 73"
 )
+puts "Created: #{super73.model}"
 super73_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733761960/IMG_8950_zerhiw.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733761949/IMG_8949_doo10c.jpg",
@@ -286,6 +291,7 @@ addmotor_motan = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Addmotor"
 )
+puts "Created: #{addmotor_motan.model}"
 addmotor_motan_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733762348/addmotor-motan-m-560-1200x800-c-default_wctwag.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733762349/addmotor-motan-m-560-control-pad-thumb-shifter-twist-throttle-1200x800-c-default_janqpv.jpg",
@@ -326,6 +332,7 @@ rad_runner_plus = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Rad Power Bikes"
 )
+puts "Created: #{rad_runner_plus.model}"
 rad_runner_plus_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733763435/s-l1600_1_mvcrcf.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733763437/s-l1600_2_bjblao.webp",
@@ -365,6 +372,7 @@ cyrusher_xf800 = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Cyrusher"
 )
+puts "Created: #{cyrusher_xf800.model}"
 cyrusher_xf800_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733763808/s-l1600_10_cx5y2w.webp",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733763808/s-l1600_8_zk4uum.webp",
@@ -402,6 +410,7 @@ mate_x250 = Bike.create!(
   brand_id: suzuki_brand_id,
   make: "Mate bike"
 )
+puts "Created: #{mate_x250.model}"
 mate_x250_urls = [
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733764285/IMG_8954_gflxyw.jpg",
   "https://res.cloudinary.com/drxr1eiwp/image/upload/v1733764284/IMG_8955_e4wcfl.jpg",
